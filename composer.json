@@ -1,0 +1,27 @@
+{
+    "description": "A simple Neos CMS shopping cart plugin (without user management)",
+    "license": "GPL-3.0+",
+    "type": "neos-plugin",
+    "name": "neosrulez/shoppingcart",
+    "authors": [
+        {
+            "name": "Patric Eckhart",
+            "email": "mail@patriceckhart.com",
+            "homepage": "http://www.patriceckhart.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "neos/neos": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "NeosRulez\\ShoppingCart\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "NeosRulez.ShoppingCart"
+        }
+    }
+}

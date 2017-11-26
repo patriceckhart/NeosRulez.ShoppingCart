@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file original="" product-name="NeosRulez.ShoppingCart" source-language="en" datatype="plaintext">
+		<body>
+			<trans-unit id="shop" xml:space="preserve">
+				<source>Shop</source>
+			</trans-unit>
+			<trans-unit id="blogsettings" xml:space="preserve">
+				<source>Settings: Shop</source>
+			</trans-unit>
+			<trans-unit id="nodefinition" xml:space="preserve">
+				<source>Please define in the Inspector.</source>
+			</trans-unit>
+            <trans-unit id="category" xml:space="preserve">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="categories" xml:space="preserve">
+				<source>Categories</source>
+			</trans-unit>
+			<trans-unit id="categorymoddescription" xml:space="preserve">
+				<source>With this module, you can edit the categories.</source>
+			</trans-unit>
+			<trans-unit id="addnewcategory" xml:space="preserve">
+				<source>Add new category</source>
+			</trans-unit>
+            <trans-unit id="savecategory" xml:space="preserve">
+				<source>Save category</source>
+			</trans-unit>
+			<trans-unit id="nocategory" xml:space="preserve">
+				<source>No categories available.</source>
+			</trans-unit>
+            <trans-unit id="editcategories" xml:space="preserve">
+				<source>Edit categories</source>
+			</trans-unit>
+            <trans-unit id="savechanges" xml:space="preserve">
+				<source>Save changes</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

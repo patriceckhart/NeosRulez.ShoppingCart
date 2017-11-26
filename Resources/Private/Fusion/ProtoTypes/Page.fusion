@@ -1,0 +1,30 @@
+prototype(Neos.Neos:Page) {
+
+    head {
+
+       NeosRulezShoppingCartCss = Neos.Fusion:Tag {
+            @position = 'after NeosRulezBootstrapCss'
+            tagName = 'link'
+            attributes {
+                media = 'all'
+                rel = 'stylesheet'
+                href = Neos.Fusion:ResourceUri {
+                    path = 'resource://NeosRulez.ShoppingCart/Public/Styles/styles.min.css'
+                }
+            }
+        }
+
+    }
+
+    NeosRulezShoppingCartJs = Neos.Fusion:Tag {
+        @position = 'after NeosRulezBootstrapJs'
+        tagName = 'script'
+        attributes {
+            type = 'text/javascript'
+            src = Neos.Fusion:ResourceUri {
+                path = 'resource://NeosRulez.ShoppingCart/Public/JavaScript/scripts.min.js'
+            }
+        }
+    }
+
+}

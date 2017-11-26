@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file original="" product-name="NeosRulez.ShoppingCart" source-language="de" datatype="plaintext">
+		<body>
+			<trans-unit id="ui.label" xml:space="preserve">
+				<source>Seite für Shop Artikel</source>
+			</trans-unit>
+			<trans-unit id="properties.articleTitle" xml:space="preserve">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="properties.articlePrice" xml:space="preserve">
+				<source>Preis</source>
+			</trans-unit>
+			<trans-unit id="properties.articleOldPrice" xml:space="preserve">
+				<source>Alter Preis</source>
+			</trans-unit>
+			<trans-unit id="properties.articleNumber" xml:space="preserve">
+				<source>Artikelnummer</source>
+			</trans-unit>
+			<trans-unit id="properties.tax" xml:space="preserve">
+				<source>Mehrwertsteuer (in Prozent)</source>
+			</trans-unit>
+			<trans-unit id="properties.stock" xml:space="preserve">
+				<source>Artikel verfügbar</source>
+			</trans-unit>
+			<trans-unit id="properties.image" xml:space="preserve">
+				<source>Hauptbild</source>
+			</trans-unit>
+			<trans-unit id="properties.assets" xml:space="preserve">
+				<source>Weitere Bilder</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

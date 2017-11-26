@@ -1,0 +1,18 @@
+prototype(Site:Article) {
+    articleTitle = ${q(documentNode).property('articleTitle')}
+    articlePrice = ${q(documentNode).property('articlePrice')}
+    articleOldPrice = ${q(documentNode).property('articleOldPrice')}
+    articleNumber = ${q(documentNode).property('articleNumber')}
+    tax = ${q(documentNode).property('tax')}
+    stock = ${q(documentNode).property('stock')}
+    image = ${q(documentNode).property('image')}
+    assets = ${q(documentNode).property('assets')}
+    taxinclusive = ${Configuration.setting('NeosRulez.ShoppingCart.taxinclusive')}
+    @cache {
+        mode = 'uncached'
+        context {
+            1 = 'node'
+            2 = 'documentNode'
+        }
+    }
+}

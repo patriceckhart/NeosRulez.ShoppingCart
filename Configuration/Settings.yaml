@@ -1,0 +1,20 @@
+Neos:
+  Neos:
+    userInterface:
+      translation:
+        autoInclude:
+          NeosRulez.ShoppingCart:
+            - Main
+            - 'NodeTypes/*'
+      defaultLanguage: 'de'
+    nodeTypes:
+      groups:
+        shop:
+          position: 'end'
+          label: NeosRulez.ShoppingCart:Main:shop
+    fusion:
+      autoInclude:
+        NeosRulez.ShoppingCart: true
+NeosRulez:
+  ShoppingCart:
+    taxinclusive: true
