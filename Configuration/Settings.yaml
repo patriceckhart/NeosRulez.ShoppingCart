@@ -51,3 +51,6 @@ NeosRulez:
     orderEmailAddress: 'mail@patriceckhart.com'
     confirmationSubject: 'Bestellbestätigung'
     orderSubject: 'Bestellung'
+    paypalIntegration: true
+    paypalAccount: 'payments@landmarkt.at'
+    paypalReturnUri: 'dev.localhost/'

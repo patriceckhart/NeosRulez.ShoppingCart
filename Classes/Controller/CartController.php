@@ -174,6 +174,7 @@ class CartController extends ActionController
         $senderEmailAddress = $this->settings['senderEmailAddress'];
         $confirmationSubject = $this->settings['confirmationSubject'];
         $orderSubject = $this->settings['orderSubject'];
+        $paypal = $this->settings['paypalIntegration'];
 
         /* Invoice */
         $company = $this->request->getArgument('company');
@@ -312,7 +313,49 @@ class CartController extends ActionController
 
         $this->cart->deleteCart();
         $linkToCart = $this->settings['linkToCart'];
-        $this->redirectToUri($linkToCart);
+
+        if ($paypal==true) {
+
+            echo '
+<form name="payform" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+	<input type="hidden" name="cmd" value="_xclick">
+	<input type="hidden" name="hosted_button_id" value="LTRDGNR38ZH6A">
+	<input type="hidden" name="business" value="payments@landmarkt.at">  
+	
+	<input type="hidden" name="tax" value="0">
+	<input type="hidden" name="quantity" value="1">
+	<input type="hidden" name="no_note" value="1">
+	<input type="hidden" name="address_override" value="1">
+	<input type="hidden" name="first_name" value="'.$firstname.'">  
+	<input type="hidden" name="last_name" value="'.$lastname.'">  
+	<input type="hidden" name="address1" value="'.$address.'">  
+	<input type="hidden" name="city" value="'.$city.'">  
+	<input type="hidden" name="state" value="-">  
+	<input type="hidden" name="zip" value="'.$zip.'">  
+	<input type="hidden" name="email" value="'.$invoiceemail.'"> 
+	<input type="hidden" name="country" value="'.$country.'">
+	
+	<input type="hidden" name="item_name" value="-">
+	<input type="hidden" name="item_number" value="-">
+	
+	<input type="hidden" name="return" value="http://www.eggnog.at/bestellen/erfolgreich.html">
+	<input type="hidden" name="currency_code" value="EUR">
+	
+	<input type="hidden" name="amount" id="amount" value="-">
+		
+		<div style="text-align:center; margin-top:200px; font-family:Arial;">
+<strong>Einen kurzen Augenblick. Sie werden zur Zahlung weitergeleitet.</strong><br /><br />
+Sollte Ihr Browser die automatische Weiterleitung nicht unterstützen, klicken Sie bitte auf die folgende Schaltfläche<br /><br />
+<input type="image" name="submit" border="0" src="https://www.paypal.com/de_DE/i/btn/btn_paynow_LG.gif" alt="PayPal - The safer, easier way to pay online">
+</div>
+</form>
+';
+
+        } else {
+            $this->redirectToUri($linkToCart);
+        }
+
 
     }
 
