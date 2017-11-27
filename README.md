@@ -17,7 +17,6 @@ And the run this command to fetch the plugin:
 ```
 composer update
 ```
-
 ## Author
 
 * E-Mail: mail@patriceckhart.com 
