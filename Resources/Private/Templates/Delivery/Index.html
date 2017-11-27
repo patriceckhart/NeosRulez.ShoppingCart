@@ -1,0 +1,38 @@
+<f:if condition="{deliveries}">
+    <f:then>
+        <table class="neos-table">
+            <thead>
+            <tr>
+                <td>{f:translate(id: 'deliverytype', package: 'NeosRulez.ShoppingCart', source: 'Main')}</td>
+                <td>{f:translate(id: 'costs', package: 'NeosRulez.ShoppingCart', source: 'Main')}</td>
+                <td>ID</td>
+                <td>&nbsp;</td>
+            </tr>
+            </thead>
+            <tbody>
+            <f:for each="{deliveries}" as="delivery">
+                <tr>
+                    <td>{delivery.name}</td>
+                    <td><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{delivery.costs}</f:format.currency></td>
+                    <td><f:format.identifier>{delivery}</f:format.identifier></td>
+                    <td class="neos-action">
+                        <div class="neos-pull-right">
+                            <f:form action="delete" arguments="{delivery: delivery}">
+                                <f:link.action class="neos-button neos-button-primary" action="edit" arguments="{delivery: delivery}"><i class="icon-pencil icon-white"></i></f:link.action>
+
+                                <button type="submit" class="neos-button neos-button-danger"><i class="icon-remove"></i></button>
+                            </f:form>
+                        </div>
+                    </td>
+                </tr>
+            </f:for>
+            </tbody>
+        </table>
+    </f:then>
+    <f:else>
+        <br />{f:translate(id: 'nodeliverytypes', package: 'NeosRulez.ShoppingCart', source: 'Main')}
+    </f:else>
+</f:if>
+<div class="neos-footer">
+    <f:link.action class="neos-button neos-button-primary" action="new">{f:translate(id: 'newdeliverytype', package: 'NeosRulez.ShoppingCart', source: 'Main')}</f:link.action>
+</div>

@@ -15,6 +15,39 @@ Neos:
     fusion:
       autoInclude:
         NeosRulez.ShoppingCart: true
+    modules:
+      shoppingcart:
+        label: NeosRulez.ShoppingCart:Main:shop
+        controller: '\Neos\Neos\Controller\Module\ManagementController'
+        description: 'Shop Admin'
+        icon: 'icon-shopping-cart'
+        resource: 'Neos_Neos_Backend_Module_Management'
+        submodules:
+          country:
+            label: 'Länder'
+            controller: '\NeosRulez\ShoppingCart\Controller\CountryController'
+            description: NeosRulez.ShoppingCart:Main:countrymodulelabel
+            icon: 'icon-globe'
+            actions:
+              index:
+                label: NeosRulez.ShoppingCart:Main:countrymoduleactionlabel
+                title: NeosRulez.ShoppingCart:Main:countrymoduleactionlabel
+          delivery:
+            label: 'Versandarten'
+            controller: '\NeosRulez\ShoppingCart\Controller\DeliveryController'
+            description: NeosRulez.ShoppingCart:Main:deliverymodulelabel
+            icon: 'icon-plane'
+            actions:
+              index:
+                label: NeosRulez.ShoppingCart:Main:deliverymoduleactionlabel
+                title: NeosRulez.ShoppingCart:Main:deliverymoduleactionlabel
 NeosRulez:
   ShoppingCart:
     taxinclusive: true
+    linkToCart: 'warenkorb.html'
+    linkToHome: 'de/shop.html'
+    standardDelivery: '7f5280e4-5820-44c3-87b7-14bdb829ed97'
+    senderEmailAddress: 'postmaster@patriceckhart.com'
+    orderEmailAddress: 'mail@patriceckhart.com'
+    confirmationSubject: 'Bestellbestätigung'
+    orderSubject: 'Bestellung'

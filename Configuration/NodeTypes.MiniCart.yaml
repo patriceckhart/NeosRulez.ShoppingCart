@@ -1,0 +1,7 @@
+'NeosRulez.ShoppingCart:MiniCart':
+  superTypes:
+    'Neos.Neos:Plugin': TRUE
+  ui:
+    label: i18n
+    group: 'shop'
+    icon: 'icon-shopping-cart'

@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="efeb9722-91df-4e52-98da-fdbaf866d876" name="Default" comment="" />
+    <list default="true" id="efeb9722-91df-4e52-98da-fdbaf866d876" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Classes/Controller/DeliveryController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Classes/Domain/Model/Cart.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Classes/Domain/Model/Country.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Classes/Domain/Model/Delivery.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Classes/Domain/Repository/CartRepository.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Classes/Domain/Repository/CountryRepository.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Classes/Domain/Repository/DeliveryRepository.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Configuration/NodeTypes.Cart.yaml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Configuration/NodeTypes.MiniCart.yaml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Configuration/Routes.yaml.example" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Cart.fusion" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/MiniCart.fusion" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Private/Templates/Cart/MiniCart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Cart.xlf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/MiniCart.xlf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Cart.xlf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/MiniCart.xlf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Resources/Private/Templates/Cart/Index.html" afterPath="$PROJECT_DIR$/Classes/Controller/CountryController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Controller/CartController.php" afterPath="$PROJECT_DIR$/Classes/Controller/CartController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Configuration/Policy.yaml" afterPath="$PROJECT_DIR$/Configuration/Policy.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Configuration/Settings.yaml" afterPath="$PROJECT_DIR$/Configuration/Settings.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf" afterPath="$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Translations/en/Main.xlf" afterPath="$PROJECT_DIR$/Resources/Private/Translations/en/Main.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Public/JavaScript/scripts.min.js" afterPath="$PROJECT_DIR$/Resources/Public/JavaScript/scripts.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Public/Styles/styles.min.css" afterPath="$PROJECT_DIR$/Resources/Public/Styles/styles.min.css" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,38 +40,93 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Cart.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2248">
+              <caret line="164" column="64" lean-forward="false" selection-start-line="164" selection-start-column="64" selection-end-line="164" selection-end-column="64" />
+              <folding>
+                <element signature="e#252#258#0" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#f:form#0;n#div#3;n#div#0;n#f:for#0;n#f:then#0;n#f:if#0;n#!!top" expanded="true" />
+                <element signature="e#5762#5767#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>shopsettings</find>
       <find>group: 'shop'</find>
+      <find>neoscomm</find>
+      <find>Site</find>
+      <find>Bachler</find>
+      <find>Bachler\Site\</find>
+      <find>&lt;div class=&quot;input&quot;&gt;</find>
     </findStrings>
     <replaceStrings>
       <replace>group: 'shopsettings'</replace>
+      <replace>ShoppingCart</replace>
+      <replace>NeosRulez</replace>
+      <replace>NeosRulez\ShoppingCart\</replace>
+      <replace>&lt;div class=&quot;form-group&quot;&gt;</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/Configuration/Policy.yaml" />
-        <option value="$PROJECT_DIR$/Classes/Controller/CartController.php" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Cart/Index.html" />
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/Root.fusion" />
         <option value="$PROJECT_DIR$/Configuration/NodeTypes.ArticlePage.yaml" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/ArticlePage.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/ArticlePage.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Article.fusion" />
-        <option value="$PROJECT_DIR$/Configuration/Settings.yaml" />
-        <option value="$PROJECT_DIR$/Resources/Public/Styles/styles.min.css" />
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion" />
         <option value="$PROJECT_DIR$/Configuration/NodeTypes.Article.yaml" />
-        <option value="$PROJECT_DIR$/Resources/Private/Translations/en/Main.xlf" />
-        <option value="$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Article.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Article.xlf" />
+        <option value="$PROJECT_DIR$/Configuration/NodeTypes.MiniCart.yaml" />
+        <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/MiniCart.xlf" />
+        <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/MiniCart.xlf" />
+        <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/MiniCart.fusion" />
+        <option value="&lt;cc005294-ba46-48bb-baa8-942f3bb836a4&gt;/data/releases/current/Configuration/Routes.yaml" />
+        <option value="$PROJECT_DIR$/Configuration/Routes.yaml" />
+        <option value="$PROJECT_DIR$/Classes/Domain/Model/Cart.php" />
+        <option value="$PROJECT_DIR$/Classes/Domain/Repository/CartRepository.php" />
+        <option value="$PROJECT_DIR$/Classes/Domain/Model/Country.php" />
+        <option value="$PROJECT_DIR$/Classes/Domain/Model/Delivery.php" />
+        <option value="$PROJECT_DIR$/Classes/Controller/CountryController.php" />
+        <option value="$PROJECT_DIR$/Classes/Domain/Repository/CountryRepository.php" />
+        <option value="$PROJECT_DIR$/Classes/Domain/Repository/DeliveryRepository.php" />
+        <option value="$PROJECT_DIR$/Classes/Controller/DeliveryController.php" />
+        <option value="$PROJECT_DIR$/Configuration/Policy.yaml" />
+        <option value="$PROJECT_DIR$/Resources/Private/Templates/Country/Index.html" />
+        <option value="$PROJECT_DIR$/Resources/Private/Templates/Country/Edit.html" />
+        <option value="$PROJECT_DIR$/Resources/Private/Templates/Delivery/Index.html" />
+        <option value="$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf" />
+        <option value="$PROJECT_DIR$/Resources/Private/Translations/en/Main.xlf" />
+        <option value="$PROJECT_DIR$/Resources/Private/Templates/Delivery/Edit.html" />
+        <option value="$PROJECT_DIR$/Resources/Private/Templates/Cart/MiniCart.html" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html" />
+        <option value="$PROJECT_DIR$/Configuration/NodeTypes.Cart.yaml" />
+        <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Cart.xlf" />
+        <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Cart.xlf" />
+        <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Cart.fusion" />
+        <option value="$PROJECT_DIR$/Configuration/Settings.yaml" />
+        <option value="$PROJECT_DIR$/Resources/Public/Styles/styles.min.css" />
+        <option value="$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html" />
+        <option value="$PROJECT_DIR$/Resources/Public/JavaScript/scripts.min.js" />
+        <option value="$PROJECT_DIR$/Classes/Controller/CartController.php" />
       </list>
     </option>
   </component>
@@ -52,6 +137,11 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="2560" />
+    <option name="height" value="1343" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -84,6 +174,26 @@
               <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Classes" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Classes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Domain" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Classes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Domain" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Classes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Domain" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Repository" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
@@ -138,6 +248,22 @@
               <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Templates" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Cart" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Country" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Delivery" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
@@ -219,6 +345,11 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -243,35 +374,40 @@
       <option name="presentableId" value="Default" />
       <updated>1511725953091</updated>
       <workItem from="1511725954347" duration="4881000" />
+      <workItem from="1511764442357" duration="1202000" />
+      <workItem from="1511765762021" duration="11094000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4881000" />
+    <option name="totallyTimeSpent" value="17177000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="23" width="1680" height="969" extended-state="6" />
+    <frame x="-1" y="24" width="2560" height="1342" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18171683" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15236568" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.175" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962668" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17752184" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Notes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Notes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,45 +421,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Configuration/Policy.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Cart/Index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Controller/CartController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <element signature="e#120#154#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Public/JavaScript/scripts.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/ArticlePage.xlf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="46" lean-forward="false" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -331,7 +432,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -339,7 +439,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -347,15 +446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="20" lean-forward="true" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Configuration/Settings.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -367,6 +457,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="1" lean-forward="false" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Article.xlf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="8" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.ArticlePage.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -375,47 +486,191 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/MiniCart.xlf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="25" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/MiniCart.xlf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="33" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Configuration/Routes.yaml.example">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Domain/Model/Country.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="e#122#156#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Domain/Model/Delivery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#122#156#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Controller/CountryController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
-          <caret line="26" column="1" lean-forward="false" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+          <folding>
+            <element signature="e#120#154#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Domain/Repository/CountryRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="42" lean-forward="true" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+          <folding>
+            <element signature="e#127#161#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Domain/Repository/DeliveryRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#127#161#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Configuration/Policy.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion">
+    <entry file="file://$PROJECT_DIR$/Classes/Controller/DeliveryController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-          <folding />
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#115#149#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Public/Styles/styles.min.css">
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Delivery/Index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="45" lean-forward="true" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/Main.xlf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="25" lean-forward="false" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+        <state relative-caret-position="555">
+          <caret line="37" column="6" lean-forward="true" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="25" lean-forward="false" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+        <state relative-caret-position="880">
+          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="69" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Article.xlf">
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/Main.xlf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="925">
+          <caret line="68" column="41" lean-forward="false" selection-start-line="68" selection-start-column="41" selection-end-line="68" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Country/Edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Delivery/Edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Country/Index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Domain/Repository/CartRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <element signature="e#127#161#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Domain/Model/Cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-835">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="46" />
+          <folding>
+            <element signature="e#122#156#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Cart/MiniCart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/MiniCart.fusion">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.MiniCart.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Article.xlf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="8" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
@@ -423,19 +678,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Article.xlf">
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Cart.xlf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="11" lean-forward="true" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
+        <state relative-caret-position="90">
+          <caret line="6" column="25" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Cart.fusion">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.Cart.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Cart.xlf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="39" column="40" lean-forward="true" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
+        <state relative-caret-position="270">
+          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Public/JavaScript/scripts.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="3" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Public/Styles/styles.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Controller/CartController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="192" column="56" lean-forward="true" selection-start-line="192" selection-start-column="56" selection-end-line="192" selection-end-column="56" />
+          <folding>
+            <element signature="e#120#154#0#PHP" expanded="true" />
+            <marker date="1511776543000" expanded="true" signature="5575:5666" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Configuration/Settings.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="49" lean-forward="true" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2248">
+          <caret line="164" column="64" lean-forward="false" selection-start-line="164" selection-start-column="64" selection-end-line="164" selection-end-column="64" />
+          <folding>
+            <element signature="e#252#258#0" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#f:form#0;n#div#3;n#div#0;n#f:for#0;n#f:then#0;n#f:if#0;n#!!top" expanded="true" />
+            <element signature="e#5762#5767#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

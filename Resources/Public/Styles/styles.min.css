@@ -1,2 +1,10 @@
-.price { float:right; }
+.price, .old-price, .tax { float:left; width:100%; text-align: right; }
 .old-price { text-decoration: line-through; }
+.article-description { padding-top:2rem; padding-bottom:2rem; }
+.margin-bottom { margin-bottom:2rem; }
+.opacity { opacity: 0.4;}
+
+@media only screen and (max-width:575px) {
+    .addto { width:100%; margin-top:2em; }
+    .cart-titles { display:none; }
+}

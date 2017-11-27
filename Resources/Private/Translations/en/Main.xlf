@@ -35,6 +35,39 @@
             <trans-unit id="savechanges" xml:space="preserve">
 				<source>Save changes</source>
 			</trans-unit>
+            <trans-unit id="countrymodulelabel" xml:space="preserve">
+				<source>With this module, you can edit the countries.</source>
+			</trans-unit>
+            <trans-unit id="countrymoduleactionlabel" xml:space="preserve">
+				<source>Edit countries</source>
+			</trans-unit>
+            <trans-unit id="deliverymodulelabel" xml:space="preserve">
+				<source>With this module, you can edit the shipping methods.</source>
+			</trans-unit>
+            <trans-unit id="deliverymoduleactionlabel" xml:space="preserve">
+				<source>Edit shipping methods</source>
+			</trans-unit>
+            <trans-unit id="country" xml:space="preserve">
+				<source>Country</source>
+			</trans-unit>
+            <trans-unit id="nocountries" xml:space="preserve">
+				<source>No countries available.</source>
+			</trans-unit>
+            <trans-unit id="newcountry" xml:space="preserve">
+				<source>New country</source>
+			</trans-unit>
+            <trans-unit id="deliverytype" xml:space="preserve">
+				<source>Delivery type</source>
+			</trans-unit>
+            <trans-unit id="costs" xml:space="preserve">
+				<source>Costs</source>
+			</trans-unit>
+            <trans-unit id="nodeliverytypes" xml:space="preserve">
+				<source>No Delivery types available.</source>
+			</trans-unit>
+            <trans-unit id="newdeliverytype" xml:space="preserve">
+				<source>New Delivery type</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

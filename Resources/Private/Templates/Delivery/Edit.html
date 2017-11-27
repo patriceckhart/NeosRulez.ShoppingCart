@@ -1,0 +1,17 @@
+<f:form action='update' object='{delivery}' objectName='delivery'>
+    <div class='neos-content neos-container-fluid'>
+
+        <div class='neos-control-group'>
+            <label for='name'>{f:translate(id: 'deliverytype', package: 'NeosRulez.ShoppingCart', source: 'Main')}</label>
+            <f:form.textfield property='name' id='name' />
+        </div>
+        <div class='neos-control-group'>
+            <label for='costs'>{f:translate(id: 'costs', package: 'NeosRulez.ShoppingCart', source: 'Main')}</label>
+            <f:form.textfield property='costs' id='costs' value="<f:format.currency decimalSeparator=',' thousandsSeparator='.' prependCurrency='true'>{delivery.costs}</f:format.currency>" />
+        </div>
+    </div>
+
+    <div class='neos-footer'>
+        <f:form.submit class="neos-button neos-button-primary" value="{f:translate(id: 'savechanges', package: 'NeosRulez.ShoppingCart', source: 'Main')}" />
+    </div>
+</f:form>

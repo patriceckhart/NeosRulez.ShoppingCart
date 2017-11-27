@@ -1,0 +1,206 @@
+{namespace fusion=Neos\Fusion\ViewHelpers}
+{namespace neos=Neos\Neos\ViewHelpers}
+{namespace media=Neos\Media\ViewHelpers}
+<f:if condition="{items}">
+    <f:then>
+        <div class="row cart-titles">
+            <div class="col-lg-2">
+                &nbsp;
+            </div>
+            <div class="col-lg-4">
+                <small class="text-muted">Beschreibung</small>
+            </div>
+            <div class="col-lg-2 text-right">
+                <small class="text-muted">Preise</small>
+            </div>
+            <div class="col-lg-1 text-right">
+                <small class="text-muted">Menge</small>
+            </div>
+            <div class="col-lg-2 text-right">
+                <small class="text-muted">Zwischensumme</small>
+            </div>
+            <div class="col-lg-1 text-right">
+                &nbsp;
+            </div>
+        </div>
+        <hr class="cart-titles">
+        <f:for each="{items}" as="item">
+            <div class="row">
+                <div class="col-lg-2">
+                    <img src="{item.image}" alt="" />
+                </div>
+                <div class="col-lg-4">
+                    <strong>{item.articleTitle}</strong><br />
+                    <small class="text-muted">{f:translate(id: 'articlenumber', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')}: {item.articleNumber}</small><br/>
+                    <f:format.crop maxCharacters="140"><f:format.stripTags>{item.articleDescription}</f:format.stripTags></f:format.crop>
+                </div>
+
+                <div class="col-lg-2 text-right">
+                    <f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{item.articlePrice}</f:format.currency>
+                </div>
+                <div class="col-lg-1 text-right">
+                    <f:form action="updateItem" objectName="item" controller="Cart" package="NeosRulez.ShoppingCart">
+                        <f:form.select property="quantity" class="quantityinput form-control form-control-sm" value="{item.quantity}" options="{1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: '10', 11: '11', 12: '12', 13: '13', 14: '14', 15: '15', 16: '16', 17: '17', 18: '18', 19: '19', 20: '20', 21: '21', 22: '22', 23: '23', 24: '24', 25: '25', 26: '26', 27: '27', 28: '28', 29: '29', 30: '30', 31: '31', 32: '32', 33: '33', 34: '34', 35: '35', 36: '36', 37: '37', 38: '38', 39: '39', 40: '40', 41: '41', 42: '42', 43: '43', 44: '44', 45: '45', 46: '46', 47: '47', 48: '48', 49: '49', 50: '50', 51: '51', 52: '52', 53: '53', 54: '54', 55: '55', 56: '56', 57: '57', 58: '58', 59: '59', 60: '60', 61: '61', 62: '62', 63: '63', 64: '64', 65: '65', 66: '66', 67: '67', 68: '68', 69: '69', 70: '70', 71: '71', 72: '72', 73: '73', 74: '74', 75: '75', 76: '76', 77: '77', 78: '78', 79: '79', 80: '80', 81: '81', 82: '82', 83: '83', 84: '84', 85: '85', 86: '86', 87: '87', 88: '88', 89: '89', 90: '90', 91: '91', 92: '92', 93: '93', 94: '94', 95: '95', 96: '96', 97: '97', 98: '98', 99: '99', 100: '100'}" />
+                        <f:form.hidden property="image" value="{item.image}" />
+                        <f:form.hidden property="articleTitle" value="{item.articleTitle}" />
+                        <f:form.hidden property="articleDescription" value="<f:format.stripTags>{item.articleDescription}</f:format.stripTags>" />
+                        <f:form.hidden property="articlePrice" value="{item.articlePrice}" />
+                        <f:form.hidden property="tax" value="{item.tax}" />
+                        <f:form.hidden property="taxvalue" value="{item.taxvalue}" />
+                        <f:form.hidden property="articleNumber" value="{item.articleNumber}" />
+                        <f:form.hidden name="delivery" value="{delivery}" />
+                        <button type="submit" class="btn btn-small" style="display:none;">Aktualisieren</button>
+                    </f:form>
+                </div>
+                <div class="col-lg-2 text-right">
+                    <f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{item.fullprice}</f:format.currency>
+                </div>
+                <div class="col-lg-1 text-right">
+                    <f:form action="removeItem" controller="Cart" package="NeosRulez.ShoppingCart" arguments="{id: item.timestamp}">
+                        <button type="submit" class="btn btn-sm btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                    </f:form>
+                </div>
+            </div>
+            <hr>
+        </f:for>
+        <div class="row">
+            <div class="col-7">
+                <f:link.action action="deleteCart" class="btn btn-danger" controller="cart">Warenkorb löschen</f:link.action>
+            </div>
+            <div class="col text-right">
+                <f:form action="cart" controller="Cart" package="NeosRulez.ShoppingCart">
+                    <div class="row">
+                        <div class="col"><label for="delivery" class="col-form-label">Versandart:</label></div>
+                        <div class="col"><f:form.select id="delivery" name="delivery" class="form-control delivery" value="{delivery}" options="{deliveries}" optionLabelField="name" /></div>
+                    </div>
+                </f:form>
+                <hr>
+                <div class="row">
+                    <div class="col">Zwischensumme:</div>
+                    <div class="col"><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{subtotal}</f:format.currency></div>
+                </div>
+                <div class="row">
+                    <div class="col">Versand &amp; Verpackung:</div>
+                    <div class="col"><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{deliverycosts}</f:format.currency></div>
+                </div>
+                <div class="row">
+                    <div class="col">Mehrwertsteuer:</div>
+                    <div class="col"><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{taxvalue}</f:format.currency></div>
+                </div>
+                <div class="row align-items-end">
+                    <div class="col">Gesamtsumme:</div>
+                    <div class="col"><h3><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{fullprice}</f:format.currency></h3></div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+            <f:form id="cartform" action="checkout" controller="Cart" package="NeosRulez.ShoppingCart">
+                <f:form.hidden name="subtotal" value="{subtotal}" />
+                <f:form.hidden name="taxvalue" value="{taxvalue}" />
+                <f:form.hidden name="fullprice" value="{fullprice}" />
+                <f:if condition="{items}">
+                    <f:for each="{items}" as="item" iteration="iterator">
+                        <f:form.hidden name="image{iterator.index}" value="{item.image}" />
+                        <f:form.hidden name="id{iterator.index}" value="{item.timestamp}" />
+                        <f:form.hidden name="title{iterator.index}" value="{item.articleTitle}" />
+                        <f:form.hidden name="description{iterator.index}" value="<f:format.stripTags>{item.articleDescription}</f:format.stripTags>" />
+                        <f:form.hidden name="price{iterator.index}" value="{item.articlePrice}" />
+                        <f:form.hidden name="articlenumber{iterator.index}" value="{item.articleNumber}" />
+                        <f:form.hidden name="tax{iterator.index}" value="{item.tax}" />
+                        <f:form.hidden name="taxvalue{iterator.index}" value="{item.taxvalue}" />
+                        <f:form.hidden name="quantity{iterator.index}" value="{item.quantity}" />
+                    </f:for>
+                </f:if>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h4>Rechnungsadresse</h4>
+                        <div class="form-group">
+                            <label for="company">Firma:</label>
+                            <f:form.textfield id="company" name="company" class="form-control" value="" placeholder="Firma" />
+                        </div>
+                        <div class="form-group">
+                            <label for="firstname">Vorname: *</label>
+                            <f:form.textfield id="firstname" name="firstname" class="form-control" value="" placeholder="Vorname" />
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname">Nachname: *</label>
+                            <f:form.textfield id="lastname" name="lastname" class="form-control" value="" placeholder="Nachname" />
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Adresse:</label>
+                            <f:form.textfield id="address" name="address" class="form-control" value="" placeholder="Adresse" />
+                        </div>
+                        <div class="form-group">
+                            <label for="zip">Postleitzahl:</label>
+                            <f:form.textfield id="zip" name="zip" class="form-control" value="" placeholder="Postleitzahl" />
+                        </div>
+                        <div class="form-group">
+                            <label for="city">Ort:</label>
+                            <f:form.textfield id="city" name="city" class="form-control" value="" placeholder="Ort" />
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Land:</label>
+                            <f:form.select id="country" property="country" class="form-control" options="{countries}" optionLabelField="country" />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefon: *</label>
+                            <f:form.textfield id="phone" name="phone" class="form-control" value="" placeholder="Telefon" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-Mail Adresse: *</label>
+                            <f:form.textfield id="email" name="email" class="form-control" value="" placeholder="E-Mail Adresse" />
+                        </div>
+                        <div class="form-group">
+                            <label class="custom-control custom-checkbox">
+                                <input id="ecustomdelivery" type="checkbox" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Abweichende Lieferadresse</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 custom-delivery opacity">
+                        <h4>Abweichende Lieferadresse</h4>
+                        <div class="form-group">
+                            <label for="company1">Firma:</label>
+                            <f:form.textfield id="company1" name="company1" class="form-control" value="" placeholder="Firma" />
+                        </div>
+                        <div class="form-group">
+                            <label for="firstname1">Vorname: *</label>
+                            <f:form.textfield id="firstname1" name="firstname1" class="form-control" value="" placeholder="Vorname" />
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname1">Nachname: *</label>
+                            <f:form.textfield id="lastname1" name="lastname1" class="form-control" value="" placeholder="Nachname" />
+                        </div>
+                        <div class="form-group">
+                            <label for="address1">Adresse:</label>
+                            <f:form.textfield id="address1" name="address1" class="form-control" value="" placeholder="Adresse" />
+                        </div>
+                        <div class="form-group">
+                            <label for="zip1">Postleitzahl:</label>
+                            <f:form.textfield id="zip1" name="zip1" class="form-control" value="" placeholder="Postleitzahl" />
+                        </div>
+                        <div class="form-group">
+                            <label for="city1">Ort:</label>
+                            <f:form.textfield id="city1" name="city1" class="form-control" value="" placeholder="Ort" />
+                        </div>
+                        <div class="form-group">
+                            <label for="country1">Land:</label>
+                            <f:form.select id="country1" property="country1" class="form-control" options="{countries}" optionLabelField="country" />
+                        </div>
+                    </div>
+                </div>
+
+        <div class="row">
+            <div class="col text-right">
+                <button type="submit" class="btn btn-lg btn-primary">Bestellung aufgeben</button>
+            </div>
+        </div>
+        </f:form>
+    </f:then>
+    <f:else>
+        Ihr Warenkorb ist leer.
+    </f:else>
+</f:if>
+

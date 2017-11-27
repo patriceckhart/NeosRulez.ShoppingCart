@@ -4,7 +4,7 @@
 <div{attributes -> f:format.raw()}>
 <f:flashMessages class="flashmessages" />
 <div class="row">
-    <div class="col-sm-6 lightbox">
+    <div class="col-lg-6 lightbox margin-bottom">
         <f:if condition="{image}">
             <a href="{media:uri.image(image: image, maximumWidth:800, maximumHeight:600, allowCropping:FALSE)}">
                 <media:image class="img-fluid" image="{image}" width="500" height="400" allowUpScaling="TRUE" alt="{articleTitle}" />
@@ -12,39 +12,49 @@
         </f:if>
         <f:if condition="{assets}">
             <f:for each="{assets}" as="asset">
-                <a href="{media:uri.image(image: asset, maximumWidth:800, maximumHeight:600, allowCropping:FALSE)}"><media:image image="{asset}" class="img-thumbnail" width="100" height="100" allowCropping="TRUE" allowUpScaling="TRUE" alt="" /></a>
+                <a href="{media:uri.image(image: asset, maximumWidth:800, maximumHeight:600, allowCropping:FALSE)}"><media:image image="{asset}" width="100" height="100" allowCropping="TRUE" allowUpScaling="TRUE" alt="" /></a>
             </f:for>
         </f:if>
     </div>
-    <div class="col-sm-6">
+    <div class="col-lg-6">
+        <div class="row">
+            <div class="col-sm-6">
         {f:if(condition: '{articleTitle}', then: '<h1>{articleTitle}</h1>')}
         <f:if condition="{articleNumber}"><small class="text-muted">{f:translate(id: 'articlenumber', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')}: {articleNumber}</small></f:if>
+            </div>
+            <div class="col-sm-6">
         <f:if condition="{articlePrice}">
-            <h3 class="price"><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{articlePrice}</f:format.currency></h3>
+            <h2 class="price"><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{articlePrice}</f:format.currency></h2>
         </f:if>
         <f:if condition="{articleOldPrice}">
-            <h5 class="old-price"><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{articleOldPrice}</f:format.currency></h5>
+            <h5 class="old-price text-muted font-weight-normal"><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{articleOldPrice}</f:format.currency></h5>
         </f:if>
         <f:if condition="{taxinclusive}==1">
             <f:then>
-                <small class="tax">inkl. {tax} % MwSt.</small>
+                <small class="tax">{f:translate(id: 'incl', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')} {tax} % {f:translate(id: 'tax', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')}</small>
             </f:then>
             <f:else>
                 <div class="tax">
-                    <small class="tax">exkl. {tax} % MwSt.</small>
+                    <small class="tax">{f:translate(id: 'excl', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')} {tax} % {f:translate(id: 'tax', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')}</small>
                 </div>
             </f:else>
         </f:if>
-        {neos:contentElement.editable(property: 'articleDescription')}
-
+            </div>
+        </div>
+        <div class="row article-description">
+            <div class="col">
+                {neos:contentElement.editable(property: 'articleDescription')}
+            </div>
+        </div>
         <f:if condition="{stock}==true">
             <f:then>
-                <form>
+                <f:form action="addItem" objectName="item" controller="Cart" package="NeosRulez.ShoppingCart">
                     <f:if condition="{image}"><f:then><f:form.hidden property="image" value="{media:uri.image(image: image, maximumWidth:140, maximumHeight:140, allowCropping:TRUE)}" /></f:then><f:else><f:form.hidden property="image" value="Kein Bild" /></f:else></f:if>
                     <f:form.hidden property="articleTitle" value="{articleTitle}" />
                     <f:form.hidden property="articleDescription" value="{articleDescription}" />
                     <f:form.hidden property="articlePrice" value="{articlePrice}" />
                     <f:form.hidden property="tax" value="{tax}" />
+                    <f:form.hidden property="taxinclusive" value="{taxinclusive}" />
                     <f:form.hidden property="articleNumber" value="{articleNumber}" />
                     <f:form.hidden property="nodeUri" value="<neos:uri.node absolute='{true}' />" />
                     <div class="form-group row">
@@ -59,10 +69,10 @@
                             </div>
                         </div>
                         <div class="col-sm-8">
-                            <button type="button" class="btn btn-primary btn btn-primary float-right">{f:translate(id: 'addtocart', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')}</button>
+                            <button type="submit" class="btn btn-primary btn btn-primary float-right addto">{f:translate(id: 'addtocart', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')}</button>
                         </div>
                     </div>
-                </form>
+                </f:form>
             </f:then>
             <f:else>
                 <span class="badge badge-danger">{f:translate(id: 'outofstock', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')}</span>

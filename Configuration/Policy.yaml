@@ -1,11 +1,26 @@
 privilegeTargets:
   Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege:
+    'NeosRulez.ShoppingCart:LoginControllerActions':
+      matcher: 'method(Neos\Flow\Security\Authentication\Controller\AbstractAuthenticationController->.*Action()) || method(NeosRulez\ShoppingCart\Controller\LoginController->.*Action())'
     'NeosRulez.ShoppingCart:CartControllerActions':
       matcher: 'method(NeosRulez\ShoppingCart\Controller\CartController->.*Action())'
+    'NeosRulez.ShoppingCart:CountryControllerActions':
+      matcher: 'method(NeosRulez\ShoppingCart\Controller\CountryController->.*Action())'
+    'NeosRulez.ShoppingCart:DeliveryControllerActions':
+      matcher: 'method(NeosRulez\ShoppingCart\Controller\DeliveryController->.*Action())'
 
 roles:
   'Neos.Flow:Everybody':
     privileges:
       -
+        privilegeTarget: 'NeosRulez.ShoppingCart:LoginControllerActions'
+        permission: GRANT
+      -
         privilegeTarget: 'NeosRulez.ShoppingCart:CartControllerActions'
+        permission: GRANT
+      -
+        privilegeTarget: 'NeosRulez.ShoppingCart:CountryControllerActions'
+        permission: GRANT
+      -
+        privilegeTarget: 'NeosRulez.ShoppingCart:DeliveryControllerActions'
         permission: GRANT

@@ -1,0 +1,7 @@
+-
+  name: 'Cart actions'
+  uriPattern:    'cart/{@action}'
+  defaults:
+    '@package':    'NeosRulez.ShoppingCart'
+    '@controller': 'Cart'
+  appendExceedingArguments: 'true'

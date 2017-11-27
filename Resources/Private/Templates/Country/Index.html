@@ -1,0 +1,36 @@
+<f:if condition="{countries}">
+    <f:then>
+        <table class="neos-table">
+            <thead>
+            <tr>
+                <td>{f:translate(id: 'country', package: 'NeosRulez.ShoppingCart', source: 'Main')}</td>
+                <td>ID</td>
+                <td>&nbsp;</td>
+            </tr>
+            </thead>
+            <tbody>
+            <f:for each="{countries}" as="country">
+                <tr>
+                    <td>{country.country}</td>
+                    <td><f:format.identifier>{country}</f:format.identifier></td>
+                    <td class="neos-action">
+                        <div class="neos-pull-right">
+                            <f:form action="delete" arguments="{country: country}">
+                                <f:link.action class="neos-button neos-button-primary" action="edit" arguments="{country: country}"><i class="icon-pencil icon-white"></i></f:link.action>
+
+                                <button type="submit" class="neos-button neos-button-danger"><i class="icon-remove"></i></button>
+                            </f:form>
+                        </div>
+                    </td>
+                </tr>
+            </f:for>
+            </tbody>
+        </table>
+    </f:then>
+    <f:else>
+        <br />{f:translate(id: 'nocountries', package: 'NeosRulez.ShoppingCart', source: 'Main')}
+    </f:else>
+</f:if>
+<div class="neos-footer">
+    <f:link.action class="neos-button neos-button-primary" action="new">{f:translate(id: 'newcountry', package: 'NeosRulez.ShoppingCart', source: 'Main')}</f:link.action>
+</div>

@@ -1,0 +1,13 @@
+<f:form action="update" object="{country}" objectName="country">
+    <div class="neos-content neos-container-fluid">
+
+        <div class="neos-control-group">
+            <label for="country">{f:translate(id: 'country', package: 'NeosRulez.ShoppingCart', source: 'Main')}</label>
+            <f:form.textfield property="country" id="country" />
+        </div>
+    </div>
+
+    <div class="neos-footer">
+        <f:form.submit class="neos-button neos-button-primary" value="{f:translate(id: 'savechanges', package: 'NeosRulez.ShoppingCart', source: 'Main')}" />
+    </div>
+</f:form>
