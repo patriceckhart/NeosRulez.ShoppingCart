@@ -175,6 +175,31 @@ class CartController extends ActionController
         $confirmationSubject = $this->settings['confirmationSubject'];
         $orderSubject = $this->settings['orderSubject'];
 
+        /* Invoice */
+        $company = $this->request->getArgument('company');
+        $firstname = $this->request->getArgument('firstname');
+        $lastname = $this->request->getArgument('lastname');
+        $address = $this->request->getArgument('address');
+        $zip = $this->request->getArgument('zip');
+        $city = $this->request->getArgument('city');
+        $country = $this->request->getArgument('country');
+        $phone = $this->request->getArgument('phone');
+        $invoiceemail = $this->request->getArgument('email');
+        $invoiceaddress = $company.'<br />'.$firstname.'<br />'.$lastname.'<br />'.$address.'<br />'.$zip.'<br />'.$city.'<br />'.$country.'<br />'.$phone.'<br />'.$invoiceemail;
+
+        /* Delivery */
+        $company1 = $this->request->getArgument('company1');
+        $firstname1 = $this->request->getArgument('firstname1');
+        $lastname1 = $this->request->getArgument('lastname1');
+        $address1 = $this->request->getArgument('address1');
+        $zip1 = $this->request->getArgument('zip1');
+        $city1 = $this->request->getArgument('city1');
+        $country1 = $this->request->getArgument('country1');
+        $deliveryaddress = $company1.'<br />'.$firstname1.'<br />'.$lastname1.'<br />'.$address1.'<br />'.$zip1.'<br />'.$city1.'<br />'.$country1;
+
+        /* Prices */
+
+
         /* Confirmation */
         $cart = $this->cart->cart();
         $cartcount = count($cart);
@@ -197,174 +222,30 @@ class CartController extends ActionController
             $subtotal = $priceraw - $taxvalue;
 
             $mailoutput .= '
-            <tr>
-		        <td>'.$quantity.'</td>
-                <td>'.$title.'</td>
-                <td>'.$price.'</td>
-                <td>'.$price*$quantity.'</td>
-            </tr>';
+           
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tbody>
+                <tr>
+                  <td width="150" height="30" align="left" valign="middle">'.$quantity.'</td>
+                  <td align="left" valign="middle">'.$title.'</td>
+                  <td width="150" align="right" valign="middle">'.$price.'</td>
+                  <td width="150" align="right" valign="middle">'.$price*$quantity.'</td>
+                </tr>
+              </tbody>
+            </table>';
 
         }
 
 
 $mail = '
-
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tbody>
-    <tr>
-      <td align="center" valign="top"><table width="900" border="0" cellspacing="0" cellpadding="0">
-        <tbody>
-          <tr>
-            <td><table width="900" border="0" cellspacing="0" cellpadding="0">
-              <tbody>
-                <tr>
-					<td width="50%" height="100"><h2>Bestellung</h2></td>
-                  <td align="right" valign="middle">Logo</td>
-                </tr>
-                <tr>
-                  <td height="30" align="left" valign="middle"><strong>Rechnungsadresse</strong></td>
-                  <td align="left" valign="middle"><strong>Lieferadresse</strong></td>
-                </tr>
-                <tr>
-                  <td align="left" valign="top">Rechnungsadresse</td>
-                  <td align="left" valign="top">Rechnungsadresse</td>
-                </tr>
-                <tr>
-                  <td height="20">&nbsp;</td>
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <td height="30" align="left" valign="middle"><strong>Versandart:</strong> Versandart</td>
-                  <td><strong>Lieferkosten:</strong> Lieferkosten</td>
-                </tr>
-                <tr>
-                  <td height="50">&nbsp;</td>
-                  <td>&nbsp;</td>
-                </tr>
-              </tbody>
-            </table></td>
-          </tr>
-          <tr>
-            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tbody>
-                <tr>
-                  <td width="150" height="30" align="left" valign="middle"><strong>Menge</strong></td>
-                  <td align="left" valign="middle"><strong>Beschreibung</strong></td>
-                  <td width="150" align="right" valign="middle"><strong>Einzelpreis</strong></td>
-                  <td width="150" align="right" valign="middle"><strong>Preis</strong></td>
-                </tr>
-              </tbody>
-            </table></td>
-          </tr>
-          <tr>
-            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tbody>
-                <tr>
-                  <td width="150" height="30" align="left" valign="middle">5</td>
-                  <td align="left" valign="middle">iPhone</td>
-                  <td width="150" align="right" valign="middle">100</td>
-                  <td width="150" align="right" valign="middle">500</td>
-                </tr>
-              </tbody>
-            </table>
-              <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                <tbody>
-                  <tr>
-                    <td width="150" height="30" align="left" valign="middle">5</td>
-                    <td align="left" valign="middle">iPhone</td>
-                    <td width="150" align="right" valign="middle">100</td>
-                    <td width="150" align="right" valign="middle">500</td>
-                  </tr>
-                </tbody>
-              </table>
-              <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                <tbody>
-                  <tr>
-                    <td width="150" height="30" align="left" valign="middle">5</td>
-                    <td align="left" valign="middle">iPhone</td>
-                    <td width="150" align="right" valign="middle">100</td>
-                    <td width="150" align="right" valign="middle">500</td>
-                  </tr>
-                </tbody>
-              </table>
-              <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                <tbody>
-                  <tr>
-                    <td width="150" height="30" align="left" valign="middle">5</td>
-                    <td align="left" valign="middle">iPhone</td>
-                    <td width="150" align="right" valign="middle">100</td>
-                    <td width="150" align="right" valign="middle">500</td>
-                  </tr>
-                </tbody>
-              </table>
-              <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                <tbody>
-                  <tr>
-                    <td width="150" height="30" align="left" valign="middle">5</td>
-                    <td align="left" valign="middle">iPhone</td>
-                    <td width="150" align="right" valign="middle">100</td>
-                    <td width="150" align="right" valign="middle">500</td>
-                  </tr>
-                </tbody>
-              </table>
-              <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                <tbody>
-                  <tr>
-                    <td width="150" height="30" align="left" valign="middle">5</td>
-                    <td align="left" valign="middle">iPhone</td>
-                    <td width="150" align="right" valign="middle">100</td>
-                    <td width="150" align="right" valign="middle">500</td>
-                  </tr>
-                </tbody>
-              </table></td>
-          </tr>
-          <tr>
-            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tbody>
-                <tr>
-                  <td height="200">Copyright</td>
-                </tr>
-              </tbody>
-            </table></td>
-          </tr>
-        </tbody>
-      </table></td>
-    </tr>
-  </tbody>
-</table>
-
+Mailvorlage
 ';
-
-
-        $mailbody = '
-        <table width="900" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-		<td>Menge</td>
-      <td>Beschreibung</td>
-      <td>Einzelpreis</td>
-      <td>Preis</td>
-    </tr>
-            <tbody>
-                <tr>
-                    <td>'.$mailoutput.'</td>
-                </tr>
-            </tbody>
-        </table>
-        ';
 
         $email = "me@patric.at";
 
-        $confirmationbody = '
-        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-            <tbody>
-                <tr>
-                    <td align="center" valign="top">'.$mailbody.'</td>
-                </tr>
-            </tbody>
-        </table>
-        ';
+        $confirmationbody = $mail;
 
-        $orderbody = 'Bestellung: <br />'.$mailbody;
+        $orderbody = $mail;
 
 
         $confirmation = new \Neos\SwiftMailer\Message();
