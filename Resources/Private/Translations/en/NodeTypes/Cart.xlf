@@ -74,6 +74,9 @@
             <trans-unit id="emptycart" xml:space="preserve">
 				<source>Your cart is empty</source>
 			</trans-unit>
+            <trans-unit id="payorder" xml:space="preserve">
+				<source>Go to Payment</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

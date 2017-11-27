@@ -144,6 +144,9 @@ class CartController extends ActionController
         $this->view->assign('countries', $this->countryRepository->findAll());
         $this->view->assign('deliveries', $this->deliveryRepository->findAll());
 
+        $paypal = $this->settings['paypalIntegration'];
+        $this->view->assign('paypal', $paypal);
+
     }
 
     /**

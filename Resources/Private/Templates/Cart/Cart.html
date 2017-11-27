@@ -194,7 +194,14 @@
 
         <div class="row">
             <div class="col text-right">
-                <button type="submit" class="btn btn-lg btn-primary">{f:translate(id: 'placeorder', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}</button>
+                <f:if condition="{paypal}==1">
+                    <f:then>
+                        <button type="submit" class="btn btn-lg btn-primary">{f:translate(id: 'payorder', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}</button>
+                    </f:then>
+                    <f:else>
+                        <button type="submit" class="btn btn-lg btn-primary">{f:translate(id: 'placeorder', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}</button>
+                    </f:else>
+                </f:if>
             </div>
         </div>
         </f:form>
