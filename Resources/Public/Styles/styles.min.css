@@ -3,6 +3,8 @@
 .article-description { padding-top:2rem; padding-bottom:2rem; }
 .margin-bottom { margin-bottom:2rem; }
 .opacity { opacity: 0.4;}
+.ulalert, .ulalert li { display:block; margin:0; padding:0; }
+.ulalert { padding:1rem; margin-bottom:2rem; }
 
 @media only screen and (max-width:575px) {
     .addto { width:100%; margin-top:2em; }
