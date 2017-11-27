@@ -5,6 +5,18 @@
 			<trans-unit id="ui.label" xml:space="preserve">
 				<source>Mini cart</source>
 			</trans-unit>
+            <trans-unit id="cart" xml:space="preserve">
+				<source>Cart</source>
+			</trans-unit>
+            <trans-unit id="article" xml:space="preserve">
+				<source>Article</source>
+			</trans-unit>
+            <trans-unit id="gotocart" xml:space="preserve">
+				<source>To the cart</source>
+			</trans-unit>
+            <trans-unit id="emptycart" xml:space="preserve">
+				<source>Your cart is empty</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

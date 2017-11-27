@@ -5,6 +5,18 @@
 			<trans-unit id="ui.label" xml:space="preserve">
 				<source>Mini Warenkorb</source>
 			</trans-unit>
+            <trans-unit id="cart" xml:space="preserve">
+				<source>Warenkorb</source>
+			</trans-unit>
+            <trans-unit id="article" xml:space="preserve">
+				<source>Artikel</source>
+			</trans-unit>
+            <trans-unit id="gotocart" xml:space="preserve">
+				<source>Zum Warenkorb</source>
+			</trans-unit>
+            <trans-unit id="emptycart" xml:space="preserve">
+				<source>Ihr Warenkorb ist leer</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

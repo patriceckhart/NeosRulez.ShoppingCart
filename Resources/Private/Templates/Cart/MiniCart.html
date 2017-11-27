@@ -3,12 +3,12 @@
 <f:if condition="{result}=!0">
     <f:then>
     <div class="minicart">
-        <h3>Warenkorb</h3>
-        <i class="fa fa-shopping-cart" aria-hidden="true"></i> {result} Artikel<br/>
-        <a href="{linkToCart}">Zum Warenkorb</a>
+        <h3>{f:translate(id: 'cart', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/MiniCart')}</h3>
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i> {result} {f:translate(id: 'article', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/MiniCart')}<br/>
+        <a href="{linkToCart}">{f:translate(id: 'gotocart', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/MiniCart')}</a>
     </div>
     </f:then>
     <f:else>
-        Keine Artikel im Warenkorb
+        {f:translate(id: 'emptycart', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/MiniCart')}.
     </f:else>
 </f:if>

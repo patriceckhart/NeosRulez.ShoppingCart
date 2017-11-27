@@ -223,13 +223,13 @@ class CartController extends ActionController
 
             $mailoutput .= '
            
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <table width="100%" border="0" cellspacing="0" cellpadding="10">
               <tbody>
                 <tr>
                   <td width="150" height="30" align="left" valign="middle">'.$quantity.'</td>
                   <td align="left" valign="middle">'.$title.'</td>
-                  <td width="150" align="right" valign="middle">'.$price.'</td>
-                  <td width="150" align="right" valign="middle">'.$price*$quantity.'</td>
+                  <td width="150" align="right" valign="middle">'.money_format('%=*^-14#8.2i', $price).'</td>
+                  <td width="150" align="right" valign="middle">'.money_format('%=*^-14#8.2i', $price*$quantity).'</td>
                 </tr>
               </tbody>
             </table>';
@@ -237,15 +237,71 @@ class CartController extends ActionController
         }
 
 
-$mail = '
-Mailvorlage
-';
+        $mail = '
+        
+        <style>
+	body { font-family: Helvetica, Arial, Sans-Serif; background:#EBEBEB; padding:40px; }
+</style>
+
+<div style="width:900px; margin:0 auto;">
+	<div style="float:left; width:860px; padding:20px; background:#FFFFFF;">
+
+		<div style="float:left; width:100%;"">
+			<div style="float:left; width:50%;">
+				<h1>{title}</h1>
+			</div>
+			<div style="float:left; width:50%; text-align:right;">
+				Logo
+			</div>
+		</div>
+
+		<div style="float:left; width:100%;"">
+			<div style="float:left; width:50%;">
+				<h3>Rechnungsadresse</h3>
+				Lorem ipsum
+			</div>
+
+			<div style="float:left; width:50%;">
+				<h3>Lieferadresse</h3>
+				Lorem ipsum
+			</div>
+		</div>
+
+		<div style="float:left; width:100%; margin-top:20px; margin-bottom:20px;">
+			<h3>Versandoptionen</h3>
+			Lorem ipsum
+		</div>
+
+		<div style="float:left; width:100%; margin-top:20px; margin-bottom:20px;">
+			
+			<table width="100%" border="0" cellspacing="0" cellpadding="10" style="background:#EBEBEB;">
+              <tbody>
+                <tr>
+                  <td width="150" height="30" align="left" valign="middle" style="border-right:1px solid #FFFFFF;">Menge</td>
+                  <td align="left" valign="middle" style="border-right:1px solid #FFFFFF;">Beschreibung</td>
+                  <td width="150" align="right" valign="middle" style="border-right:1px solid #FFFFFF;">Preis</td>
+                  <td width="150" align="right" valign="middle">Gesamtpreis</td>
+                </tr>
+              </tbody>
+            </table>
+
+            '.$mailoutput.'
+
+		</div>
+
+		<div style="float:left; width:100%; margin-top:20px; margin-bottom:20px;">
+			Copyright
+		</div>
+
+	</div>
+</div>
+        ';
 
         $email = "me@patric.at";
 
-        $confirmationbody = $mail;
+        $confirmationbody = str_replace("{title}","Bestellbestätigung",$mail);
 
-        $orderbody = $mail;
+        $orderbody = str_replace("{title}","Bestelllung",$mail);
 
 
         $confirmation = new \Neos\SwiftMailer\Message();

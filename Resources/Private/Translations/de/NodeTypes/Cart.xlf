@@ -5,6 +5,75 @@
 			<trans-unit id="ui.label" xml:space="preserve">
 				<source>Warenkorb</source>
 			</trans-unit>
+			<trans-unit id="description" xml:space="preserve">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="price" xml:space="preserve">
+				<source>Preis</source>
+			</trans-unit>
+            <trans-unit id="quantity" xml:space="preserve">
+				<source>Anzahl</source>
+			</trans-unit>
+            <trans-unit id="subtotal" xml:space="preserve">
+				<source>Zwischensumme</source>
+			</trans-unit>
+            <trans-unit id="refresh" xml:space="preserve">
+				<source>Aktualisieren</source>
+			</trans-unit>
+            <trans-unit id="deletecart" xml:space="preserve">
+				<source>Warenkorb löschen</source>
+			</trans-unit>
+            <trans-unit id="deliverytype" xml:space="preserve">
+				<source>Versandart</source>
+			</trans-unit>
+            <trans-unit id="deliveryandpackage" xml:space="preserve">
+				<source>Versand &amp; Verpackung</source>
+			</trans-unit>
+            <trans-unit id="tax" xml:space="preserve">
+				<source>Mehrwertsteuer</source>
+			</trans-unit>
+            <trans-unit id="total" xml:space="preserve">
+				<source>Gesamtsumme</source>
+			</trans-unit>
+            <trans-unit id="invoiceaddress" xml:space="preserve">
+				<source>Rechnungsadresse</source>
+			</trans-unit>
+            <trans-unit id="deliveryaddress" xml:space="preserve">
+				<source>Abweichende Lieferadresse</source>
+			</trans-unit>
+            <trans-unit id="formcompany" xml:space="preserve">
+				<source>Firma</source>
+			</trans-unit>
+            <trans-unit id="formfirstname" xml:space="preserve">
+				<source>Vorname</source>
+			</trans-unit>
+            <trans-unit id="formlastname" xml:space="preserve">
+				<source>Nachname</source>
+			</trans-unit>
+            <trans-unit id="formaddress" xml:space="preserve">
+				<source>Adresse</source>
+			</trans-unit>
+            <trans-unit id="formzip" xml:space="preserve">
+				<source>Postleitzahl</source>
+			</trans-unit>
+            <trans-unit id="formcity" xml:space="preserve">
+				<source>Ort</source>
+			</trans-unit>
+            <trans-unit id="formcountry" xml:space="preserve">
+				<source>Land</source>
+			</trans-unit>
+            <trans-unit id="formphone" xml:space="preserve">
+				<source>Telefon</source>
+			</trans-unit>
+            <trans-unit id="formemail" xml:space="preserve">
+				<source>E-Mail Adresse</source>
+			</trans-unit>
+            <trans-unit id="placeorder" xml:space="preserve">
+				<source>Bestellung aufgeben</source>
+			</trans-unit>
+            <trans-unit id="emptycart" xml:space="preserve">
+				<source>Ihr Warenkorb ist leer</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
