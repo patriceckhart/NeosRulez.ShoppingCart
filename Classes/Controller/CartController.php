@@ -199,7 +199,6 @@ class CartController extends ActionController
 
         /* Prices */
 
-
         /* Confirmation */
         $cart = $this->cart->cart();
         $cartcount = count($cart);
@@ -214,10 +213,6 @@ class CartController extends ActionController
             $articlenumber = $innerarray['articleNumber'];
             $tax = $innerarray['tax'];
             $taxvalue = $innerarray['taxvalue'];
-
-            //$priceraw = str_replace(',', '.', $price);
-            //$subtotal = $priceraw - $taxvalue;
-
             $priceraw = $price;
             $subtotal = $priceraw - $taxvalue;
 
@@ -290,23 +285,20 @@ class CartController extends ActionController
 		</div>
 
 		<div style="float:left; width:100%; margin-top:20px; margin-bottom:20px;">
-			Copyright
+			-- <br />
+			Dies ist ein automatisch generiertes Mail, bitte antworten Sie nicht darauf.
 		</div>
 
 	</div>
 </div>
         ';
 
-        $email = "me@patric.at";
-
-        $confirmationbody = str_replace("{title}","Bestellbestätigung",$mail);
-
-        $orderbody = str_replace("{title}","Bestelllung",$mail);
-
+        $confirmationbody = str_replace("{title}", $confirmationSubject, $mail);
+        $orderbody = str_replace("{title}", $orderSubject, $mail);
 
         $confirmation = new \Neos\SwiftMailer\Message();
         $confirmation->setFrom(array($senderEmailAddress))
-            ->setTo(array($email))
+            ->setTo(array($invoiceemail))
             ->setSubject($confirmationSubject)
             ->setBody($confirmationbody, 'text/html')
             ->send();

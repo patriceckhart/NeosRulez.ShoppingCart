@@ -44,8 +44,8 @@ Neos:
 NeosRulez:
   ShoppingCart:
     taxinclusive: true
-    linkToCart: 'warenkorb.html'
-    linkToHome: 'de/shop.html'
+    linkToCart: '/de/shop/warenkorb.html'
+    linkToHome: '/de/shop.html'
     standardDelivery: '7f5280e4-5820-44c3-87b7-14bdb829ed97'
     senderEmailAddress: 'postmaster@patriceckhart.com'
     orderEmailAddress: 'mail@patriceckhart.com'
