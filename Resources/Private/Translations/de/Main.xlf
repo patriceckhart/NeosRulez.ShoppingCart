@@ -66,7 +66,7 @@
 				<source>Keine Versandarten verfügbar.</source>
 			</trans-unit>
             <trans-unit id="newdeliverytype" xml:space="preserve">
-				<source>Neue Versandarten erstellen.</source>
+				<source>Neue Versandarten erstellen</source>
 			</trans-unit>
 		</body>
 	</file>

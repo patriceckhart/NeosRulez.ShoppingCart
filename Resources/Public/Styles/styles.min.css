@@ -1,13 +1,1 @@
-.price, .old-price, .tax { float:left; width:100%; text-align: right; }
-.old-price { text-decoration: line-through; }
-.article-description { padding-top:2rem; padding-bottom:2rem; }
-.margin-bottom { margin-bottom:2rem; }
-.opacity { opacity: 0.4;}
-.ulalert, .ulalert li { display:block; margin:0; padding:0; }
-.ulalert { padding:1rem; margin-bottom:2rem; }
-
-@media only screen and (max-width:575px) {
-    .addto { width:100%; margin-top:2em; }
-    .cart-titles { display:none; }
-    .shop-btn { width:100%; }
-}
+.old-price,.price,.tax{float:left;width:100%;text-align:right}.old-price{text-decoration:line-through}.article-description{padding-top:2rem;padding-bottom:2rem}.margin-bottom{margin-bottom:2rem}.opacity{opacity:.4}.ulalert,.ulalert li{display:block;margin:0;padding:0}.ulalert{padding:1rem;margin-bottom:2rem}@media only screen and (max-width:575px){.addto{width:100%;margin-top:2em}.cart-titles{display:none}.shop-btn{width:100%}}

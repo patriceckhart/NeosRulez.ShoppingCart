@@ -43,7 +43,7 @@ Neos:
                 title: NeosRulez.ShoppingCart:Main:deliverymoduleactionlabel
 NeosRulez:
   ShoppingCart:
-    taxinclusive: true
+    taxinclusive: false
     linkToCart: '/de/shop/warenkorb.html'
     linkToHome: '/de/shop.html'
     standardDelivery: '7f5280e4-5820-44c3-87b7-14bdb829ed97'
@@ -51,6 +51,4 @@ NeosRulez:
     orderEmailAddress: 'mail@patriceckhart.com'
     confirmationSubject: 'Bestellbestätigung'
     orderSubject: 'Bestellung'
-    paypalIntegration: true
-    paypalAccount: 'payments@landmarkt.at'
-    paypalReturnUri: 'dev.localhost/'
+    mailLogo: 'http://dev.localhost/_Resources/Persistent/da2b254877a5c7bb4155ee4f112495899ac075ef/Testlogo.png'

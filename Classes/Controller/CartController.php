@@ -134,7 +134,7 @@ class CartController extends ActionController
         if($taxinclusive==true) {
             $this->view->assign('fullprice', $sumExcl);
         } else {
-            $this->view->assign('fullprice', $sumExcl);
+            $this->view->assign('fullprice', $sumExcl+$sumTax);
         }
 
         $this->view->assign('taxvalue', $sumTax);
@@ -144,8 +144,7 @@ class CartController extends ActionController
         $this->view->assign('countries', $this->countryRepository->findAll());
         $this->view->assign('deliveries', $this->deliveryRepository->findAll());
 
-        $paypal = $this->settings['paypalIntegration'];
-        $this->view->assign('paypal', $paypal);
+
 
     }
 
@@ -177,7 +176,7 @@ class CartController extends ActionController
         $senderEmailAddress = $this->settings['senderEmailAddress'];
         $confirmationSubject = $this->settings['confirmationSubject'];
         $orderSubject = $this->settings['orderSubject'];
-        $paypal = $this->settings['paypalIntegration'];
+        $mailLogo = $this->settings['mailLogo'];
 
         /* Invoice */
         $company = $this->request->getArgument('company');
@@ -189,17 +188,54 @@ class CartController extends ActionController
         $country = $this->request->getArgument('country');
         $phone = $this->request->getArgument('phone');
         $invoiceemail = $this->request->getArgument('email');
-        $invoiceaddress = $company.'<br />'.$firstname.'<br />'.$lastname.'<br />'.$address.'<br />'.$zip.'<br />'.$city.'<br />'.$country.'<br />'.$phone.'<br />'.$invoiceemail;
+        $invoiceaddress = $company.'<br />'.$firstname.' '.$lastname.'<br />'.$address.'<br />'.$zip.' '.$city.'<br />'.$country.'<br />'.$phone.'<br />'.$invoiceemail;
+
+
+        $delivery = $this->request->getArgument('delivery');
+        $deliveries = '\NeosRulez\ShoppingCart\Domain\Model\Delivery';
+        $query = $this->persistenceManager->createQueryForType($deliveries);
+        $result = $query->matching($query->equals('Persistence_Object_Identifier', $delivery))->execute()->getFirst();
+        $deliverycosts = $result->getCosts();
+        $deliveryname = $result->getName();
 
         /* Delivery */
-        $company1 = $this->request->getArgument('company1');
-        $firstname1 = $this->request->getArgument('firstname1');
-        $lastname1 = $this->request->getArgument('lastname1');
-        $address1 = $this->request->getArgument('address1');
-        $zip1 = $this->request->getArgument('zip1');
-        $city1 = $this->request->getArgument('city1');
-        $country1 = $this->request->getArgument('country1');
-        $deliveryaddress = $company1.'<br />'.$firstname1.'<br />'.$lastname1.'<br />'.$address1.'<br />'.$zip1.'<br />'.$city1.'<br />'.$country1;
+        if ($this->request->hasArgument('company1')) {
+            $company1 = $this->request->getArgument('company1');
+        } else {
+            $company1 = $this->request->getArgument('company');
+        }
+        if ($this->request->hasArgument('firstname1')) {
+            $firstname1 = $this->request->getArgument('firstname1');
+        } else {
+            $firstname1 = $this->request->getArgument('firstname');
+        }
+        if ($this->request->hasArgument('lastname1')) {
+            $lastname1 = $this->request->getArgument('lastname1');
+        } else {
+            $lastname1 = $this->request->getArgument('lastname');
+        }
+        if ($this->request->hasArgument('address1')) {
+            $address1 = $this->request->getArgument('address1');
+        } else {
+            $address1 = $this->request->getArgument('address');
+        }
+        if ($this->request->hasArgument('zip1')) {
+            $zip1 = $this->request->getArgument('zip1');
+        } else {
+            $zip1 = $this->request->getArgument('zip');
+        }
+        if ($this->request->hasArgument('city1')) {
+            $city1 = $this->request->getArgument('city1');
+        } else {
+            $city1 = $this->request->getArgument('city');
+        }
+        if ($this->request->hasArgument('country1')) {
+            $country1 = $this->request->getArgument('country1');
+        } else {
+            $country1 = $this->request->getArgument('country');
+        }
+
+        $deliveryaddress = $company1.'<br />'.$firstname1.' '.$lastname1.'<br />'.$address1.'<br />'.$zip1.' '.$city1.'<br />'.$country1;
 
         /* Prices */
 
@@ -207,6 +243,11 @@ class CartController extends ActionController
         $cart = $this->cart->cart();
         $cartcount = count($cart);
         $mailoutput = "";
+
+        $sumsubtotal = floatval($this->request->getArgument('subtotal'));
+        $sumdeliverycosts = floatval($this->request->getArgument('deliverycosts'));
+        $sumtaxvalue = floatval($this->request->getArgument('taxvalue'));
+        $sumfullprice = floatval($this->request->getArgument('fullprice'));
 
         for ($i = 0; $i < $cartcount; $i++) {
             $innerarray = $cart[$i];
@@ -250,25 +291,25 @@ class CartController extends ActionController
 				<h1>{title}</h1>
 			</div>
 			<div style="float:left; width:50%; text-align:right;">
-				Logo
+				<img src="'.$mailLogo.'" alt="" />
 			</div>
 		</div>
 
 		<div style="float:left; width:100%;"">
 			<div style="float:left; width:50%;">
 				<h3>Rechnungsadresse</h3>
-				Lorem ipsum
+				'.$invoiceaddress.'
 			</div>
 
 			<div style="float:left; width:50%;">
 				<h3>Lieferadresse</h3>
-				Lorem ipsum
+				'.$deliveryaddress.'
 			</div>
 		</div>
 
 		<div style="float:left; width:100%; margin-top:20px; margin-bottom:20px;">
 			<h3>Versandoptionen</h3>
-			Lorem ipsum
+			'.$deliveryname.' ('.money_format('%=*^-14#8.2i',$deliverycosts).')
 		</div>
 
 		<div style="float:left; width:100%; margin-top:20px; margin-bottom:20px;">
@@ -285,6 +326,17 @@ class CartController extends ActionController
             </table>
 
             '.$mailoutput.'
+            
+            <table width="100%" border="0" cellspacing="0" cellpadding="10">
+              <tbody>
+                <tr>
+                  <td width="150" height="30" align="left" valign="middle"></td>
+                  <td align="left" valign="middle"></td>
+                  <td width="150" align="right" valign="middle">Zwischensumme:<br />Versand &amp; Verpackung:<br />Mehrwertsteuer:<br />Gesamtsumme:</td>
+                  <td width="150" align="right" valign="middle">'.money_format('%=*^-14#8.2i', $sumsubtotal).'<br />'.money_format('%=*^-14#8.2i', $sumdeliverycosts).'<br />'.money_format('%=*^-14#8.2i', $sumtaxvalue).'<br /><strong>'.money_format('%=*^-14#8.2i', $sumfullprice).'</strong></td>
+                </tr>
+              </tbody>
+            </table>
 
 		</div>
 
@@ -316,49 +368,7 @@ class CartController extends ActionController
 
         $this->cart->deleteCart();
         $linkToCart = $this->settings['linkToCart'];
-
-        if ($paypal==true) {
-
-            echo '
-<form name="payform" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-
-	<input type="hidden" name="cmd" value="_xclick">
-	<input type="hidden" name="hosted_button_id" value="LTRDGNR38ZH6A">
-	<input type="hidden" name="business" value="payments@landmarkt.at">  
-	
-	<input type="hidden" name="tax" value="0">
-	<input type="hidden" name="quantity" value="1">
-	<input type="hidden" name="no_note" value="1">
-	<input type="hidden" name="address_override" value="1">
-	<input type="hidden" name="first_name" value="'.$firstname.'">  
-	<input type="hidden" name="last_name" value="'.$lastname.'">  
-	<input type="hidden" name="address1" value="'.$address.'">  
-	<input type="hidden" name="city" value="'.$city.'">  
-	<input type="hidden" name="state" value="-">  
-	<input type="hidden" name="zip" value="'.$zip.'">  
-	<input type="hidden" name="email" value="'.$invoiceemail.'"> 
-	<input type="hidden" name="country" value="'.$country.'">
-	
-	<input type="hidden" name="item_name" value="-">
-	<input type="hidden" name="item_number" value="-">
-	
-	<input type="hidden" name="return" value="http://www.eggnog.at/bestellen/erfolgreich.html">
-	<input type="hidden" name="currency_code" value="EUR">
-	
-	<input type="hidden" name="amount" id="amount" value="-">
-		
-		<div style="text-align:center; margin-top:200px; font-family:Arial;">
-<strong>Einen kurzen Augenblick. Sie werden zur Zahlung weitergeleitet.</strong><br /><br />
-Sollte Ihr Browser die automatische Weiterleitung nicht unterstützen, klicken Sie bitte auf die folgende Schaltfläche<br /><br />
-<input type="image" name="submit" border="0" src="https://www.paypal.com/de_DE/i/btn/btn_paynow_LG.gif" alt="PayPal - The safer, easier way to pay online">
-</div>
-</form>
-';
-
-        } else {
-            $this->redirectToUri($linkToCart);
-        }
-
+        $this->redirectToUri($linkToCart);
 
     }
 

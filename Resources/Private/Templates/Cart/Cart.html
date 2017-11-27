@@ -34,9 +34,18 @@
                     <small class="text-muted">{f:translate(id: 'articlenumber', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')}: {item.articleNumber}</small><br/>
                     <f:format.crop maxCharacters="140"><f:format.stripTags>{item.articleDescription}</f:format.stripTags></f:format.crop>
                 </div>
-
                 <div class="col-lg-2 text-right">
-                    <f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{item.articlePrice}</f:format.currency>
+                    <f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{item.articlePrice}</f:format.currency><br />
+                    <small class="text-muted">
+                        <f:if condition="{taxinclusive}==1">
+                            <f:then>
+                                {f:translate(id: 'incl', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')} {item.tax} % {f:translate(id: 'tax', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')}
+                            </f:then>
+                            <f:else>
+                                {f:translate(id: 'excl', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')} {item.tax} % {f:translate(id: 'tax', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')}
+                            </f:else>
+                        </f:if>
+                    </small>
                 </div>
                 <div class="col-lg-1 text-right">
                     <f:form action="updateItem" objectName="item" controller="Cart" package="NeosRulez.ShoppingCart">
@@ -53,7 +62,17 @@
                     </f:form>
                 </div>
                 <div class="col-lg-2 text-right">
-                    <f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{item.fullprice}</f:format.currency>
+                    <f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{item.fullprice}</f:format.currency><br />
+                    <small class="text-muted">
+                        <f:if condition="{taxinclusive}==1">
+                            <f:then>
+                                {f:translate(id: 'incl', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')} {item.tax} % {f:translate(id: 'tax', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')}
+                            </f:then>
+                            <f:else>
+                                {f:translate(id: 'excl', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')} {item.tax} % {f:translate(id: 'tax', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')}
+                            </f:else>
+                        </f:if>
+                    </small>
                 </div>
                 <div class="col-lg-1 text-right">
                     <f:form action="removeItem" controller="Cart" package="NeosRulez.ShoppingCart" arguments="{id: item.timestamp}">
@@ -83,13 +102,15 @@
                     <div class="col">{f:translate(id: 'deliveryandpackage', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}:</div>
                     <div class="col"><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{deliverycosts}</f:format.currency></div>
                 </div>
+                <f:if condition="{taxinclusive}==0">
                 <div class="row">
                     <div class="col">{f:translate(id: 'tax', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}:</div>
                     <div class="col"><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{taxvalue}</f:format.currency></div>
                 </div>
+                </f:if>
                 <div class="row align-items-end">
                     <div class="col">{f:translate(id: 'total', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}:</div>
-                    <div class="col"><h3><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{fullprice}</f:format.currency></h3></div>
+                    <div class="col"><h3 class="fullprice"><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{fullprice}</f:format.currency></h3></div>
                 </div>
             </div>
         </div>
@@ -98,6 +119,8 @@
             <f:form id="cartform" action="checkout" controller="Cart" package="NeosRulez.ShoppingCart">
                 <f:form.hidden name="subtotal" value="{subtotal}" />
                 <f:form.hidden name="taxvalue" value="{taxvalue}" />
+                <f:form.hidden name="delivery" value="{delivery}" />
+                <f:form.hidden name="deliverycosts" value="{deliverycosts}" />
                 <f:form.hidden name="fullprice" value="{fullprice}" />
                 <f:if condition="{items}">
                     <f:for each="{items}" as="item" iteration="iterator">
@@ -141,7 +164,7 @@
                         </div>
                         <div class="form-group">
                             <label for="country">{f:translate(id: 'formcountry', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}<span class="required">*</span></label>
-                            <f:form.select id="country" name="country" class="form-control" options="{countries}" optionLabelField="country" />
+                            <f:form.select id="country" name="country" class="form-control" options="{countries}" optionLabelField="country" optionValueField="country" />
                         </div>
                         <div class="form-group">
                             <label for="phone">{f:translate(id: 'formphone', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}<span class="required">*</span></label>
@@ -187,21 +210,14 @@
                         </div>
                         <div class="form-group">
                             <label for="country1">{f:translate(id: 'formcountry', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}<span class="required">*</span></label>
-                            <f:form.select id="country1" name="country1" class="form-control" options="{countries}" optionLabelField="country" />
+                            <f:form.select id="country1" name="country1" class="form-control" options="{countries}" optionLabelField="country" optionValueField="country" />
                         </div>
                     </div>
                 </div>
 
         <div class="row">
             <div class="col text-right">
-                <f:if condition="{paypal}==1">
-                    <f:then>
-                        <button type="submit" class="btn btn-lg btn-primary">{f:translate(id: 'payorder', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}</button>
-                    </f:then>
-                    <f:else>
-                        <button type="submit" class="btn btn-lg btn-primary">{f:translate(id: 'placeorder', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}</button>
-                    </f:else>
-                </f:if>
+                <button type="submit" id="submitbtn" class="btn btn-lg btn-primary">{f:translate(id: 'placeorder', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}</button>
             </div>
         </div>
         </f:form>
