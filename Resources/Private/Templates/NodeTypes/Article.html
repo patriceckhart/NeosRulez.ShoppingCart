@@ -24,10 +24,10 @@
             </div>
             <div class="col-sm-6">
         <f:if condition="{articlePrice}">
-            <h2 class="price">€ {articlePrice}</h2>
+            <h2 class="price"><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{articlePrice}</f:format.currency></h2>
         </f:if>
         <f:if condition="{articleOldPrice}">
-            <h5 class="old-price text-muted font-weight-normal">€ {articleOldPrice}</h5>
+            <h5 class="old-price text-muted font-weight-normal"><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{articleOldPrice}</f:format.currency></h5>
         </f:if>
         <f:if condition="{taxinclusive}==1">
             <f:then>

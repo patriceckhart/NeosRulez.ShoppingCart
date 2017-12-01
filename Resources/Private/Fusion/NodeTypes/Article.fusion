@@ -1,7 +1,7 @@
 prototype(Site:Article) {
     articleTitle = ${q(documentNode).property('articleTitle')}
-    articlePrice = ${q(documentNode).property('articlePrice')}
-    articleOldPrice = ${q(documentNode).property('articleOldPrice')}
+    articlePrice = ${String.replace(q(documentNode).property('articlePrice'), ',', '.')}
+    articleOldPrice = ${String.replace(q(documentNode).property('articleOldPrice'), ',', '.')}
     articleNumber = ${q(documentNode).property('articleNumber')}
     tax = ${q(documentNode).property('tax')}
     stock = ${q(documentNode).property('stock')}
