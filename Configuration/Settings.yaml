@@ -47,6 +47,7 @@ NeosRulez:
     linkToCart: '/de/shop/warenkorb.html'
     linkToHome: '/de/shop.html'
     standardDelivery: '7f5280e4-5820-44c3-87b7-14bdb829ed97'
+    standardCountry: 'c1866462-c952-4b30-b239-9ef11f73a278'
     senderEmailAddress: 'postmaster@patriceckhart.com'
     orderEmailAddress: 'mail@patriceckhart.com'
     confirmationSubject: 'Bestellbestätigung'
