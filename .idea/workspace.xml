@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efeb9722-91df-4e52-98da-fdbaf866d876" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Configuration/NodeTypes.SingleArticle.yaml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/SingleArticle.fusion" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/SingleArticle.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/SingleArticle.xlf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/SingleArticle.xlf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Article.fusion" afterPath="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Article.fusion" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,6 +37,7 @@
       <find>money</find>
       <find>fullprice</find>
       <find>$sumExcl</find>
+      <find>neos-contentcollection</find>
     </findStrings>
     <replaceStrings>
       <replace>group: 'shopsettings'</replace>
@@ -53,8 +57,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/Resources/Private/Templates/Cart/Index.html" />
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/Root.fusion" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/ArticlePage.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/ArticlePage.xlf" />
@@ -94,13 +96,18 @@
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html" />
         <option value="$PROJECT_DIR$/Classes/Controller/CartController.php" />
         <option value="$PROJECT_DIR$/Configuration/Settings.yaml" />
-        <option value="$PROJECT_DIR$/Resources/Private/Styles/styles.css" />
         <option value="$PROJECT_DIR$/Resources/Private/JavaScript/scripts.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Cart/MiniCart.html" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html" />
-        <option value="$PROJECT_DIR$/Configuration/NodeTypes.ArticlePage.yaml" />
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Article.fusion" />
+        <option value="$PROJECT_DIR$/Configuration/NodeTypes.ArticlePage.yaml" />
+        <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/SingleArticle.xlf" />
+        <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/SingleArticle.fusion" />
+        <option value="$PROJECT_DIR$/Configuration/NodeTypes.SingleArticle.yaml" />
+        <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/SingleArticle.xlf" />
+        <option value="$PROJECT_DIR$/Resources/Private/Styles/styles.css" />
+        <option value="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/SingleArticle.html" />
       </list>
     </option>
   </component>
@@ -131,8 +138,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -251,6 +256,47 @@
               <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
               <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Translations" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Translations" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="de" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Translations" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="de" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="NodeTypes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Translations" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="en" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Translations" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="en" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="NodeTypes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -271,6 +317,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -284,6 +332,10 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes" />
+      <recent name="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Resources/Private/Styles" />
       <recent name="$PROJECT_DIR$/Resources/Private/JavaScript" />
@@ -322,14 +374,15 @@
       <workItem from="1511850671516" duration="70000" />
       <workItem from="1512138181755" duration="501000" />
       <workItem from="1512141371954" duration="477000" />
+      <workItem from="1512202661096" duration="3065000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37210000" />
+    <option name="totallyTimeSpent" value="40275000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="969" extended-state="6" />
+    <frame x="-1" y="23" width="1680" height="969" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
@@ -366,48 +419,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Classes/Controller/CartController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Configuration/Settings.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="37" lean-forward="true" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Controller/CartController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1710">
           <caret line="114" column="33" lean-forward="true" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/ArticlePage.xlf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="46" lean-forward="false" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/ArticlePage.xlf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -471,13 +486,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Cart.fusion">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Classes/Domain/Model/Country.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -537,7 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Styles/styles.css" />
     <entry file="file://$PROJECT_DIR$/Resources/Public/Styles/styles.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -577,34 +584,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="40" column="15" lean-forward="true" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.Article.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        <state relative-caret-position="270">
+          <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.ArticlePage.yaml">
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Cart.fusion">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="30" column="18" lean-forward="false" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/ArticlePage.xlf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="25" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="27" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/ArticlePage.xlf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="8" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Article.fusion">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="14" lean-forward="false" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        <state relative-caret-position="255">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/SingleArticle.xlf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="50" column="28" lean-forward="false" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/SingleArticle.xlf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.ArticlePage.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Styles/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="46" lean-forward="false" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/SingleArticle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="63" column="25" lean-forward="true" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.SingleArticle.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-143">
+          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/SingleArticle.fusion">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="53" lean-forward="false" selection-start-line="1" selection-start-column="53" selection-end-line="1" selection-end-column="53" />
           <folding />
         </state>
       </provider>

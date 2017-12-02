@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file original="" product-name="NeosRulez.ShoppingCart" source-language="en" datatype="plaintext">
+		<body>
+			<trans-unit id="ui.label" xml:space="preserve">
+				<source>Shop single article</source>
+			</trans-unit>
+			<trans-unit id="properties.articleDescription" xml:space="preserve">
+				<source>Description</source>
+			</trans-unit>
+            <trans-unit id="articlenumber" xml:space="preserve">
+				<source>Articlenumber</source>
+			</trans-unit>
+            <trans-unit id="excl" xml:space="preserve">
+				<source>excl.</source>
+			</trans-unit>
+            <trans-unit id="incl" xml:space="preserve">
+				<source>incl.</source>
+			</trans-unit>
+            <trans-unit id="tax" xml:space="preserve">
+				<source>Tax.</source>
+			</trans-unit>
+            <trans-unit id="outofstock" xml:space="preserve">
+				<source>This item is not available at the moment.</source>
+			</trans-unit>
+            <trans-unit id="quantity" xml:space="preserve">
+				<source>Quantity</source>
+			</trans-unit>
+            <trans-unit id="addtocart" xml:space="preserve">
+				<source>Add to cart</source>
+			</trans-unit>
+            <trans-unit id="properties.articleTitle" xml:space="preserve">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="properties.articlePrice" xml:space="preserve">
+				<source>Price</source>
+			</trans-unit>
+			<trans-unit id="properties.articleOldPrice" xml:space="preserve">
+				<source>Old price</source>
+			</trans-unit>
+			<trans-unit id="properties.articleNumber" xml:space="preserve">
+				<source>Articlenumber</source>
+			</trans-unit>
+			<trans-unit id="properties.tax" xml:space="preserve">
+				<source>Tax (percentage)</source>
+			</trans-unit>
+			<trans-unit id="properties.stock" xml:space="preserve">
+				<source>Article in stock</source>
+			</trans-unit>
+			<trans-unit id="properties.image" xml:space="preserve">
+				<source>Image</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

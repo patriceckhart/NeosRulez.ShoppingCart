@@ -1,0 +1,3 @@
+prototype(Site:SingleArticle) < prototype(Content) {
+    templatePath = 'resource://NeosRulez.ShoppingCart/Private/Templates/NodeTypes/SingleArticle.html'
+}

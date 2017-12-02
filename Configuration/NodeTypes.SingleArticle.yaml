@@ -1,0 +1,89 @@
+'NeosRulez.ShoppingCart:SingleArticle':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  ui:
+    label: i18n
+    icon: 'icon-shopping-cart'
+    group: 'shop'
+    inspector:
+      groups:
+        shopsettings:
+          label: NeosRulez.ShoppingCart:Main:shopsettings
+          icon: 'icon-shopping-cart'
+  properties:
+    'articleTitle':
+      type: string
+      ui:
+        label: i18n
+        defaultValue : 'Artikelbezeichnung'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'shopsettings'
+          position: 1
+    'articleDescription':
+      defaultValue : 'Enter Description here'
+      type: string
+      ui:
+        inlineEditable: TRUE
+        aloha:
+          'table':
+            'table': true
+          'link':
+            'a': true
+          'list':
+            'ul': true
+            'ol': true
+    'articlePrice':
+      type: string
+      ui:
+        label: i18n
+        defaultValue : 'Preis'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'shopsettings'
+          position: 2
+    'articleOldPrice':
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'shopsettings'
+          position: 3
+    'articleNumber':
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'shopsettings'
+          position: 4
+    'tax':
+      type: string
+      defaultValue: '20'
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'shopsettings'
+          position: 5
+    'stock':
+      type: boolean
+      defaultValue: TRUE
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'shopsettings'
+          position: 7
+    'image':
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'shopsettings'
+          position: 8
+          editorOptions:
+            features:
+              resize: TRUE

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file original="" product-name="NeosRulez.ShoppingCart" source-language="de" datatype="plaintext">
+		<body>
+			<trans-unit id="ui.label" xml:space="preserve">
+				<source>Shop Einzel-Artikel</source>
+			</trans-unit>
+			<trans-unit id="properties.articleDescription" xml:space="preserve">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="articlenumber" xml:space="preserve">
+				<source>Artikelnummer</source>
+			</trans-unit>
+            <trans-unit id="excl" xml:space="preserve">
+				<source>exkl.</source>
+			</trans-unit>
+            <trans-unit id="incl" xml:space="preserve">
+				<source>inkl.</source>
+			</trans-unit>
+            <trans-unit id="tax" xml:space="preserve">
+				<source>MwSt.</source>
+			</trans-unit>
+			<trans-unit id="outofstock" xml:space="preserve">
+				<source>Dieser Artikel ist im Moment nicht verfügbar.</source>
+			</trans-unit>
+            <trans-unit id="quantity" xml:space="preserve">
+				<source>Anzahl</source>
+			</trans-unit>
+            <trans-unit id="addtocart" xml:space="preserve">
+				<source>In den Warenkorb</source>
+			</trans-unit>
+            <trans-unit id="properties.articleTitle" xml:space="preserve">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="properties.articlePrice" xml:space="preserve">
+				<source>Preis</source>
+			</trans-unit>
+			<trans-unit id="properties.articleOldPrice" xml:space="preserve">
+				<source>Alter Preis</source>
+			</trans-unit>
+			<trans-unit id="properties.articleNumber" xml:space="preserve">
+				<source>Artikelnummer</source>
+			</trans-unit>
+			<trans-unit id="properties.tax" xml:space="preserve">
+				<source>Mehrwertsteuer (in Prozent)</source>
+			</trans-unit>
+			<trans-unit id="properties.stock" xml:space="preserve">
+				<source>Artikel verfügbar</source>
+			</trans-unit>
+			<trans-unit id="properties.image" xml:space="preserve">
+				<source>Bild</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
