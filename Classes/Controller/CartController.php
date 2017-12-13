@@ -96,13 +96,24 @@ class CartController extends ActionController
         if ($cartcount>0) {
             $sumExcl = FALSE;
             $sumExcl = floatval($sumExcl);
+
+            $sumDelivery = FALSE;
+            $sumDelivery = floatval($sumDelivery);
+
             foreach ($items as $dat) {
                 $fullpriceExcl = floatval($dat["fullprice"]);
                 $sumExcl += $fullpriceExcl;
+
+                $fulldelivery = floatval($dat["fulldelivery"]);
+                $sumDelivery += $fulldelivery;
             }
+            
+            $this->view->assign('fulldelivery', $fulldelivery);
             $this->view->assign('subtotal', $sumExcl);
+            //$this->view->assign('articledelivery', $sumDelivery);
         } else {
             $sumExcl = 0;
+            $fulldelivery = 0;
         }
 
         $sumTax = FALSE;
@@ -126,6 +137,8 @@ class CartController extends ActionController
         $query = $this->persistenceManager->createQueryForType($deliveries);
         $result = $query->matching($query->equals('Persistence_Object_Identifier', $delivery))->execute()->getFirst();
         $deliverycosts = $result->getCosts();
+
+        $deliverycosts = $deliverycosts+$fulldelivery;
         $this->view->assign('deliverycosts', $deliverycosts);
 
         $sumExcl = $sumExcl+$deliverycosts;

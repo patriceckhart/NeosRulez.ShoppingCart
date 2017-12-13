@@ -44,10 +44,12 @@ Neos:
 NeosRulez:
   ShoppingCart:
     taxinclusive: false
-    linkToCart: '/de/shop/warenkorb.html'
-    linkToHome: '/de/shop.html'
-    standardDelivery: '7f5280e4-5820-44c3-87b7-14bdb829ed97'
-    standardCountry: 'c1866462-c952-4b30-b239-9ef11f73a278'
+    #linkToCart: '/de/shop/warenkorb.html'
+    #linkToHome: '/de/shop.html'
+    linkToCart: '/de/warenkorb.html'
+    linkToHome: '/'
+    standardDelivery: '7ac6ba34-5992-4b9f-8d21-bdc5966c945e'
+    standardCountry: '222a091c-d95e-4487-b15e-194c1b9c9741'
     senderEmailAddress: 'postmaster@patriceckhart.com'
     orderEmailAddress: 'mail@patriceckhart.com'
     confirmationSubject: 'Bestellbestätigung'

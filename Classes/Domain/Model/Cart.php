@@ -44,6 +44,11 @@ class Cart {
         $item['fullprice'] = floatval($fullprice);
         $item['articlePrice'] = floatval($price);
 
+        $delivery = $item['delivery'];
+        $delivery = str_replace(',', '.', $delivery);
+        $fulldelivery = $delivery*$quantity;
+        $item['fulldelivery'] = floatval($fulldelivery);
+
         $tax = intval($item['tax']);
         $taxvalue = floatval($price)/100*$tax;
         $item['taxvalue'] = $taxvalue*$quantity;
@@ -74,6 +79,11 @@ class Cart {
         $fullprice = $price*$quantity;
         $item['fullprice'] = floatval($fullprice);
         $item['articlePrice'] = floatval($price);
+
+        $delivery = $item['delivery'];
+        $delivery = str_replace(',', '.', $delivery);
+        $fulldelivery = $delivery*$quantity;
+        $item['fulldelivery'] = floatval($fulldelivery);
 
         $tax = intval($item['tax']);
         $taxvalue = floatval($price)/100*$tax;

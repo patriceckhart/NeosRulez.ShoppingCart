@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efeb9722-91df-4e52-98da-fdbaf866d876" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Controller/CartController.php" afterPath="$PROJECT_DIR$/Classes/Controller/CartController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Domain/Model/Cart.php" afterPath="$PROJECT_DIR$/Classes/Domain/Model/Cart.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Configuration/NodeTypes.ArticlePage.yaml" afterPath="$PROJECT_DIR$/Configuration/NodeTypes.ArticlePage.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Configuration/NodeTypes.SingleArticle.yaml" afterPath="$PROJECT_DIR$/Configuration/NodeTypes.SingleArticle.yaml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Configuration/Settings.yaml" afterPath="$PROJECT_DIR$/Configuration/Settings.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Article.fusion" afterPath="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Article.fusion" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/SingleArticle.fusion" afterPath="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/SingleArticle.fusion" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/SingleArticle.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/SingleArticle.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/ArticlePage.xlf" afterPath="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/ArticlePage.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/SingleArticle.xlf" afterPath="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/SingleArticle.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/ArticlePage.xlf" afterPath="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/ArticlePage.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/SingleArticle.xlf" afterPath="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/SingleArticle.xlf" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,12 +26,68 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Settings.yaml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Configuration/Settings.yaml">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Cart.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+            <state relative-caret-position="550">
+              <caret line="225" column="22" lean-forward="false" selection-start-line="225" selection-start-column="22" selection-end-line="225" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CartController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Classes/Controller/CartController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="433">
+              <caret line="109" column="12" lean-forward="false" selection-start-line="109" selection-start-column="12" selection-end-line="109" selection-end-column="12" />
+              <folding>
+                <marker date="1513191829521" expanded="true" signature="9113:9613" ph="..." />
+                <marker date="1513191829521" expanded="true" signature="9135:9592" ph="..." />
+                <marker date="1513191829521" expanded="true" signature="9156:9569" ph="..." />
+                <marker date="1513191829521" expanded="true" signature="9671:9767" ph="..." />
+                <marker date="1513191829521" expanded="false" signature="9782:9809" ph="..." />
+                <marker date="1513191829521" expanded="true" signature="9810:10371" ph="..." />
+                <marker date="1513191829521" expanded="false" signature="9825:9883" ph="..." />
+                <marker date="1513191829521" expanded="true" signature="9884:10113" ph="..." />
+                <marker date="1513191829521" expanded="false" signature="9901:9924" ph="..." />
+                <marker date="1513191829521" expanded="false" signature="9943:9965" ph="..." />
+                <marker date="1513191829521" expanded="true" signature="9966:9997" ph="..." />
+                <marker date="1513191829521" expanded="false" signature="10014:10054" ph="..." />
+                <marker date="1513191829521" expanded="true" signature="10055:10104" ph="..." />
+                <marker date="1513191829521" expanded="false" signature="10130:10153" ph="..." />
+                <marker date="1513191829521" expanded="false" signature="10172:10194" ph="..." />
+                <marker date="1513191829521" expanded="true" signature="10195:10259" ph="..." />
+                <marker date="1513191829521" expanded="false" signature="10277:10299" ph="..." />
+                <marker date="1513191829521" expanded="true" signature="10300:10362" ph="..." />
+                <marker date="1513191829521" expanded="false" signature="10388:10448" ph="..." />
+                <marker date="1513191829521" expanded="true" signature="10449:10557" ph="..." />
+                <marker date="1513191829521" expanded="false" signature="10574:10634" ph="..." />
+                <marker date="1513191829521" expanded="true" signature="10635:12100" ph="..." />
+                <marker date="1513191829521" expanded="false" signature="10715:10734" ph="..." />
+                <marker date="1513191829521" expanded="true" signature="10735:11275" ph="..." />
+                <marker date="1513191829521" expanded="true" signature="10757:11254" ph="..." />
+                <marker date="1513191829521" expanded="true" signature="10778:11231" ph="..." />
+                <marker date="1513191829521" expanded="false" signature="10862:10893" ph="..." />
+                <marker date="1513191829521" expanded="false" signature="10964:10995" ph="..." />
+                <marker date="1513191829521" expanded="false" signature="11086:11117" ph="..." />
+                <marker date="1513191829521" expanded="true" signature="11394:12090" ph="..." />
+                <marker date="1513191829521" expanded="true" signature="11416:12069" ph="..." />
+                <marker date="1513191829521" expanded="true" signature="11437:12046" ph="..." />
+                <marker date="1513191829521" expanded="true" signature="11669:11674" ph="&amp;" />
+                <marker date="1513191829521" expanded="false" signature="12117:12177" ph="..." />
+                <marker date="1513191829521" expanded="true" signature="12178:12280" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Cart.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classes/Domain/Model/Cart.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="707">
+              <caret line="76" column="39" lean-forward="true" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -44,6 +114,7 @@
       <find>fullprice</find>
       <find>$sumExcl</find>
       <find>neos-contentcollection</find>
+      <find>${q(documentNode).property</find>
     </findStrings>
     <replaceStrings>
       <replace>group: 'shopsettings'</replace>
@@ -52,6 +123,7 @@
       <replace>NeosRulez\ShoppingCart\</replace>
       <replace>&lt;div class=&quot;form-group&quot;&gt;</replace>
       <replace>1</replace>
+      <replace>${q(node).property</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -64,8 +136,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/Root.fusion" />
-        <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/ArticlePage.xlf" />
-        <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/ArticlePage.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion" />
         <option value="$PROJECT_DIR$/Configuration/NodeTypes.Article.yaml" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Article.xlf" />
@@ -74,7 +144,6 @@
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/MiniCart.fusion" />
         <option value="&lt;cc005294-ba46-48bb-baa8-942f3bb836a4&gt;/data/releases/current/Configuration/Routes.yaml" />
         <option value="$PROJECT_DIR$/Configuration/Routes.yaml" />
-        <option value="$PROJECT_DIR$/Classes/Domain/Model/Cart.php" />
         <option value="$PROJECT_DIR$/Classes/Domain/Repository/CartRepository.php" />
         <option value="$PROJECT_DIR$/Classes/Domain/Model/Country.php" />
         <option value="$PROJECT_DIR$/Classes/Domain/Model/Delivery.php" />
@@ -99,21 +168,24 @@
         <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Cart.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Cart.xlf" />
         <option value="$PROJECT_DIR$/Resources/Public/Styles/styles.min.css" />
-        <option value="$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html" />
-        <option value="$PROJECT_DIR$/Classes/Controller/CartController.php" />
         <option value="$PROJECT_DIR$/Resources/Private/JavaScript/scripts.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Cart/MiniCart.html" />
-        <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Article.fusion" />
-        <option value="$PROJECT_DIR$/Configuration/NodeTypes.ArticlePage.yaml" />
-        <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/SingleArticle.xlf" />
-        <option value="$PROJECT_DIR$/Configuration/NodeTypes.SingleArticle.yaml" />
-        <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/SingleArticle.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Styles/styles.css" />
-        <option value="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html" />
-        <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/SingleArticle.fusion" />
-        <option value="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/SingleArticle.html" />
         <option value="$PROJECT_DIR$/Configuration/Settings.yaml" />
+        <option value="$PROJECT_DIR$/Configuration/NodeTypes.ArticlePage.yaml" />
+        <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/ArticlePage.xlf" />
+        <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/ArticlePage.xlf" />
+        <option value="$PROJECT_DIR$/Configuration/NodeTypes.SingleArticle.yaml" />
+        <option value="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html" />
+        <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Article.fusion" />
+        <option value="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/SingleArticle.html" />
+        <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/SingleArticle.fusion" />
+        <option value="$PROJECT_DIR$/Classes/Domain/Model/Cart.php" />
+        <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/SingleArticle.xlf" />
+        <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/SingleArticle.xlf" />
+        <option value="$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html" />
+        <option value="$PROJECT_DIR$/Classes/Controller/CartController.php" />
       </list>
     </option>
   </component>
@@ -382,29 +454,30 @@
       <workItem from="1512141371954" duration="477000" />
       <workItem from="1512202661096" duration="3065000" />
       <workItem from="1512205842618" duration="598000" />
+      <workItem from="1513187632576" duration="3913000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40873000" />
+    <option name="totallyTimeSpent" value="44786000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="969" extended-state="6" />
+    <frame x="-1" y="23" width="1680" height="969" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15050167" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20595238" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16785714" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Notes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Notes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -470,8 +543,6 @@
     <entry file="file://$PROJECT_DIR$/Classes/Controller/DeliveryController.php" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Delivery/Index.html" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Country/Index.html" />
-    <entry file="file://$PROJECT_DIR$/Classes/Domain/Repository/CartRepository.php" />
-    <entry file="file://$PROJECT_DIR$/Classes/Domain/Model/Cart.php" />
     <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.MiniCart.yaml" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Article.xlf">
       <provider selected="true" editor-type-id="text-editor">
@@ -528,14 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Controller/CartController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="334" column="115" lean-forward="false" selection-start-line="334" selection-start-column="115" selection-end-line="334" selection-end-column="115" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Public/JavaScript/scripts.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -575,6 +638,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Styles/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="46" lean-forward="false" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.Cart.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.Article.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -583,70 +661,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/ArticlePage.xlf">
+    <entry file="file://$PROJECT_DIR$/Configuration/Settings.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="25" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="27" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/ArticlePage.xlf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="8" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/SingleArticle.xlf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="50" column="28" lean-forward="false" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/SingleArticle.xlf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.ArticlePage.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Styles/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="46" lean-forward="false" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+        <state relative-caret-position="550">
+          <caret line="49" column="18" lean-forward="false" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.SingleArticle.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-143">
-          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        <state relative-caret-position="352">
+          <caret line="76" column="21" lean-forward="false" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html">
+    <entry file="file://$PROJECT_DIR$/Classes/Domain/Repository/CartRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2450">
-          <caret line="212" column="48" lean-forward="true" selection-start-line="212" selection-start-column="48" selection-end-line="212" selection-end-column="48" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html">
+    <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.ArticlePage.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+        <state relative-caret-position="547">
+          <caret line="52" column="21" lean-forward="true" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/SingleArticle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="49" column="75" lean-forward="false" selection-start-line="49" selection-start-column="75" selection-end-line="49" selection-end-column="75" />
           <folding />
         </state>
       </provider>
@@ -659,6 +709,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Article.fusion">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Cart.fusion">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -667,43 +725,111 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Article.fusion">
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/ArticlePage.xlf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="18" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/SingleArticle.html">
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/SingleArticle.xlf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="49" column="76" lean-forward="false" selection-start-line="49" selection-start-column="76" selection-end-line="49" selection-end-column="76" />
+        <state relative-caret-position="486">
+          <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/ArticlePage.xlf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="18" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/SingleArticle.xlf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/SingleArticle.fusion">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        <state relative-caret-position="285">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.Cart.yaml">
+    <entry file="file://$PROJECT_DIR$/Classes/Domain/Model/Cart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="707">
+          <caret line="76" column="39" lean-forward="true" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Configuration/Settings.yaml">
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+        <state relative-caret-position="550">
+          <caret line="225" column="22" lean-forward="false" selection-start-line="225" selection-start-column="22" selection-end-line="225" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Controller/CartController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="109" column="12" lean-forward="false" selection-start-line="109" selection-start-column="12" selection-end-line="109" selection-end-column="12" />
+          <folding>
+            <marker date="1513191829521" expanded="true" signature="9113:9613" ph="..." />
+            <marker date="1513191829521" expanded="true" signature="9135:9592" ph="..." />
+            <marker date="1513191829521" expanded="true" signature="9156:9569" ph="..." />
+            <marker date="1513191829521" expanded="true" signature="9671:9767" ph="..." />
+            <marker date="1513191829521" expanded="false" signature="9782:9809" ph="..." />
+            <marker date="1513191829521" expanded="true" signature="9810:10371" ph="..." />
+            <marker date="1513191829521" expanded="false" signature="9825:9883" ph="..." />
+            <marker date="1513191829521" expanded="true" signature="9884:10113" ph="..." />
+            <marker date="1513191829521" expanded="false" signature="9901:9924" ph="..." />
+            <marker date="1513191829521" expanded="false" signature="9943:9965" ph="..." />
+            <marker date="1513191829521" expanded="true" signature="9966:9997" ph="..." />
+            <marker date="1513191829521" expanded="false" signature="10014:10054" ph="..." />
+            <marker date="1513191829521" expanded="true" signature="10055:10104" ph="..." />
+            <marker date="1513191829521" expanded="false" signature="10130:10153" ph="..." />
+            <marker date="1513191829521" expanded="false" signature="10172:10194" ph="..." />
+            <marker date="1513191829521" expanded="true" signature="10195:10259" ph="..." />
+            <marker date="1513191829521" expanded="false" signature="10277:10299" ph="..." />
+            <marker date="1513191829521" expanded="true" signature="10300:10362" ph="..." />
+            <marker date="1513191829521" expanded="false" signature="10388:10448" ph="..." />
+            <marker date="1513191829521" expanded="true" signature="10449:10557" ph="..." />
+            <marker date="1513191829521" expanded="false" signature="10574:10634" ph="..." />
+            <marker date="1513191829521" expanded="true" signature="10635:12100" ph="..." />
+            <marker date="1513191829521" expanded="false" signature="10715:10734" ph="..." />
+            <marker date="1513191829521" expanded="true" signature="10735:11275" ph="..." />
+            <marker date="1513191829521" expanded="true" signature="10757:11254" ph="..." />
+            <marker date="1513191829521" expanded="true" signature="10778:11231" ph="..." />
+            <marker date="1513191829521" expanded="false" signature="10862:10893" ph="..." />
+            <marker date="1513191829521" expanded="false" signature="10964:10995" ph="..." />
+            <marker date="1513191829521" expanded="false" signature="11086:11117" ph="..." />
+            <marker date="1513191829521" expanded="true" signature="11394:12090" ph="..." />
+            <marker date="1513191829521" expanded="true" signature="11416:12069" ph="..." />
+            <marker date="1513191829521" expanded="true" signature="11437:12046" ph="..." />
+            <marker date="1513191829521" expanded="true" signature="11669:11674" ph="&amp;" />
+            <marker date="1513191829521" expanded="false" signature="12117:12177" ph="..." />
+            <marker date="1513191829521" expanded="true" signature="12178:12280" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -14,6 +14,9 @@
 			<trans-unit id="properties.articleOldPrice" xml:space="preserve">
 				<source>Old price</source>
 			</trans-unit>
+            <trans-unit id="properties.delivery" xml:space="preserve">
+				<source>Delivery costs</source>
+			</trans-unit>
 			<trans-unit id="properties.articleNumber" xml:space="preserve">
 				<source>Articlenumber</source>
 			</trans-unit>

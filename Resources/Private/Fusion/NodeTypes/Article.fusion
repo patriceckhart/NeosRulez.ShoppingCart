@@ -7,6 +7,7 @@ prototype(Site:Article) {
     stock = ${q(documentNode).property('stock')}
     image = ${q(documentNode).property('image')}
     assets = ${q(documentNode).property('assets')}
+    delivery = ${String.replace(q(documentNode).property('delivery'), ',', '.')}
     taxinclusive = ${Configuration.setting('NeosRulez.ShoppingCart.taxinclusive')}
     @cache {
         mode = 'uncached'

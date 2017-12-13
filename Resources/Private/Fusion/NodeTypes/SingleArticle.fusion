@@ -1,4 +1,20 @@
 prototype(Site:SingleArticle) < prototype(Content) {
     templatePath = 'resource://NeosRulez.ShoppingCart/Private/Templates/NodeTypes/SingleArticle.html'
     linkToCart = ${Configuration.setting('NeosRulez.ShoppingCart.linkToCart')}
+    articleTitle = ${q(node).property('articleTitle')}
+    articlePrice = ${String.replace(q(node).property('articlePrice'), ',', '.')}
+    articleOldPrice = ${String.replace(q(node).property('articleOldPrice'), ',', '.')}
+    articleNumber = ${q(node).property('articleNumber')}
+    tax = ${q(node).property('tax')}
+    stock = ${q(node).property('stock')}
+    image = ${q(node).property('image')}
+    delivery = ${String.replace(q(node).property('delivery'), ',', '.')}
+    taxinclusive = ${Configuration.setting('NeosRulez.ShoppingCart.taxinclusive')}
+    @cache {
+        mode = 'uncached'
+        context {
+            1 = 'node'
+            2 = 'documentNode'
+        }
+    }
 }
