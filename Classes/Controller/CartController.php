@@ -52,6 +52,12 @@ class CartController extends ActionController
     protected $deliveryRepository;
 
     /**
+     * @Flow\Inject
+     * @var \NeosRulez\ShoppingCart\Domain\Repository\DeliverycostRepository
+     */
+    protected $deliverycostRepository;
+
+    /**
      * @param array $item
      * @return void
      */
@@ -105,15 +111,23 @@ class CartController extends ActionController
                 $sumExcl += $fullpriceExcl;
 
                 $fulldelivery = floatval($dat["fulldelivery"]);
+
+                /*$delivercost = '\NeosRulez\ShoppingCart\Domain\Model\Deliverycost';
+                $querydelivercost = $this->persistenceManager->createQueryForType($delivercost);
+                $dmin = $querydelivercost->matching($querydelivercost->equals('minweight', $delivery))->execute();*/
+
+                $deliverycosts = $this->deliverycostRepository->findAll();
+                
+
+
                 $sumDelivery += $fulldelivery;
             }
             
             $this->view->assign('fulldelivery', $sumDelivery);
             $this->view->assign('subtotal', $sumExcl);
-            //$this->view->assign('articledelivery', $sumDelivery);
         } else {
             $sumExcl = 0;
-            $fulldelivery = 0;
+            $sumDelivery = 0;
         }
 
         $sumTax = FALSE;
