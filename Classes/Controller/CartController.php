@@ -112,12 +112,30 @@ class CartController extends ActionController
 
                 $fulldelivery = floatval($dat["fulldelivery"]);
 
-                /*$delivercost = '\NeosRulez\ShoppingCart\Domain\Model\Deliverycost';
+                $delivercost = '\NeosRulez\ShoppingCart\Domain\Model\Deliverycost';
                 $querydelivercost = $this->persistenceManager->createQueryForType($delivercost);
-                $dmin = $querydelivercost->matching($querydelivercost->equals('minweight', $delivery))->execute();*/
+                $deliverycosts = $querydelivercost->execute();
 
-                $deliverycosts = $this->deliverycostRepository->findAll();
-                
+                while ($deliverycost = $deliverycosts->current()) {
+
+                    $minweight = floatval($deliverycost->getMinweight());
+                    $maxweight = floatval($deliverycost->getMaxweight());
+
+                    if($fulldelivery>=$minweight) {
+                        if($fulldelivery<=$maxweight) {
+                            $deliverc = floatval($deliverycost->getPrice());
+                            $delivert = floatval($deliverycost->getTax());
+                        }
+                    } else {
+                        $deliverc = 0;
+                        $delivert = 0;
+                    }
+
+                    $deliverycosts->next();
+
+                }
+
+                $sumDelivery += $deliverc;
 
 
                 $sumDelivery += $fulldelivery;

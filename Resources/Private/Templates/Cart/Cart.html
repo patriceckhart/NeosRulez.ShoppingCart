@@ -36,6 +36,7 @@
                 </div>
                 <div class="col-lg-2 text-right">
                     <f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{item.articlePrice}</f:format.currency><br />
+                    {item.delivery}
                     <small class="text-muted">
                         <f:if condition="{taxinclusive}==1">
                             <f:then>
