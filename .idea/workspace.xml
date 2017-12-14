@@ -2,10 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efeb9722-91df-4e52-98da-fdbaf866d876" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Public/JavaScript/scripts.min.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Public/Styles/styles.min.min.css" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Classes/Controller/DeliverycostController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Classes/Domain/Model/Deliverycost.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Classes/Domain/Repository/DeliverycostRepository.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Private/Templates/Deliverycost/Edit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Private/Templates/Deliverycost/Index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Private/Templates/Deliverycost/New.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Controller/CartController.php" afterPath="$PROJECT_DIR$/Classes/Controller/CartController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Configuration/Policy.yaml" afterPath="$PROJECT_DIR$/Configuration/Policy.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Configuration/Settings.yaml" afterPath="$PROJECT_DIR$/Configuration/Settings.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf" afterPath="$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/ArticlePage.xlf" afterPath="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/ArticlePage.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/SingleArticle.xlf" afterPath="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/SingleArticle.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Translations/en/Main.xlf" afterPath="$PROJECT_DIR$/Resources/Private/Translations/en/Main.xlf" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,12 +27,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Settings.yaml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Configuration/Settings.yaml">
+      <file leaf-file-name="CartController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Classes/Controller/CartController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="795">
-              <caret line="53" column="47" lean-forward="false" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
-              <folding />
+            <state relative-caret-position="457">
+              <caret line="116" column="9" lean-forward="true" selection-start-line="116" selection-start-column="9" selection-end-line="116" selection-end-column="9" />
+              <folding>
+                <marker date="1513275154693" expanded="true" signature="9111:9611" ph="..." />
+                <marker date="1513275154693" expanded="true" signature="9133:9590" ph="..." />
+                <marker date="1513275154693" expanded="true" signature="9154:9567" ph="..." />
+                <marker date="1513275154693" expanded="true" signature="9669:9765" ph="..." />
+                <marker date="1513275154693" expanded="false" signature="9780:9807" ph="..." />
+                <marker date="1513275154693" expanded="true" signature="9808:10369" ph="..." />
+                <marker date="1513275154693" expanded="false" signature="9823:9881" ph="..." />
+                <marker date="1513275154693" expanded="true" signature="9882:10111" ph="..." />
+                <marker date="1513275154693" expanded="false" signature="9899:9922" ph="..." />
+                <marker date="1513275154693" expanded="false" signature="9941:9963" ph="..." />
+                <marker date="1513275154693" expanded="true" signature="9964:9995" ph="..." />
+                <marker date="1513275154693" expanded="false" signature="10012:10052" ph="..." />
+                <marker date="1513275154693" expanded="true" signature="10053:10102" ph="..." />
+                <marker date="1513275154693" expanded="false" signature="10128:10151" ph="..." />
+                <marker date="1513275154693" expanded="false" signature="10170:10192" ph="..." />
+                <marker date="1513275154693" expanded="true" signature="10193:10257" ph="..." />
+                <marker date="1513275154693" expanded="false" signature="10275:10297" ph="..." />
+                <marker date="1513275154693" expanded="true" signature="10298:10360" ph="..." />
+                <marker date="1513275154693" expanded="false" signature="10386:10446" ph="..." />
+                <marker date="1513275154693" expanded="true" signature="10447:10555" ph="..." />
+                <marker date="1513275154693" expanded="false" signature="10572:10632" ph="..." />
+                <marker date="1513275154693" expanded="true" signature="10633:12098" ph="..." />
+                <marker date="1513275154693" expanded="false" signature="10713:10732" ph="..." />
+                <marker date="1513275154693" expanded="true" signature="10733:11273" ph="..." />
+                <marker date="1513275154693" expanded="true" signature="10755:11252" ph="..." />
+                <marker date="1513275154693" expanded="true" signature="10776:11229" ph="..." />
+                <marker date="1513275154693" expanded="false" signature="10860:10891" ph="..." />
+                <marker date="1513275154693" expanded="false" signature="10962:10993" ph="..." />
+                <marker date="1513275154693" expanded="false" signature="11084:11115" ph="..." />
+                <marker date="1513275154693" expanded="true" signature="11392:12088" ph="..." />
+                <marker date="1513275154693" expanded="true" signature="11414:12067" ph="..." />
+                <marker date="1513275154693" expanded="true" signature="11435:12044" ph="..." />
+                <marker date="1513275154693" expanded="false" signature="11667:11672" ph="&amp;" />
+                <marker date="1513275154693" expanded="false" signature="12115:12175" ph="..." />
+                <marker date="1513275154693" expanded="true" signature="12176:12278" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,6 +95,12 @@
       <find>$sumExcl</find>
       <find>neos-contentcollection</find>
       <find>${q(documentNode).property</find>
+      <find>minweight</find>
+      <find>name</find>
+      <find>maxweight</find>
+      <find>delivery</find>
+      <find>versandarten</find>
+      <find>float</find>
     </findStrings>
     <replaceStrings>
       <replace>group: 'shopsettings'</replace>
@@ -57,6 +110,11 @@
       <replace>&lt;div class=&quot;form-group&quot;&gt;</replace>
       <replace>1</replace>
       <replace>${q(node).property</replace>
+      <replace>maxweight</replace>
+      <replace>integer</replace>
+      <replace>deliverycost</replace>
+      <replace>price</replace>
+      <replace>string</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -68,12 +126,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion" />
-        <option value="$PROJECT_DIR$/Configuration/NodeTypes.Article.yaml" />
-        <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Article.xlf" />
-        <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Article.xlf" />
-        <option value="$PROJECT_DIR$/Configuration/NodeTypes.MiniCart.yaml" />
-        <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/MiniCart.fusion" />
         <option value="&lt;cc005294-ba46-48bb-baa8-942f3bb836a4&gt;/data/releases/current/Configuration/Routes.yaml" />
         <option value="$PROJECT_DIR$/Configuration/Routes.yaml" />
         <option value="$PROJECT_DIR$/Classes/Domain/Repository/CartRepository.php" />
@@ -83,7 +135,6 @@
         <option value="$PROJECT_DIR$/Classes/Domain/Repository/CountryRepository.php" />
         <option value="$PROJECT_DIR$/Classes/Domain/Repository/DeliveryRepository.php" />
         <option value="$PROJECT_DIR$/Classes/Controller/DeliveryController.php" />
-        <option value="$PROJECT_DIR$/Configuration/Policy.yaml" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Country/Index.html" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Country/Edit.html" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Delivery/Index.html" />
@@ -92,11 +143,9 @@
         <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/MiniCart.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/MiniCart.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Delivery/New.html" />
-        <option value="$PROJECT_DIR$/Resources/Private/Translations/en/Main.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Cart.fusion" />
         <option value="&lt;9ed936d1-89e1-45d8-83b9-6c74613ce306&gt;/data/releases/current/Configuration/Routes.yaml" />
         <option value="$PROJECT_DIR$/Resources/Public/JavaScript/scripts.min.js" />
-        <option value="$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Cart.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Cart.xlf" />
         <option value="$PROJECT_DIR$/Resources/Public/Styles/styles.min.css" />
@@ -104,9 +153,7 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Cart/MiniCart.html" />
         <option value="$PROJECT_DIR$/Resources/Private/Styles/styles.css" />
-        <option value="$PROJECT_DIR$/Configuration/Settings.yaml" />
         <option value="$PROJECT_DIR$/Configuration/NodeTypes.ArticlePage.yaml" />
-        <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/ArticlePage.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/ArticlePage.xlf" />
         <option value="$PROJECT_DIR$/Configuration/NodeTypes.SingleArticle.yaml" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html" />
@@ -114,11 +161,22 @@
         <option value="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/SingleArticle.html" />
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/SingleArticle.fusion" />
         <option value="$PROJECT_DIR$/Classes/Domain/Model/Cart.php" />
-        <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/SingleArticle.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/SingleArticle.xlf" />
-        <option value="$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html" />
-        <option value="$PROJECT_DIR$/Classes/Controller/CartController.php" />
         <option value="$PROJECT_DIR$/Configuration/Routes.yaml.example" />
+        <option value="$PROJECT_DIR$/Classes/Controller/CartController.php" />
+        <option value="$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html" />
+        <option value="$PROJECT_DIR$/Classes/Domain/Repository/DeliverycostRepository.php" />
+        <option value="$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf" />
+        <option value="$PROJECT_DIR$/Resources/Private/Translations/en/Main.xlf" />
+        <option value="$PROJECT_DIR$/Configuration/Policy.yaml" />
+        <option value="$PROJECT_DIR$/Resources/Private/Templates/Deliverycost/New.html" />
+        <option value="$PROJECT_DIR$/Classes/Controller/DeliverycostController.php" />
+        <option value="$PROJECT_DIR$/Resources/Private/Templates/Deliverycost/Index.html" />
+        <option value="$PROJECT_DIR$/Configuration/Settings.yaml" />
+        <option value="$PROJECT_DIR$/Classes/Domain/Model/Deliverycost.php" />
+        <option value="$PROJECT_DIR$/Resources/Private/Templates/Deliverycost/Edit.html" />
+        <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/ArticlePage.xlf" />
+        <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/SingleArticle.xlf" />
       </list>
     </option>
   </component>
@@ -129,10 +187,13 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="2560" />
     <option name="height" value="1345" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -149,113 +210,171 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Classes" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Classes" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Classes" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Domain" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Classes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Domain" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Classes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Domain" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Repository" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Configuration" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Fusion" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Fusion" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="NodeTypes" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Fusion" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="ProtoTypes" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="JavaScript" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Styles" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Templates" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Cart" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Delivery" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Deliverycost" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="NodeTypes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Translations" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Translations" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="de" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Translations" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="de" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="NodeTypes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Translations" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="en" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="JavaScript" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.ShoppingCart-Dez2017" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="NeosRulez.ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Styles" type="2a2b976b:PhpTreeStructureProvider$1" />
@@ -264,7 +383,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -326,37 +444,39 @@
       <workItem from="1513187632576" duration="3913000" />
       <workItem from="1513233406122" duration="456000" />
       <workItem from="1513234711316" duration="17000" />
+      <workItem from="1513274560097" duration="2627000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45259000" />
+    <option name="totallyTimeSpent" value="47886000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2560" height="1345" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="969" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1703733" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14938684" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17023809" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Notes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1504" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Notes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,48 +490,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="114" column="33" lean-forward="true" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/Root.fusion">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="20" lean-forward="true" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Article.xlf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="8" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Domain/Model/Delivery.php" />
-    <entry file="file://$PROJECT_DIR$/Classes/Controller/CountryController.php" />
-    <entry file="file://$PROJECT_DIR$/Classes/Domain/Repository/CountryRepository.php" />
-    <entry file="file://$PROJECT_DIR$/Classes/Domain/Repository/DeliveryRepository.php" />
-    <entry file="file://$PROJECT_DIR$/Configuration/Policy.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Controller/DeliveryController.php" />
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Delivery/Index.html" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Country/Index.html" />
     <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.MiniCart.yaml" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Article.xlf">
@@ -424,26 +502,10 @@
     <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/MiniCart.xlf" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/MiniCart.xlf" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Country/Edit.html" />
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Delivery/Edit.html" />
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Delivery/New.html" />
     <entry file="file://$PROJECT_DIR$/Classes/Domain/Model/Country.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="68" column="51" lean-forward="false" selection-start-line="68" selection-start-column="51" selection-end-line="68" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/Main.xlf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="69" column="25" lean-forward="false" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -531,14 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.ArticlePage.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="52" column="21" lean-forward="true" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/SingleArticle.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="481">
@@ -581,20 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/ArticlePage.xlf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="18" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/SingleArticle.xlf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -609,33 +649,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Domain/Model/Cart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="707">
-          <caret line="76" column="39" lean-forward="true" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="225" column="22" lean-forward="false" selection-start-line="225" selection-start-column="22" selection-end-line="225" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Controller/CartController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="109" column="12" lean-forward="false" selection-start-line="109" selection-start-column="12" selection-end-line="109" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Configuration/Routes.yaml.example">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="34" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -643,15 +660,220 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="223" column="17" lean-forward="false" selection-start-line="223" selection-start-column="17" selection-end-line="223" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Domain/Model/Delivery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Domain/Repository/DeliveryRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Domain/Repository/DeliverycostRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Controller/DeliveryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Delivery/Index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="20" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Configuration/Policy.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Controller/DeliverycostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="70" column="47" lean-forward="false" selection-start-line="70" selection-start-column="47" selection-end-line="70" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Delivery/New.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Deliverycost/Edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="170" lean-forward="false" selection-start-line="17" selection-start-column="170" selection-end-line="17" selection-end-column="170" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Deliverycost/Index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="52" lean-forward="false" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Deliverycost/New.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="66" lean-forward="false" selection-start-line="9" selection-start-column="66" selection-end-line="9" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/Main.xlf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="95" column="74" lean-forward="false" selection-start-line="95" selection-start-column="74" selection-end-line="95" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="51" column="25" lean-forward="true" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Delivery/Edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Domain/Model/Deliverycost.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding>
+            <element signature="e#122#156#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Configuration/Settings.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="53" column="47" lean-forward="false" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
+        <state relative-caret-position="533">
+          <caret line="44" column="47" lean-forward="true" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="47" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/SingleArticle.xlf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="41" column="31" lean-forward="false" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/ArticlePage.xlf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.ArticlePage.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Domain/Model/Cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="84" column="44" lean-forward="true" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Controller/CartController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="116" column="9" lean-forward="true" selection-start-line="116" selection-start-column="9" selection-end-line="116" selection-end-column="9" />
+          <folding>
+            <marker date="1513275154693" expanded="true" signature="9111:9611" ph="..." />
+            <marker date="1513275154693" expanded="true" signature="9133:9590" ph="..." />
+            <marker date="1513275154693" expanded="true" signature="9154:9567" ph="..." />
+            <marker date="1513275154693" expanded="true" signature="9669:9765" ph="..." />
+            <marker date="1513275154693" expanded="false" signature="9780:9807" ph="..." />
+            <marker date="1513275154693" expanded="true" signature="9808:10369" ph="..." />
+            <marker date="1513275154693" expanded="false" signature="9823:9881" ph="..." />
+            <marker date="1513275154693" expanded="true" signature="9882:10111" ph="..." />
+            <marker date="1513275154693" expanded="false" signature="9899:9922" ph="..." />
+            <marker date="1513275154693" expanded="false" signature="9941:9963" ph="..." />
+            <marker date="1513275154693" expanded="true" signature="9964:9995" ph="..." />
+            <marker date="1513275154693" expanded="false" signature="10012:10052" ph="..." />
+            <marker date="1513275154693" expanded="true" signature="10053:10102" ph="..." />
+            <marker date="1513275154693" expanded="false" signature="10128:10151" ph="..." />
+            <marker date="1513275154693" expanded="false" signature="10170:10192" ph="..." />
+            <marker date="1513275154693" expanded="true" signature="10193:10257" ph="..." />
+            <marker date="1513275154693" expanded="false" signature="10275:10297" ph="..." />
+            <marker date="1513275154693" expanded="true" signature="10298:10360" ph="..." />
+            <marker date="1513275154693" expanded="false" signature="10386:10446" ph="..." />
+            <marker date="1513275154693" expanded="true" signature="10447:10555" ph="..." />
+            <marker date="1513275154693" expanded="false" signature="10572:10632" ph="..." />
+            <marker date="1513275154693" expanded="true" signature="10633:12098" ph="..." />
+            <marker date="1513275154693" expanded="false" signature="10713:10732" ph="..." />
+            <marker date="1513275154693" expanded="true" signature="10733:11273" ph="..." />
+            <marker date="1513275154693" expanded="true" signature="10755:11252" ph="..." />
+            <marker date="1513275154693" expanded="true" signature="10776:11229" ph="..." />
+            <marker date="1513275154693" expanded="false" signature="10860:10891" ph="..." />
+            <marker date="1513275154693" expanded="false" signature="10962:10993" ph="..." />
+            <marker date="1513275154693" expanded="false" signature="11084:11115" ph="..." />
+            <marker date="1513275154693" expanded="true" signature="11392:12088" ph="..." />
+            <marker date="1513275154693" expanded="true" signature="11414:12067" ph="..." />
+            <marker date="1513275154693" expanded="true" signature="11435:12044" ph="..." />
+            <marker date="1513275154693" expanded="false" signature="11667:11672" ph="&amp;" />
+            <marker date="1513275154693" expanded="false" signature="12115:12175" ph="..." />
+            <marker date="1513275154693" expanded="true" signature="12176:12278" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

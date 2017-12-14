@@ -108,7 +108,7 @@ class CartController extends ActionController
                 $sumDelivery += $fulldelivery;
             }
             
-            $this->view->assign('fulldelivery', $fulldelivery);
+            $this->view->assign('fulldelivery', $sumDelivery);
             $this->view->assign('subtotal', $sumExcl);
             //$this->view->assign('articledelivery', $sumDelivery);
         } else {
@@ -138,7 +138,7 @@ class CartController extends ActionController
         $result = $query->matching($query->equals('Persistence_Object_Identifier', $delivery))->execute()->getFirst();
         $deliverycosts = $result->getCosts();
 
-        $deliverycosts = $deliverycosts+$fulldelivery;
+        $deliverycosts = $deliverycosts+$sumDelivery;
         $this->view->assign('deliverycosts', $deliverycosts);
 
         $sumExcl = $sumExcl+$deliverycosts;

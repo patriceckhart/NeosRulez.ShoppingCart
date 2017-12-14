@@ -41,6 +41,15 @@ Neos:
               index:
                 label: NeosRulez.ShoppingCart:Main:deliverymoduleactionlabel
                 title: NeosRulez.ShoppingCart:Main:deliverymoduleactionlabel
+          deliverycost:
+            label: NeosRulez.ShoppingCart:Main:deliverycosts
+            controller: '\NeosRulez\ShoppingCart\Controller\DeliverycostController'
+            description: NeosRulez.ShoppingCart:Main:deliverycostsmoddescription
+            icon: 'icon-truck'
+            actions:
+              index:
+                label: NeosRulez.ShoppingCart:Main:newdeliverycosts
+                title: NeosRulez.ShoppingCart:Main:newdeliverycosts
 NeosRulez:
   ShoppingCart:
     taxinclusive: false

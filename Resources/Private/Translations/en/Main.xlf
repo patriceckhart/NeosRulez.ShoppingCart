@@ -68,6 +68,33 @@
             <trans-unit id="newdeliverytype" xml:space="preserve">
 				<source>New Delivery type</source>
 			</trans-unit>
+            <trans-unit id="deliverycostname" xml:space="preserve">
+				<source>Description</source>
+			</trans-unit>
+            <trans-unit id="minweight" xml:space="preserve">
+				<source>Weight min.</source>
+			</trans-unit>
+            <trans-unit id="maxweight" xml:space="preserve">
+				<source>Weight max.</source>
+			</trans-unit>
+            <trans-unit id="deliverycostprice" xml:space="preserve">
+				<source>Price</source>
+			</trans-unit>
+            <trans-unit id="deliverycosttax" xml:space="preserve">
+				<source>Tax</source>
+			</trans-unit>
+            <trans-unit id="nodeliverycosts" xml:space="preserve">
+				<source>No shipping costs available.</source>
+			</trans-unit>
+            <trans-unit id="newdeliverycosts" xml:space="preserve">
+				<source>Create new shipping costs</source>
+			</trans-unit>
+            <trans-unit id="deliverycosts" xml:space="preserve">
+				<source>Shipping costs</source>
+			</trans-unit>
+            <trans-unit id="deliverycostsmoddescription" xml:space="preserve">
+				<source>With this module, you can edit the shipping costs.</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

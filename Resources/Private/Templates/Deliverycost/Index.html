@@ -1,0 +1,42 @@
+<f:if condition="{deliverycosts}">
+    <f:then>
+        <table class="neos-table">
+            <thead>
+            <tr>
+                <td>{f:translate(id: 'deliverycostname', package: 'NeosRulez.ShoppingCart', source: 'Main')}</td>
+                <td>{f:translate(id: 'minweight', package: 'NeosRulez.ShoppingCart', source: 'Main')}</td>
+                <td>{f:translate(id: 'maxweight', package: 'NeosRulez.ShoppingCart', source: 'Main')}</td>
+                <td>{f:translate(id: 'deliverycostprice', package: 'NeosRulez.ShoppingCart', source: 'Main')}</td>
+                <td>{f:translate(id: 'deliverycosttax', package: 'NeosRulez.ShoppingCart', source: 'Main')}</td>
+                <td>&nbsp;</td>
+            </tr>
+            </thead>
+            <tbody>
+            <f:for each="{deliverycosts}" as="deliverycost">
+                <tr>
+                    <td>{deliverycost.name}</td>
+                    <td><f:format.number decimals="2" decimalSeparator="," thousandsSeparator=".">{deliverycost.minweight}</f:format.number></td>
+                    <td><f:format.number decimals="2" decimalSeparator="," thousandsSeparator=".">{deliverycost.maxweight}</f:format.number></td>
+                    <td><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{deliverycost.price}</f:format.currency></td>
+                    <td>{deliverycost.tax} %</td>
+                    <td class="neos-action">
+                        <div class="neos-pull-right">
+                            <f:form action="delete" arguments="{deliverycost: deliverycost}">
+                                <f:link.action class="neos-button neos-button-primary" action="edit" arguments="{deliverycost: deliverycost}"><i class="icon-pencil icon-white"></i></f:link.action>
+
+                                <button type="submit" class="neos-button neos-button-danger"><i class="icon-remove"></i></button>
+                            </f:form>
+                        </div>
+                    </td>
+                </tr>
+            </f:for>
+            </tbody>
+        </table>
+    </f:then>
+    <f:else>
+        <br />{f:translate(id: 'nodeliverycosts', package: 'NeosRulez.ShoppingCart', source: 'Main')}
+    </f:else>
+</f:if>
+<div class="neos-footer">
+    <f:link.action class="neos-button neos-button-primary" action="new">{f:translate(id: 'newdeliverycosts', package: 'NeosRulez.ShoppingCart', source: 'Main')}</f:link.action>
+</div>

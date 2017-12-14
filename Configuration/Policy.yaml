@@ -8,6 +8,8 @@ privilegeTargets:
       matcher: 'method(NeosRulez\ShoppingCart\Controller\CountryController->.*Action())'
     'NeosRulez.ShoppingCart:DeliveryControllerActions':
       matcher: 'method(NeosRulez\ShoppingCart\Controller\DeliveryController->.*Action())'
+    'NeosRulez.ShoppingCart:DeliverycostControllerActions':
+      matcher: 'method(NeosRulez\ShoppingCart\Controller\DeliverycostController->.*Action())'
 
 roles:
   'Neos.Flow:Everybody':
@@ -23,4 +25,7 @@ roles:
         permission: GRANT
       -
         privilegeTarget: 'NeosRulez.ShoppingCart:DeliveryControllerActions'
+        permission: GRANT
+      -
+        privilegeTarget: 'NeosRulez.ShoppingCart:DeliverycostControllerActions'
         permission: GRANT

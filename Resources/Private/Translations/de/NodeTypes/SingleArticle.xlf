@@ -39,7 +39,7 @@
 				<source>Alter Preis</source>
 			</trans-unit>
             <trans-unit id="properties.delivery" xml:space="preserve">
-				<source>Versandkosten</source>
+				<source>Gewicht</source>
 			</trans-unit>
 			<trans-unit id="properties.articleNumber" xml:space="preserve">
 				<source>Artikelnummer</source>

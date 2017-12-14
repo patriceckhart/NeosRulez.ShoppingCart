@@ -68,6 +68,33 @@
             <trans-unit id="newdeliverytype" xml:space="preserve">
 				<source>Neue Versandarten erstellen</source>
 			</trans-unit>
+            <trans-unit id="deliverycostname" xml:space="preserve">
+				<source>Bezeichnung</source>
+			</trans-unit>
+            <trans-unit id="minweight" xml:space="preserve">
+				<source>Gewicht min.</source>
+			</trans-unit>
+            <trans-unit id="maxweight" xml:space="preserve">
+				<source>Gewicht max.</source>
+			</trans-unit>
+            <trans-unit id="deliverycostprice" xml:space="preserve">
+				<source>Preis</source>
+			</trans-unit>
+            <trans-unit id="deliverycosttax" xml:space="preserve">
+				<source>MwSt.</source>
+			</trans-unit>
+            <trans-unit id="nodeliverycosts" xml:space="preserve">
+				<source>Keine Versandkosten verfügbar.</source>
+			</trans-unit>
+            <trans-unit id="newdeliverycosts" xml:space="preserve">
+				<source>Neue Versandkosten erstellen</source>
+			</trans-unit>
+            <trans-unit id="deliverycosts" xml:space="preserve">
+				<source>Versandkosten</source>
+			</trans-unit>
+            <trans-unit id="deliverycostsmoddescription" xml:space="preserve">
+				<source>Mit diesem Modul, können Sie die Versandkosten bearbeiten.</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

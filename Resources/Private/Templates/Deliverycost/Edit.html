@@ -1,0 +1,29 @@
+<f:form action='update' object='{deliverycost}' objectName='deliverycost'>
+    <div class='neos-content neos-container-fluid'>
+
+        <div class="neos-control-group">
+            <label for="name">{f:translate(id: 'deliverycostname', package: 'NeosRulez.ShoppingCart', source: 'Main')}</label>
+            <f:form.textfield property="name" id="name" />
+        </div>
+        <div class="neos-control-group">
+            <label for="minweight">{f:translate(id: 'minweight', package: 'NeosRulez.ShoppingCart', source: 'Main')}</label>
+            <f:form.textfield property="minweight" id="minweight" value="<f:format.currency decimalSeparator=',' thousandsSeparator='.' prependCurrency='true'>{deliverycost.minweight}</f:format.currency>" />
+        </div>
+        <div class="neos-control-group">
+            <label for="maxweight">{f:translate(id: 'maxweight', package: 'NeosRulez.ShoppingCart', source: 'Main')}</label>
+            <f:form.textfield property="maxweight" id="maxweight" value="<f:format.currency decimalSeparator=',' thousandsSeparator='.' prependCurrency='true'>{deliverycost.maxweight}</f:format.currency>" />
+        </div>
+        <div class="neos-control-group">
+            <label for="price">{f:translate(id: 'deliverycostprice', package: 'NeosRulez.ShoppingCart', source: 'Main')}</label>
+            <f:form.textfield property="price" id="price" value="<f:format.currency decimalSeparator=',' thousandsSeparator='.' prependCurrency='true'>{deliverycost.price}</f:format.currency>"/>
+        </div>
+        <div class="neos-control-group">
+            <label for="tax">{f:translate(id: 'deliverycosttax', package: 'NeosRulez.ShoppingCart', source: 'Main')}</label>
+            <f:form.textfield property="tax" id="tax" />
+        </div>
+    </div>
+
+    <div class='neos-footer'>
+        <f:form.submit class="neos-button neos-button-primary" value="{f:translate(id: 'savechanges', package: 'NeosRulez.ShoppingCart', source: 'Main')}" />
+    </div>
+</f:form>
