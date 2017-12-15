@@ -45,7 +45,10 @@ class DeliverycostController extends ActionController
      * @return void
      */
     public function indexAction() {
-        $this->view->assign('deliverycosts', $this->deliverycostRepository->findAll());
+        $delivercost = '\NeosRulez\ShoppingCart\Domain\Model\Deliverycost';
+        $querydelivercost = $this->persistenceManager->createQueryForType($delivercost);
+        $deliverycosts = $querydelivercost->setOrderings(array('price' => \Neos\Flow\Persistence\QueryInterface::ORDER_ASCENDING))->execute();
+        $this->view->assign('deliverycosts', $deliverycosts);
     }
 
     /**

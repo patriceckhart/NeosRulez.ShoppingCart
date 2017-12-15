@@ -86,7 +86,7 @@
         </f:for>
         <div class="row">
             <div class="col-7">
-                <f:link.action action="deleteCart" class="btn btn-danger" controller="cart">{f:translate(id: 'deletecart', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}</f:link.action>
+                <f:link.action action="deleteCart" class="btn btn-danger mb-4" controller="cart">{f:translate(id: 'deletecart', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}</f:link.action>
             </div>
             <div class="col text-right">
                 <f:form action="cart" controller="Cart" package="NeosRulez.ShoppingCart">
@@ -112,7 +112,7 @@
                 </f:if>
                 <div class="row align-items-end">
                     <div class="col">{f:translate(id: 'total', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}:</div>
-                    <div class="col"><h3 class="fullprice"><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{fullprice}</f:format.currency></h3></div>
+                    <div class="col"><h3 class="fullprice mb-0"><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{fullprice}</f:format.currency></h3></div>
                 </div>
             </div>
         </div>

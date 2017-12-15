@@ -77,6 +77,9 @@
             <trans-unit id="payorder" xml:space="preserve">
 				<source>Weiter zur Kassa</source>
 			</trans-unit>
+            <trans-unit id="paymenttype" xml:space="preserve">
+				<source>Zahlungsweise</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

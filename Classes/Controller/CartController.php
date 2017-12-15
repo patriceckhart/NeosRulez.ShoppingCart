@@ -106,46 +106,52 @@ class CartController extends ActionController
             $sumDelivery = FALSE;
             $sumDelivery = floatval($sumDelivery);
 
+            $fullweight = FALSE;
+            $fullweight = floatval($fullweight);
+
             foreach ($items as $dat) {
                 $fullpriceExcl = floatval($dat["fullprice"]);
                 $sumExcl += $fullpriceExcl;
 
                 $fulldelivery = floatval($dat["fulldelivery"]);
 
-                $delivercost = '\NeosRulez\ShoppingCart\Domain\Model\Deliverycost';
-                $querydelivercost = $this->persistenceManager->createQueryForType($delivercost);
-                $deliverycosts = $querydelivercost->execute();
+                $fullweight += $fulldelivery;
+            }
 
-                while ($deliverycost = $deliverycosts->current()) {
+            $delivercost = '\NeosRulez\ShoppingCart\Domain\Model\Deliverycost';
+            $querydelivercost = $this->persistenceManager->createQueryForType($delivercost);
+            $deliverycosts = $querydelivercost->execute();
 
-                    $minweight = floatval($deliverycost->getMinweight());
-                    $maxweight = floatval($deliverycost->getMaxweight());
+            while ($deliverycost = $deliverycosts->current()) {
 
-                    if($fulldelivery>=$minweight) {
-                        if($fulldelivery<=$maxweight) {
-                            $deliverc = floatval($deliverycost->getPrice());
-                            $delivert = floatval($deliverycost->getTax());
-                        }
+                $minweight = floatval($deliverycost->getMinweight());
+                $maxweight = floatval($deliverycost->getMaxweight());
+
+                if($fullweight>=$minweight AND $fullweight<=$maxweight) {
+                    $deliverc = floatval($deliverycost->getPrice());
+                    $delivert = floatval($deliverycost->getTax());
+                    break;
+                } else {
+                    if($fullweight>$minweight AND $fullweight>$maxweight) {
+                        $deliverc = floatval($deliverycost->getPrice());
+                        $delivert = floatval($deliverycost->getTax());
                     } else {
                         $deliverc = 0;
                         $delivert = 0;
                     }
-
-                    $deliverycosts->next();
-
                 }
-
-                $sumDelivery += $deliverc;
-
-
-                $sumDelivery += $fulldelivery;
+                $deliverycosts->next();
             }
-            
+
+            $sumDelivery = $deliverc;
+            $sumDeliveryTax = $delivert;
             $this->view->assign('fulldelivery', $sumDelivery);
+            $this->view->assign('fullweight', $fullweight);
             $this->view->assign('subtotal', $sumExcl);
         } else {
             $sumExcl = 0;
             $sumDelivery = 0;
+            $sumDeliveryTax = 0;
         }
 
         $sumTax = FALSE;
@@ -179,17 +185,16 @@ class CartController extends ActionController
         if($taxinclusive==true) {
             $this->view->assign('fullprice', $sumExcl);
         } else {
-            $this->view->assign('fullprice', $sumExcl+$sumTax);
+            $this->view->assign('fullprice', $sumExcl+$sumTax+$sumDeliveryTax);
         }
 
-        $this->view->assign('taxvalue', $sumTax);
+        $fulltax = $sumTax+$sumDeliveryTax;
+        $this->view->assign('taxvalue', $fulltax);
 
         $this->view->assign('items', $items);
 
         $this->view->assign('countries', $this->countryRepository->findAll());
         $this->view->assign('deliveries', $this->deliveryRepository->findAll());
-
-
 
     }
 

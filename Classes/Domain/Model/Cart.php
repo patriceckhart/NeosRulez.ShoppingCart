@@ -84,6 +84,7 @@ class Cart {
         $delivery = str_replace(',', '.', $delivery);
         $fulldelivery = $delivery*$quantity;
         $item['fulldelivery'] = floatval($fulldelivery);
+        $fulldelivery = floatval($fulldelivery);
 
         $tax = intval($item['tax']);
         $taxvalue = floatval($price)/100*$tax;
