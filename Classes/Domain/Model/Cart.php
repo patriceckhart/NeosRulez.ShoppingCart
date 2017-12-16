@@ -46,7 +46,12 @@ class Cart {
 
         $delivery = $item['delivery'];
         $delivery = str_replace(',', '.', $delivery);
-        $fulldelivery = $delivery*$quantity;
+        if($delivery=="") {
+            $fulldelivery = 0;
+        } else {
+            $fulldelivery = $delivery*$quantity;
+        }
+
         $item['fulldelivery'] = floatval($fulldelivery);
 
         $tax = intval($item['tax']);
@@ -82,7 +87,11 @@ class Cart {
 
         $delivery = $item['delivery'];
         $delivery = str_replace(',', '.', $delivery);
-        $fulldelivery = $delivery*$quantity;
+        if($delivery=="") {
+            $fulldelivery = 0;
+        } else {
+            $fulldelivery = $delivery*$quantity;
+        }
         $item['fulldelivery'] = floatval($fulldelivery);
         $fulldelivery = floatval($fulldelivery);
 
