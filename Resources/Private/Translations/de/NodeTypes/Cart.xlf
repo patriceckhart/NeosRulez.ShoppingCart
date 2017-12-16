@@ -68,8 +68,11 @@
             <trans-unit id="formemail" xml:space="preserve">
 				<source>E-Mail Adresse</source>
 			</trans-unit>
+            <trans-unit id="continueorder" xml:space="preserve">
+				<source>Bestellung fortsetzen</source>
+			</trans-unit>
             <trans-unit id="placeorder" xml:space="preserve">
-				<source>Bestellung aufgeben</source>
+				<source>Bestellung abschließen</source>
 			</trans-unit>
             <trans-unit id="emptycart" xml:space="preserve">
 				<source>Ihr Warenkorb ist leer</source>
@@ -79,6 +82,18 @@
 			</trans-unit>
             <trans-unit id="paymenttype" xml:space="preserve">
 				<source>Zahlungsweise</source>
+			</trans-unit>
+            <trans-unit id="paymenttype1" xml:space="preserve">
+				<source>PayPal</source>
+			</trans-unit>
+            <trans-unit id="paymenttype2" xml:space="preserve">
+				<source>Vorauskasse</source>
+			</trans-unit>
+            <trans-unit id="paymenttype3" xml:space="preserve">
+				<source>Rechnung</source>
+			</trans-unit>
+            <trans-unit id="paymenttype4" xml:space="preserve">
+				<source>Nachnahme</source>
 			</trans-unit>
 		</body>
 	</file>

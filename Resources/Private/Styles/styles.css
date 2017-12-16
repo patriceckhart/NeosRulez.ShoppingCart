@@ -5,6 +5,8 @@
 .opacity { opacity: 0.4;}
 .ulalert, .ulalert li { display:block; margin:0; padding:0; }
 .ulalert { padding:1rem; margin-bottom:2rem; }
+#step1 { display:block; }
+#step2 { display:none; }
 
 @media only screen and (max-width:575px) {
     .addto { width:100%; margin-top:2em; }

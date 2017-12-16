@@ -36,4 +36,26 @@ class Country
         $this->country = $country;
     }
 
+    /**
+     * @var string
+     */
+    protected $countrykey;
+
+    /**
+     * @return string
+     */
+    public function getCountrykey()
+    {
+        return $this->countrykey;
+    }
+
+    /**
+     * @param string $countrykey
+     * @return void
+     */
+    public function setCountrykey($countrykey)
+    {
+        $this->countrykey = $countrykey;
+    }
+
 }

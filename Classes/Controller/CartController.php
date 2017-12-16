@@ -98,6 +98,9 @@ class CartController extends ActionController
         $taxinclusive = $this->settings['taxinclusive'];
         $this->view->assign('taxinclusive', $taxinclusive);
 
+        $paypal = $this->settings['payPal'];
+        $this->view->assign('paypal', $paypal);
+
         $cartcount = count($items);
         if ($cartcount>0) {
             $sumExcl = FALSE;
@@ -222,11 +225,15 @@ class CartController extends ActionController
      */
     public function checkoutAction() {
 
+        $timestamp = time();
         $orderEmailAddress = $this->settings['orderEmailAddress'];
         $senderEmailAddress = $this->settings['senderEmailAddress'];
-        $confirmationSubject = $this->settings['confirmationSubject'];
-        $orderSubject = $this->settings['orderSubject'];
+        $confirmationSubject = $this->settings['confirmationSubject'].' ('.$timestamp.')';
+        $orderSubject = $this->settings['orderSubject'].' ('.$timestamp.')';
         $mailLogo = $this->settings['mailLogo'];
+        $payPalReturnUri = $this->settings['payPalReturnUri'];
+        $payPalHostedButtonId = $this->settings['payPalHostedButtonId'];
+        $payPalBusiness = $this->settings['payPalBusiness'];
 
         /* Invoice */
         $company = $this->request->getArgument('company');
@@ -240,6 +247,7 @@ class CartController extends ActionController
         $invoiceemail = $this->request->getArgument('email');
         $invoiceaddress = $company.'<br />'.$firstname.' '.$lastname.'<br />'.$address.'<br />'.$zip.' '.$city.'<br />'.$country.'<br />'.$phone.'<br />'.$invoiceemail;
 
+        $payment = $this->request->getArgument('payment');
 
         $delivery = $this->request->getArgument('delivery');
         $deliveries = '\NeosRulez\ShoppingCart\Domain\Model\Delivery';
@@ -284,6 +292,11 @@ class CartController extends ActionController
         } else {
             $country1 = $this->request->getArgument('country');
         }
+
+        $countrykeyclass = '\NeosRulez\ShoppingCart\Domain\Model\Country';
+        $countrykeyquery = $this->persistenceManager->createQueryForType($countrykeyclass);
+        $countrykeyresult = $countrykeyquery->matching($countrykeyquery->equals('country', $country))->execute()->getFirst();
+        $countrykey = $countrykeyresult->getCountrykey();
 
         $deliveryaddress = $company1.'<br />'.$firstname1.' '.$lastname1.'<br />'.$address1.'<br />'.$zip1.' '.$city1.'<br />'.$country1;
 
@@ -338,7 +351,7 @@ class CartController extends ActionController
 
 		<div style="float:left; width:100%;"">
 			<div style="float:left; width:50%;">
-				<h1>{title}</h1>
+				<h1>{title} ('.$timestamp.')</h1>
 			</div>
 			<div style="float:left; width:50%; text-align:right;">
 				<img src="'.$mailLogo.'" alt="" />
@@ -358,8 +371,9 @@ class CartController extends ActionController
 		</div>
 
 		<div style="float:left; width:100%; margin-top:20px; margin-bottom:20px;">
-			<h3>Versandoptionen</h3>
-			'.$deliveryname.' ('.money_format('%=*^-14#8.2i',$deliverycosts).')
+			<h3>Versandoptionen &amp; Bezahlung</h3>
+			'.$deliveryname.' ('.money_format('%=*^-14#8.2i',$deliverycosts).')<br />
+			Zahlungsweise: '.$payment.' 
 		</div>
 
 		<div style="float:left; width:100%; margin-top:20px; margin-bottom:20px;">
@@ -416,9 +430,26 @@ class CartController extends ActionController
             ->setBody($orderbody, 'text/html')
             ->send();
 
-        $this->cart->deleteCart();
-        $linkToCart = $this->settings['linkToCart'];
-        $this->redirectToUri($linkToCart);
+        if($payment=="1") {
+            $this->view->assign('hosted_button_id', $payPalHostedButtonId);
+            $this->view->assign('business', $payPalBusiness);
+            $this->view->assign('firstname', $firstname);
+            $this->view->assign('lastname', $lastname);
+            $this->view->assign('address', $address);
+            $this->view->assign('city', $city);
+            $this->view->assign('zip', $zip);
+            $this->view->assign('invoiceemail', $invoiceemail);
+            $this->view->assign('country', $countrykey);
+            $this->view->assign('timestamp', $timestamp);
+            $this->view->assign('payPalReturnUri', $payPalReturnUri);
+            $this->view->assign('sumfullprice', $sumfullprice);
+            $this->cart->deleteCart();
+        } else {
+            $this->cart->deleteCart();
+            $linkToCart = $this->settings['linkToCart'];
+            $this->redirectToUri($linkToCart);
+        }
+
 
     }
 

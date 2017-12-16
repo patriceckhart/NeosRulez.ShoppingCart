@@ -53,8 +53,6 @@ Neos:
 NeosRulez:
   ShoppingCart:
     taxinclusive: false
-    #linkToCart: '/de/shop/warenkorb.html'
-    #linkToHome: '/de/shop.html'
     linkToCart: '/de/warenkorb.html'
     linkToHome: '/'
     standardDelivery: '7ac6ba34-5992-4b9f-8d21-bdc5966c945e'
@@ -64,3 +62,7 @@ NeosRulez:
     confirmationSubject: 'Bestellbestätigung'
     orderSubject: 'Bestellung'
     mailLogo: 'http://dev.localhost/_Resources/Persistent/da2b254877a5c7bb4155ee4f112495899ac075ef/Testlogo.png'
+    payPal: false
+    payPalReturnUri: '/paymentsuccessful.html'
+    payPalHostedButtonId: 'LTRDGNR38ZH6A'
+    payPalBusiness: 'mail@patriceckhart.com'

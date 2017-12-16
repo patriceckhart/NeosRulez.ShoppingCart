@@ -22,6 +22,12 @@ $(function() {
         }
     });
 });
+$('#gotostep2').click(function() {
+    $('#step1').addClass("opacity");
+    $('#step2').css('display','block');
+    $('#gotostep2').css('display','none');
+    $('#step1 :input').attr('disabled', true);
+});
 
 
 function validateForm() {

@@ -4,6 +4,7 @@
             <thead>
             <tr>
                 <td>{f:translate(id: 'country', package: 'NeosRulez.ShoppingCart', source: 'Main')}</td>
+                <td>Key</td>
                 <td>ID</td>
                 <td>&nbsp;</td>
             </tr>
@@ -12,6 +13,7 @@
             <f:for each="{countries}" as="country">
                 <tr>
                     <td>{country.country}</td>
+                    <td>{country.countrykey}</td>
                     <td><f:format.identifier>{country}</f:format.identifier></td>
                     <td class="neos-action">
                         <div class="neos-pull-right">

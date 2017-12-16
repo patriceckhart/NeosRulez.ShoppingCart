@@ -3,6 +3,7 @@
 {namespace media=Neos\Media\ViewHelpers}
 <f:if condition="{items}">
     <f:then>
+        <div id="step1">
         <div class="row cart-titles">
             <div class="col-lg-2">
                 &nbsp;
@@ -36,7 +37,6 @@
                 </div>
                 <div class="col-lg-2 text-right">
                     <f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{item.articlePrice}</f:format.currency><br />
-                    {item.delivery}
                     <small class="text-muted">
                         <f:if condition="{taxinclusive}==1">
                             <f:then>
@@ -116,8 +116,15 @@
                 </div>
             </div>
         </div>
+        </div>
         <hr>
 
+        <div class="row">
+            <div class="col text-right">
+                <a id="gotostep2" class="btn btn-lg btn-primary" href="#step2">{f:translate(id: 'continueorder', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}</a>
+            </div>
+        </div>
+        <div id="step2">
             <f:form id="cartform" action="checkout" controller="Cart" package="NeosRulez.ShoppingCart">
                 <f:form.hidden name="subtotal" value="{subtotal}" />
                 <f:form.hidden name="taxvalue" value="{taxvalue}" />
@@ -216,13 +223,28 @@
                         </div>
                     </div>
                 </div>
+<hr>
 
-        <div class="row">
-            <div class="col text-right">
+        <div class="row align-items-center">
+
+            <div class="col col-sm-2"><label for="payment" class="col-form-label">{f:translate(id: 'paymenttype', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}:</label></div>
+            <div class="col col-sm-3">
+                <select class="form-control" id="payment" name="--neosrulez_shoppingcart-cart[payment]">
+                    <f:if condition="{paypal}">
+                        <option value="1">{f:translate(id: 'paymenttype1', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}</option>
+                    </f:if>
+                    <option value="2">{f:translate(id: 'paymenttype2', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}</option>
+                    <option value="3">{f:translate(id: 'paymenttype3', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}</option>
+                    <option value="4">{f:translate(id: 'paymenttype4', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}</option>
+                </select>
+            </div>
+
+            <div class="col col-sm-7 text-right">
                 <button type="submit" id="submitbtn" class="btn btn-lg btn-primary">{f:translate(id: 'placeorder', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}</button>
             </div>
         </div>
         </f:form>
+        </div>
     </f:then>
     <f:else>
         {f:translate(id: 'emptycart', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}.
