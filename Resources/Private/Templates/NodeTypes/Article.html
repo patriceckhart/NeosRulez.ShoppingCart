@@ -19,12 +19,12 @@
     <div class="col-lg-6">
         <div class="row">
             <div class="col-sm-6">
-        {f:if(condition: '{articleTitle}', then: '<h1>{articleTitle}</h1>')}
+        {f:if(condition: '{articleTitle}', then: '<h2>{articleTitle}</h2>')}
         <f:if condition="{articleNumber}"><small class="text-muted">{f:translate(id: 'articlenumber', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')}: {articleNumber}</small></f:if>
             </div>
             <div class="col-sm-6">
         <f:if condition="{articlePrice}">
-            <h2 class="price"><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{articlePrice}</f:format.currency></h2>
+            <h3 class="price"><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{articlePrice}</f:format.currency></h3>
         </f:if>
         <f:if condition="{articleOldPrice}">
             <h5 class="old-price text-muted font-weight-normal"><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{articleOldPrice}</f:format.currency></h5>

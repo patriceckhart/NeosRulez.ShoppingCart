@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efeb9722-91df-4e52-98da-fdbaf866d876" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Private/Templates/Cart/Checkout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Controller/CartController.php" afterPath="$PROJECT_DIR$/Classes/Controller/CartController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Domain/Model/Country.php" afterPath="$PROJECT_DIR$/Classes/Domain/Model/Country.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Configuration/Settings.yaml" afterPath="$PROJECT_DIR$/Configuration/Settings.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/JavaScript/scripts.js" afterPath="$PROJECT_DIR$/Resources/Private/JavaScript/scripts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Styles/styles.css" afterPath="$PROJECT_DIR$/Resources/Private/Styles/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/Country/Edit.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/Country/Edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/Country/Index.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/Country/Index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/Country/New.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/Country/New.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Cart.xlf" afterPath="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Cart.xlf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Cart.xlf" afterPath="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Cart.xlf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Public/JavaScript/scripts.min.js" afterPath="$PROJECT_DIR$/Resources/Public/JavaScript/scripts.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Public/Styles/styles.min.css" afterPath="$PROJECT_DIR$/Resources/Public/Styles/styles.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -108,7 +94,6 @@
         <option value="$PROJECT_DIR$/Configuration/NodeTypes.ArticlePage.yaml" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/ArticlePage.xlf" />
         <option value="$PROJECT_DIR$/Configuration/NodeTypes.SingleArticle.yaml" />
-        <option value="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html" />
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Article.fusion" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/SingleArticle.html" />
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/SingleArticle.fusion" />
@@ -139,6 +124,7 @@
         <option value="$PROJECT_DIR$/Classes/Controller/CartController.php" />
         <option value="$PROJECT_DIR$/Configuration/Settings.yaml" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html" />
+        <option value="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html" />
       </list>
     </option>
   </component>
@@ -441,12 +427,12 @@
       <workItem from="1513274560097" duration="5192000" />
       <workItem from="1513362022531" duration="7686000" />
       <workItem from="1513430915879" duration="2576000" />
-      <workItem from="1513434053869" duration="2877000" />
+      <workItem from="1513434053869" duration="3042000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63590000" />
+    <option name="totallyTimeSpent" value="63755000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="969" extended-state="6" />
@@ -590,13 +576,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -846,9 +825,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Configuration/Settings.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="618">
+          <caret line="64" column="17" lean-forward="false" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Classes/Controller/CartController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
+        <state relative-caret-position="1620">
           <caret line="109" column="50" lean-forward="true" selection-start-line="109" selection-start-column="50" selection-end-line="109" selection-end-column="50" />
           <folding>
             <marker date="1513438732559" expanded="true" signature="11391:11891" ph="..." />
@@ -893,10 +880,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Configuration/Settings.yaml">
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="64" column="17" lean-forward="false" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
+        <state relative-caret-position="390">
+          <caret line="26" column="15" lean-forward="false" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
           <folding />
         </state>
       </provider>
