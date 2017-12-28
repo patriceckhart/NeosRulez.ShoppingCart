@@ -330,7 +330,7 @@ class CartController extends ActionController
               <tbody>
                 <tr>
                   <td width="150" height="30" align="left" valign="middle">'.$quantity.'</td>
-                  <td align="left" valign="middle">'.$title.'</td>
+                  <td align="left" valign="middle">'.$title.'<br /><small>'.$articlenumber.'</small>'.$description.'</td>
                   <td width="150" align="right" valign="middle">'.money_format('%=*^-14#8.2i', $price).'</td>
                   <td width="150" align="right" valign="middle">'.money_format('%=*^-14#8.2i', $price*$quantity).'</td>
                 </tr>
