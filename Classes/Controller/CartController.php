@@ -234,6 +234,7 @@ class CartController extends ActionController
         $payPalReturnUri = $this->settings['payPalReturnUri'];
         $payPalHostedButtonId = $this->settings['payPalHostedButtonId'];
         $payPalBusiness = $this->settings['payPalBusiness'];
+        $mailAdditional = $this->settings['mailAdditional'];
 
         /* Invoice */
         $company = $this->request->getArgument('company');
@@ -402,6 +403,10 @@ class CartController extends ActionController
               </tbody>
             </table>
 
+		</div>
+		
+		<div style="float:left; width:100%; margin-top:20px; margin-bottom:20px;">
+			'.$mailAdditional.'
 		</div>
 
 		<div style="float:left; width:100%; margin-top:20px; margin-bottom:20px;">

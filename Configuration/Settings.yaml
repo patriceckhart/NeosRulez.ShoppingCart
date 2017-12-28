@@ -62,6 +62,7 @@ NeosRulez:
     confirmationSubject: 'Bestellbestätigung'
     orderSubject: 'Bestellung'
     mailLogo: 'http://dev.localhost/_Resources/Persistent/da2b254877a5c7bb4155ee4f112495899ac075ef/Testlogo.png'
+    mailAdditional: 'Additional Information'
     payPal: false
     payPalReturnUri: '/paymentsuccessful.html'
     payPalHostedButtonId: 'LTRDGNR38ZH6A'
