@@ -330,7 +330,7 @@ class CartController extends ActionController
               <tbody>
                 <tr>
                   <td width="150" height="30" align="left" valign="middle">'.$quantity.'</td>
-                  <td align="left" valign="middle">'.$title.'<br /><small>'.$articlenumber.'</small>'.$description.'</td>
+                  <td align="left" valign="middle">'.$title.'<br /><small>'.$articlenumber.'</small><br />'.$description.'</td>
                   <td width="150" align="right" valign="middle">'.money_format('%=*^-14#8.2i', $price).'</td>
                   <td width="150" align="right" valign="middle">'.money_format('%=*^-14#8.2i', $price*$quantity).'</td>
                 </tr>
@@ -351,7 +351,7 @@ class CartController extends ActionController
 
 		<div style="float:left; width:100%;"">
 			<div style="float:left; width:50%;">
-				<h1>{title} ('.$timestamp.')</h1>
+				<h1>{title}</h1>
 			</div>
 			<div style="float:left; width:50%; text-align:right;">
 				<img src="'.$mailLogo.'" alt="" />
