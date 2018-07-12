@@ -1,4 +1,4 @@
-prototype(Site:Article) {
+prototype(ShoppingCart:Article) {
     articleTitle = ${q(documentNode).property('articleTitle')}
     articlePrice = ${String.replace(q(documentNode).property('articlePrice'), ',', '.')}
     articleOldPrice = ${String.replace(q(documentNode).property('articleOldPrice'), ',', '.')}

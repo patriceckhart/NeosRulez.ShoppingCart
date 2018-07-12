@@ -1,4 +1,4 @@
-prototype(Site:SingleArticle) < prototype(Content) {
+prototype(ShoppingCart:SingleArticle) < prototype(Content) {
     templatePath = 'resource://NeosRulez.ShoppingCart/Private/Templates/NodeTypes/SingleArticle.html'
     linkToCart = ${Configuration.setting('NeosRulez.ShoppingCart.linkToCart')}
     articleTitle = ${q(node).property('articleTitle')}

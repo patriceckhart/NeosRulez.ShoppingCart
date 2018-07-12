@@ -1,5 +1,5 @@
-prototype(Site:Cart) < prototype(Neos.Neos:Plugin)
-prototype(Site:Cart) {
+prototype(ShoppingCart:Cart) < prototype(Neos.Neos:Plugin)
+prototype(ShoppingCart:Cart) {
     package = 'NeosRulez.ShoppingCart'
     controller = 'Cart'
     action = 'cart'
