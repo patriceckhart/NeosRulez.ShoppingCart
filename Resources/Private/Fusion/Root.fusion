@@ -1,3 +1,2 @@
-namespace: ShoppingCart=NeosRulez.ShoppingCart
 include: ProtoTypes/*
 include: NodeTypes/*
