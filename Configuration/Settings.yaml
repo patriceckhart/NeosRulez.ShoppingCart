@@ -41,7 +41,7 @@ Neos:
               index:
                 label: NeosRulez.ShoppingCart:Main:deliverymoduleactionlabel
                 title: NeosRulez.ShoppingCart:Main:deliverymoduleactionlabel
-          deliverycost:
+          costdelivery:
             label: NeosRulez.ShoppingCart:Main:deliverycosts
             controller: '\NeosRulez\ShoppingCart\Controller\DeliverycostController'
             description: NeosRulez.ShoppingCart:Main:deliverycostsmoddescription
@@ -55,8 +55,8 @@ NeosRulez:
     taxinclusive: false
     linkToCart: '/de/warenkorb.html'
     linkToHome: '/'
-    standardDelivery: '7ac6ba34-5992-4b9f-8d21-bdc5966c945e'
-    standardCountry: '222a091c-d95e-4487-b15e-194c1b9c9741'
+    standardDelivery: '49b096f0-bbdc-49fb-85e2-9cc490c473ac'
+    standardCountry: '82a601a0-515d-43da-b307-9c44714c2893'
     senderEmailAddress: 'postmaster@patriceckhart.com'
     orderEmailAddress: 'mail@patriceckhart.com'
     confirmationSubject: 'Bestellbestätigung'

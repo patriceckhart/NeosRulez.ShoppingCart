@@ -78,7 +78,7 @@
                 </div>
                 <div class="col-lg-1 text-right">
                     <f:form action="removeItem" controller="Cart" package="NeosRulez.ShoppingCart" arguments="{id: item.timestamp}">
-                        <button type="submit" class="btn btn-sm btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                        <button type="submit" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
                     </f:form>
                 </div>
             </div>
@@ -184,11 +184,10 @@
                             <f:form.textfield id="email" name="email" class="form-control" value="" placeholder="E-Mail Adresse" />
                         </div>
                         <div class="form-group">
-                            <label class="custom-control custom-checkbox">
-                                <input id="ecustomdelivery" type="checkbox" class="custom-control-input">
-                                <span class="custom-control-indicator"></span>
-                                <span class="custom-control-description">{f:translate(id: 'deliveryaddress', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}</span>
-                            </label>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="ecustomdelivery">
+                                <label class="custom-control-label" for="ecustomdelivery">{f:translate(id: 'deliveryaddress', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}</label>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-6 custom-delivery opacity">
