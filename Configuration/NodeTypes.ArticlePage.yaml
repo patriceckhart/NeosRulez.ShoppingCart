@@ -15,7 +15,7 @@
       type: 'Neos.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          'NeosCommerce.Cart:Article': TRUE
+          'NeosRulez.ShoppingCart:Article': TRUE
           '*': FALSE
   properties:
     'articleTitle':
