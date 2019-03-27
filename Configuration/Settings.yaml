@@ -50,6 +50,15 @@ Neos:
               index:
                 label: NeosRulez.ShoppingCart:Main:newdeliverycosts
                 title: NeosRulez.ShoppingCart:Main:newdeliverycosts
+          coupon:
+            label: NeosRulez.ShoppingCart:Main:coupon
+            controller: '\NeosRulez\ShoppingCart\Controller\CouponController'
+            description: NeosRulez.ShoppingCart:Main:couponmoddescription
+            icon: 'icon-ticket-alt'
+            actions:
+              index:
+                label: NeosRulez.ShoppingCart:Main:coupon
+                title: NeosRulez.ShoppingCart:Main:coupon
 NeosRulez:
   ShoppingCart:
     taxinclusive: false
@@ -67,3 +76,4 @@ NeosRulez:
     payPalReturnUri: '/paymentsuccessful.html'
     payPalHostedButtonId: 'LTRDGNR38ZH6A'
     payPalBusiness: 'mail@patriceckhart.com'
+    coupons: true

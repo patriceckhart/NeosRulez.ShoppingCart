@@ -1,0 +1,69 @@
+<f:if condition="{coupons}">
+    <f:then>
+        <table class="neos-table">
+            <thead>
+            <tr>
+                <td>{f:translate(id: 'couponname', package: 'NeosRulez.ShoppingCart', source: 'Main')}</td>
+                <td>{f:translate(id: 'couponvalue', package: 'NeosRulez.ShoppingCart', source: 'Main')}</td>
+                <td>{f:translate(id: 'couponcode', package: 'NeosRulez.ShoppingCart', source: 'Main')}</td>
+                <td>{f:translate(id: 'coupontype', package: 'NeosRulez.ShoppingCart', source: 'Main')}</td>
+                <td>{f:translate(id: 'status', package: 'NeosRulez.ShoppingCart', source: 'Main')}</td>
+                <td>{f:translate(id: 'couponcounter', package: 'NeosRulez.ShoppingCart', source: 'Main')}</td>
+                <td>&nbsp;</td>
+            </tr>
+            </thead>
+            <tbody>
+            <f:for each="{coupons}" as="coupon">
+                <tr>
+                    <td>{coupon.name}</td>
+                    <td><f:format.number decimals="2" decimalSeparator="," thousandsSeparator=".">{coupon.couponvalue}</f:format.number></td>
+                    <td>{coupon.couponcode}</td>
+                    <td>
+                        <f:if condition="{coupon.coupontype}==1">
+                            <f:then>
+                                {f:translate(id: 'unique', package: 'NeosRulez.ShoppingCart', source: 'Main')}
+                            </f:then>
+                            <f:else>
+                                {f:translate(id: 'notunique', package: 'NeosRulez.ShoppingCart', source: 'Main')}
+                            </f:else>
+                        </f:if>
+                    </td>
+                    <td>
+                        <f:if condition="{coupon.validity}==1">
+                            <f:then>
+                                <span class="neos-badge neos-badge-success">{f:translate(id: 'active', package: 'NeosRulez.ShoppingCart', source: 'Main')}</span>
+                            </f:then>
+                            <f:else>
+                                <span class="neos-badge neos-badge-warning">{f:translate(id: 'inactive', package: 'NeosRulez.ShoppingCart', source: 'Main')}</span>
+                            </f:else>
+                        </f:if>
+                    </td>
+                    <td>{coupon.couponcount}</td>
+                    <td class="neos-action">
+                        <div class="neos-pull-right">
+                            <f:form action="delete" arguments="{coupon: coupon}">
+                                <f:link.action class="neos-button neos-button-primary" action="edit" arguments="{coupon: coupon}"><i class="fas fa-pencil-alt icon-white"></i></f:link.action>
+                                <f:if condition="{coupon.validity}==1">
+                                    <f:then>
+                                        <f:link.action class="neos-button neos-button-warning" action="toggle" arguments="{coupon: coupon, enable: 0}"><i class="fas fa-ban icon-white"></i></f:link.action>
+                                    </f:then>
+                                    <f:else>
+                                        <f:link.action class="neos-button neos-button-success" action="toggle" arguments="{coupon: coupon, enable: 1}"><i class="fas fa-check icon-white"></i></f:link.action>
+                                    </f:else>
+                                </f:if>
+                                <button type="submit" class="neos-button neos-button-danger"><i class="fas fa-trash-alt"></i></button>
+                            </f:form>
+                        </div>
+                    </td>
+                </tr>
+            </f:for>
+            </tbody>
+        </table>
+    </f:then>
+    <f:else>
+        <br />{f:translate(id: 'nocoupons', package: 'NeosRulez.ShoppingCart', source: 'Main')}
+    </f:else>
+</f:if>
+<div class="neos-footer">
+    <f:link.action class="neos-button neos-button-primary" action="new">{f:translate(id: 'newcoupon', package: 'NeosRulez.ShoppingCart', source: 'Main')}</f:link.action>
+</div>

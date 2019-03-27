@@ -95,6 +95,48 @@
             <trans-unit id="deliverycostsmoddescription" xml:space="preserve">
 				<source>With this module, you can edit the shipping costs.</source>
 			</trans-unit>
+			<trans-unit id="coupon" xml:space="preserve">
+				<source>Coupons</source>
+			</trans-unit>
+			<trans-unit id="couponmoddescription" xml:space="preserve">
+				<source>With this module, you can manage coupons.</source>
+			</trans-unit>
+			<trans-unit id="newcoupon" xml:space="preserve">
+				<source>Create new coupon</source>
+			</trans-unit>
+			<trans-unit id="nocoupons" xml:space="preserve">
+				<source>No Coupons available.</source>
+			</trans-unit>
+			<trans-unit id="couponname" xml:space="preserve">
+				<source>Coupon</source>
+			</trans-unit>
+			<trans-unit id="couponvalue" xml:space="preserve">
+				<source>Value</source>
+			</trans-unit>
+			<trans-unit id="couponcode" xml:space="preserve">
+				<source>Coupon-Code</source>
+			</trans-unit>
+			<trans-unit id="coupontype" xml:space="preserve">
+				<source>Gutschein-Type</source>
+			</trans-unit>
+            <trans-unit id="unique" xml:space="preserve">
+				<source>Coupon is unique</source>
+			</trans-unit>
+			<trans-unit id="notunique" xml:space="preserve">
+				<source>Coupon is not unique</source>
+			</trans-unit>
+			<trans-unit id="status" xml:space="preserve">
+				<source>Status</source>
+			</trans-unit>
+			<trans-unit id="active" xml:space="preserve">
+				<source>Active</source>
+			</trans-unit>
+			<trans-unit id="inactive" xml:space="preserve">
+				<source>Inactive</source>
+			</trans-unit>
+			<trans-unit id="couponcounter" xml:space="preserve">
+				<source>Counter</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

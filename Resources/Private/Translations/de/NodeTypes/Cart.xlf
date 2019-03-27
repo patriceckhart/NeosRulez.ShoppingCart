@@ -95,6 +95,9 @@
             <trans-unit id="paymenttype4" xml:space="preserve">
 				<source>Nachnahme</source>
 			</trans-unit>
+			<trans-unit id="checkcouponcode" xml:space="preserve">
+				<source>Gutschein einlösen</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

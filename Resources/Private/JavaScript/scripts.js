@@ -27,6 +27,44 @@ $('#gotostep2').click(function() {
     $('#step2').css('display','block');
     $('#gotostep2').css('display','none');
     $('#step1 :input').attr('disabled', true);
+    $('.coupons').addClass("opacity");
+    $('#couponcode').attr('disabled', true);
+    $('.checkcode').attr('disabled', true);
+});
+
+$(function () {
+
+    $('#checkcouponform').on('submit', function (e) {
+        couponCode = $('#couponcode').val();
+        $form = $(this);
+        var path = $form.attr('action');
+        e.preventDefault();
+        $.ajax({
+            type: 'post',
+            url: path,
+            data: $('#checkcouponform').serialize(),
+            success: function (data) {
+                var splitted = data.split(',');
+                value = splitted[0];
+                identifier = splitted[1];
+                if(value>0) {
+                    couponvalue = value;
+                    sum = $('input[name="--neosrulez_shoppingcart-cart[fullprice]"').val();
+                    newSum = sum-couponvalue;
+                    $('input[name="--neosrulez_shoppingcart-cart[fullprice]"').val(newSum);
+                    $('#couponidentifier').val(identifier);
+                    $('h3.fullprice').text('€ '+newSum.toFixed(2).replace(".", ","));
+                    $('#couponcode').removeClass('is-invalid');
+                    $('#couponcode').addClass('is-valid');
+                    $('.coupons').addClass("opacity");
+                    $('#couponcode').attr('disabled', true);
+                    $('.checkcode').attr('disabled', true);
+                } else {
+                    $('#couponcode').addClass('is-invalid');
+                }
+            }
+        });
+    });
 });
 
 

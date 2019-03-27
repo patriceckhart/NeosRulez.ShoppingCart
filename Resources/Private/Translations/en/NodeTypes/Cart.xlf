@@ -95,6 +95,9 @@
             <trans-unit id="paymenttype4" xml:space="preserve">
 				<source>Cash on delivery</source>
 			</trans-unit>
+			<trans-unit id="checkcouponcode" xml:space="preserve">
+				<source>Redeem coupon</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

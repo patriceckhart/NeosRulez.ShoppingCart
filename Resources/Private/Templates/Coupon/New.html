@@ -1,0 +1,32 @@
+<f:form action="create" objectName="newCoupon" controller="Coupon">
+    <div class="neos-content neos-container-fluid">
+
+        <div class="neos-control-group">
+            <label for="name">{f:translate(id: 'couponname', package: 'NeosRulez.ShoppingCart', source: 'Main')}</label>
+            <f:form.textfield property="name" id="name" />
+        </div>
+        <div class="neos-control-group">
+            <label for="couponvalue">{f:translate(id: 'couponvalue', package: 'NeosRulez.ShoppingCart', source: 'Main')}</label>
+            <f:form.textfield property="couponvalue" id="couponvalue" />
+        </div>
+        <div class="neos-control-group">
+            <label for="couponcode">{f:translate(id: 'couponcode', package: 'NeosRulez.ShoppingCart', source: 'Main')}</label>
+            <f:form.textfield property="couponcode" id="couponcode" />
+        </div>
+        <div class="neos-control-group">
+            <label for="coupontype" class="neos-checkbox" title="" data-neos-toggle="tooltip" data-placement="right" data-original-title="Neos.Neos">
+                <f:form.checkbox property="coupontype" id="coupontype" value="1" /><span></span>
+                {f:translate(id: 'unique', package: 'NeosRulez.ShoppingCart', source: 'Main')}
+            </label>
+        </div>
+
+        <f:form.hidden property="validity" value="1" />
+        <f:form.hidden property="couponcount" value="0" />
+    </div>
+
+    <div class="neos-footer">
+        <f:form.submit class="neos-button neos-button-primary" value="{f:translate(id: 'newcoupon', package: 'NeosRulez.ShoppingCart', source: 'Main')}" />
+    </div>
+</f:form>
+
+

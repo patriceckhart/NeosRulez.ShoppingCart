@@ -58,6 +58,12 @@ class CartController extends ActionController
     protected $deliverycostRepository;
 
     /**
+     * @Flow\Inject
+     * @var \NeosRulez\ShoppingCart\Domain\Repository\CouponRepository
+     */
+    protected $couponRepository;
+
+    /**
      * @param array $item
      * @return void
      */
@@ -67,6 +73,40 @@ class CartController extends ActionController
         //$this->addFlashMessage($this->translator->translateById('added', $sourceName = 'NodeTypes/Article', $packageKey = 'NeosRulez.Cart'));
         $this->addFlashMessage("Artikel hinzugefügt.");
         $this->redirectToUri($nodeUri);
+    }
+
+    /**
+     * @return string
+     */
+    public function validateCouponAction() {
+        $code = $this->request->getArgument('couponcode');
+        $cartfullprice = $this->request->getArgument('cartfullprice');
+
+        $coupons = '\NeosRulez\ShoppingCart\Domain\Model\Coupon';
+        $couponsQuery = $this->persistenceManager->createQueryForType($coupons);
+        $result = $couponsQuery->matching($couponsQuery->equals('couponcode', $code))->execute()->getFirst();
+
+        if($result) {
+            $validity = $result->getValidity();
+            if($validity==1) {
+                $cval = $result->getCouponvalue();
+                $couponValue = $result->getCouponvalue().','.$this->persistenceManager->getIdentifierByObject($result);
+            } else {
+                $couponValue = 0;
+            }
+        } else {
+            $validity = 0;
+            $couponValue = 0;
+        }
+
+        if($cartfullprice<$cval) {
+            $validity = 0;
+            $couponValue = 0;
+        }
+
+        print $couponValue;
+
+        exit();
     }
 
     /**
@@ -100,6 +140,9 @@ class CartController extends ActionController
 
         $paypal = $this->settings['payPal'];
         $this->view->assign('paypal', $paypal);
+
+        $coupons = $this->settings['coupons'];
+        $this->view->assign('coupons', $coupons);
 
         $cartcount = count($items);
         if ($cartcount>0) {
@@ -374,7 +417,7 @@ class CartController extends ActionController
 		<div style="float:left; width:100%; margin-top:20px; margin-bottom:20px;">
 			<h3>Versandoptionen &amp; Bezahlung</h3>
 			'.$deliveryname.' ('.money_format('%=*^-14#8.2i',$deliverycosts).')<br />
-			Zahlungsweise: '.$payment.' 
+			Zahlungsweise: '.$payment.'
 		</div>
 
 		<div style="float:left; width:100%; margin-top:20px; margin-bottom:20px;">
@@ -435,6 +478,26 @@ class CartController extends ActionController
             ->setBody($orderbody, 'text/html')
             ->send();
 
+        //$coupon = $this->request->getArgument('coupon');
+        $couponIdentifier = $this->request->getArgument('couponidentifier');
+
+        $coupons = '\NeosRulez\ShoppingCart\Domain\Model\Coupon';
+        $couponsQuery = $this->persistenceManager->createQueryForType($coupons);
+        $couponresult = $couponsQuery->matching($couponsQuery->equals('Persistence_Object_Identifier', $couponIdentifier))->execute()->getFirst();
+
+        if($couponresult) {
+            $coupontype = $couponresult->getCoupontype();
+            $couponcount = $couponresult->getCouponcount();
+        } else {
+            $coupontype = 0;
+        }
+
+        if($coupontype==1) {
+            $couponresult->setValidity(0);
+            $couponresult->setCouponcount($couponcount+1);
+            $this->couponRepository->update($couponresult);
+        }
+
         if($payment=="1") {
             $this->view->assign('hosted_button_id', $payPalHostedButtonId);
             $this->view->assign('business', $payPalBusiness);
@@ -454,7 +517,6 @@ class CartController extends ActionController
             $linkToCart = $this->settings['linkToCart'];
             $this->redirectToUri($linkToCart);
         }
-
 
     }
 
