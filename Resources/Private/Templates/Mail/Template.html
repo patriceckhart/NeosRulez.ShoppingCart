@@ -1,0 +1,119 @@
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<style>
+    body { font-family: Helvetica, Arial, Sans-Serif; background:#EBEBEB; padding:40px; }
+</style>
+<div style="width:1000px; margin:0 auto; margin-bottom:40px;">
+    <!-- Header -->
+    <div style="float:left; width:940px; background:#FFFFFF; padding:40px;">
+        <div style="float:left; width:470px;">
+            <h1 style="margin:0;">{title}</h1>
+        </div>
+        <div style="float:left; width:470px; text-align:right;">
+            {logo}
+        </div>
+    </div>
+    <!-- Header -->
+
+    <!-- Address -->
+    <div style="float:left; width:940px; background:#FFFFFF; padding:40px;">
+        <div style="float:left; width:470px;">
+            <h3>Rechnungsadresse</h3>
+            <p>{company}<br />
+                {firstname} {lastname}<br />
+                {address}<br />
+                {zip} {city}, {country}</p>
+        </div>
+        <div style="float:left; width:470px;">
+            <h3>Lieferadresse</h3>
+            <p>{company1}<br />
+                {firstname1} {lastname1}<br />
+                {address1}<br />
+                {zip1} {city1}, {country1}</p>
+        </div>
+    </div>
+    <!-- Address -->
+
+    <!-- Shipping and Payment -->
+    <div style="float:left; width:940px; background:#FFFFFF; padding:40px;">
+        <div style="float:left; width:960px;">
+            <h3>Versandoptionen & Bezahlung:</h3>
+            <p>Versandart: {delivery}<br />
+                Zahlungsweise: {payment}</p>
+        </div>
+    </div>
+    <!-- Shipping and Payment -->
+
+    <!-- Articles -->
+    <div style="float:left; width:940px; background:#FFFFFF; padding:40px;">
+        <div style="float:left; width:960px;">
+
+
+            <!-- Articles Header -->
+            <table width="940" border="0" cellspacing="0" cellpadding="10" style="background:#EBEBEB;">
+                <tbody>
+                <tr>
+                    <td width="150" height="30" align="left" valign="middle" style="border-right:1px solid #FFFFFF;">Menge</td>
+                    <td align="left" valign="middle" style="border-right:1px solid #FFFFFF;">Beschreibung</td>
+                    <td width="150" align="right" valign="middle" style="border-right:1px solid #FFFFFF;">Preis</td>
+                    <td width="150" align="right" valign="middle">Gesamtpreis</td>
+                </tr>
+                </tbody>
+            </table>
+            <!-- Articles Header -->
+
+            {articles}
+
+        </div>
+    </div>
+    <!-- Articles -->
+
+    <!-- Summary -->
+    <div style="float:left; width:940px; background:#FFFFFF; padding:40px;">
+        <div style="float:left; width:960px;">
+
+            <!-- Summary Row -->
+            <table width="940" border="0" cellspacing="0" cellpadding="10">
+                <tbody>
+                <tr>
+                    <td width="790" align="right" valign="top">Zwischensumme:</td>
+                    <td width="150" align="right" valign="top">{sumsubtotal}</td>
+                </tr>
+                <tr>
+                    <td width="790" align="right" valign="top">Versand & Verpackung:</td>
+                    <td width="150" align="right" valign="top">{sumdeliverycosts}</td>
+                </tr>
+                <tr>
+                    <td width="790" align="right" valign="top">Mehrwertsteuer:</td>
+                    <td width="150" align="right" valign="top">{sumtaxvalue}</td>
+                </tr>
+                <!-- Coupon
+                <tr>
+                    <td width="790" align="right" valign="top">Gutschein:</td>
+                    <td width="150" align="right" valign="top">- {couponvalue}</td>
+                </tr>
+                Coupon -->
+                <tr style="font-weight:bold;">
+                    <td width="790" align="right" valign="top">Gesamtsumme:</td>
+                    <td width="150" align="right" valign="top">{sumfullprice}</td>
+                </tr>
+                </tbody>
+            </table>
+            <!-- Summary Row -->
+
+        </div>
+    </div>
+    <!-- Summary -->
+
+    <!-- Footer -->
+    <div style="float:left; width:940px; background:#FFFFFF; padding:40px;">
+        <div style="float:left; width:960px;">
+            <p>{maildditional}</p>
+            <small>
+                -- <br />
+                Dies ist ein automatisch generiertes Mail, bitte antworten Sie nicht darauf.
+            </small>
+        </div>
+    </div>
+    <!-- Footer -->
+
+</div>

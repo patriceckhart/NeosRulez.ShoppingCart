@@ -77,3 +77,5 @@ NeosRulez:
     payPalHostedButtonId: 'LTRDGNR38ZH6A'
     payPalBusiness: 'mail@patriceckhart.com'
     coupons: true
+    mailBodyTemplate: 'resource://NeosRulez.ShoppingCart/Private/Templates/Mail/Template.html'
+    mailArticleTemplate: 'resource://NeosRulez.ShoppingCart/Private/Partials/Mail/Article.html'

@@ -147,6 +147,7 @@
         <div id="step2" class="mt-5">
             <f:form id="cartform" action="checkout" controller="Cart" package="NeosRulez.ShoppingCart">
                 <f:form.hidden name="coupon" value="0" />
+                <f:form.hidden name="couponvalue" id="couponvalue" value="0" />
                 <f:form.hidden id="couponidentifier" name="couponidentifier" value="0" />
                 <f:form.hidden name="subtotal" value="{subtotal}" />
                 <f:form.hidden name="taxvalue" value="{taxvalue}" />

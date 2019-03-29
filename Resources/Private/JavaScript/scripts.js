@@ -51,6 +51,7 @@ $(function () {
                     couponvalue = value;
                     sum = $('input[name="--neosrulez_shoppingcart-cart[fullprice]"').val();
                     newSum = sum-couponvalue;
+                    $('#couponvalue').val(couponvalue);
                     $('input[name="--neosrulez_shoppingcart-cart[fullprice]"').val(newSum);
                     $('#couponidentifier').val(identifier);
                     $('h3.fullprice').text('€ '+newSum.toFixed(2).replace(".", ","));

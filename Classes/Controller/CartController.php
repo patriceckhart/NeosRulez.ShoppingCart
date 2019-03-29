@@ -64,6 +64,12 @@ class CartController extends ActionController
     protected $couponRepository;
 
     /**
+     * @Flow\Inject
+     * @var \Neos\Flow\I18n\Service
+     */
+    protected $i18nService;
+
+    /**
      * @param array $item
      * @return void
      */
@@ -346,15 +352,28 @@ class CartController extends ActionController
 
         /* Prices */
 
+        $couponValue = $this->request->getArgument('couponvalue');
+        if($couponValue>0) {
+            $couponValue = $couponValue;
+        } else {
+            $couponValue = 0;
+        }
+
+        #setlocale(LC_MONETARY, 'de_DE');
+        #echo money_format('€ %!n', 1.620.56);
+
+
         /* Confirmation */
         $cart = $this->cart->cart();
         $cartcount = count($cart);
-        $mailoutput = "";
 
         $sumsubtotal = floatval($this->request->getArgument('subtotal'));
         $sumdeliverycosts = floatval($this->request->getArgument('deliverycosts'));
         $sumtaxvalue = floatval($this->request->getArgument('taxvalue'));
         $sumfullprice = floatval($this->request->getArgument('fullprice'));
+
+        $articleTemplate = file_get_contents($this->settings['mailArticleTemplate']);
+        $articles = "";
 
         for ($i = 0; $i < $cartcount; $i++) {
             $innerarray = $cart[$i];
@@ -368,103 +387,59 @@ class CartController extends ActionController
             $priceraw = $price;
             $subtotal = $priceraw - $taxvalue;
 
-            $mailoutput .= '
-           
-            <table width="100%" border="0" cellspacing="0" cellpadding="10">
-              <tbody>
-                <tr>
-                  <td width="150" height="30" align="left" valign="middle">'.$quantity.'</td>
-                  <td align="left" valign="middle">'.$title.'<br /><small>'.$articlenumber.'</small><br />'.$description.'</td>
-                  <td width="150" align="right" valign="middle">'.money_format('%=*^-14#8.2i', $price).'</td>
-                  <td width="150" align="right" valign="middle">'.money_format('%=*^-14#8.2i', $price*$quantity).'</td>
-                </tr>
-              </tbody>
-            </table>';
+            $article = str_replace("{quantity}",$quantity,$articleTemplate);
+            $article = str_replace("{title}",$title,$article);
+            $article = str_replace("{description}",$description,$article);
+            $article = str_replace("{articlenumber}",$articlenumber,$article);
+            $article = str_replace("{price}",number_format($price, 2, ',', '.'),$article);
+            $article = str_replace("{pricequantity}",number_format($price*$quantity, 2, ',', '.'),$article);
+
+            $articles .= $article;
 
         }
 
+        $invoiceTemplate = file_get_contents($this->settings['mailBodyTemplate']);
 
-        $mail = '
-        
-        <style>
-	body { font-family: Helvetica, Arial, Sans-Serif; background:#EBEBEB; padding:40px; }
-</style>
+        $body = str_replace("{logo}",$mailLogo.$this->i18nService->getConfiguration()->getCurrentLocale(),$invoiceTemplate);
+        $body = str_replace("{articles}",$articles,$body);
 
-<div style="width:900px; margin:0 auto;">
-	<div style="float:left; width:860px; padding:20px; background:#FFFFFF;">
+        $body = str_replace("{company}",$company,$body);
+        $body = str_replace("{firstname}",$firstname,$body);
+        $body = str_replace("{lastname}",$lastname,$body);
+        $body = str_replace("{address}",$address,$body);
+        $body = str_replace("{zip}",$zip,$body);
+        $body = str_replace("{city}",$city,$body);
+        $body = str_replace("{country}",$country,$body);
 
-		<div style="float:left; width:100%;"">
-			<div style="float:left; width:50%;">
-				<h1>{title}</h1>
-			</div>
-			<div style="float:left; width:50%; text-align:right;">
-				<img src="'.$mailLogo.'" alt="" />
-			</div>
-		</div>
+        $body = str_replace("{company1}",$company1,$body);
+        $body = str_replace("{firstname1}",$firstname1,$body);
+        $body = str_replace("{lastname1}",$lastname1,$body);
+        $body = str_replace("{address1}",$address1,$body);
+        $body = str_replace("{zip1}",$zip1,$body);
+        $body = str_replace("{city1}",$city1,$body);
+        $body = str_replace("{country1}",$country1,$body);
 
-		<div style="float:left; width:100%;"">
-			<div style="float:left; width:50%;">
-				<h3>Rechnungsadresse</h3>
-				'.$invoiceaddress.'
-			</div>
+        $body = str_replace("{delivery}",$deliveryname.' ('.number_format($deliverycosts, 2, ',', '.').')',$body);
+        $body = str_replace("{payment}",$payment,$body);
 
-			<div style="float:left; width:50%;">
-				<h3>Lieferadresse</h3>
-				'.$deliveryaddress.'
-			</div>
-		</div>
+        $body = str_replace("{sumsubtotal}",number_format($sumsubtotal, 2, ',', '.'),$body);
+        $body = str_replace("{sumdeliverycosts}",number_format($sumdeliverycosts, 2, ',', '.'),$body);
+        $body = str_replace("{sumtaxvalue}",number_format($sumtaxvalue, 2, ',', '.'),$body);
+        $body = str_replace("{sumfullprice}",number_format($sumfullprice, 2, ',', '.'),$body);
 
-		<div style="float:left; width:100%; margin-top:20px; margin-bottom:20px;">
-			<h3>Versandoptionen &amp; Bezahlung</h3>
-			'.$deliveryname.' ('.money_format('%=*^-14#8.2i',$deliverycosts).')<br />
-			Zahlungsweise: '.$payment.'
-		</div>
+        $body = str_replace("{couponvalue}",number_format($couponValue, 2, ',', '.'),$body);
 
-		<div style="float:left; width:100%; margin-top:20px; margin-bottom:20px;">
-			
-			<table width="100%" border="0" cellspacing="0" cellpadding="10" style="background:#EBEBEB;">
-              <tbody>
-                <tr>
-                  <td width="150" height="30" align="left" valign="middle" style="border-right:1px solid #FFFFFF;">Menge</td>
-                  <td align="left" valign="middle" style="border-right:1px solid #FFFFFF;">Beschreibung</td>
-                  <td width="150" align="right" valign="middle" style="border-right:1px solid #FFFFFF;">Preis</td>
-                  <td width="150" align="right" valign="middle">Gesamtpreis</td>
-                </tr>
-              </tbody>
-            </table>
+        $body = str_replace("{maildditional}",$mailAdditional,$body);
 
-            '.$mailoutput.'
-            
-            <table width="100%" border="0" cellspacing="0" cellpadding="10">
-              <tbody>
-                <tr>
-                  <td width="150" height="30" align="left" valign="middle"></td>
-                  <td align="left" valign="middle"></td>
-                  <td width="150" align="right" valign="middle">Zwischensumme:<br />Versand &amp; Verpackung:<br />Mehrwertsteuer:<br />Gesamtsumme:</td>
-                  <td width="150" align="right" valign="middle">'.money_format('%=*^-14#8.2i', $sumsubtotal).'<br />'.money_format('%=*^-14#8.2i', $sumdeliverycosts).'<br />'.money_format('%=*^-14#8.2i', $sumtaxvalue).'<br /><strong>'.money_format('%=*^-14#8.2i', $sumfullprice).'</strong></td>
-                </tr>
-              </tbody>
-            </table>
+        if($couponValue>0) {
+            $body = str_replace("<!-- Coupon","",$body);
+            $body = str_replace("Coupon -->","",$body);
+        }
 
-		</div>
-		
-		<div style="float:left; width:100%; margin-top:20px; margin-bottom:20px;">
-			'.$mailAdditional.'
-		</div>
+        $confirmationbody = str_replace("{title}", $confirmationSubject, $body);
+        $orderbody = str_replace("{title}", $orderSubject, $body);
 
-		<div style="float:left; width:100%; margin-top:20px; margin-bottom:20px;">
-			-- <br />
-			Dies ist ein automatisch generiertes Mail, bitte antworten Sie nicht darauf.
-		</div>
-
-	</div>
-</div>
-        ';
-
-        $confirmationbody = str_replace("{title}", $confirmationSubject, $mail);
-        $orderbody = str_replace("{title}", $orderSubject, $mail);
-
-        $confirmation = new \Neos\SwiftMailer\Message();
+        /*$confirmation = new \Neos\SwiftMailer\Message();
         $confirmation->setFrom(array($senderEmailAddress))
             ->setTo(array($invoiceemail))
             ->setSubject($confirmationSubject)
@@ -476,7 +451,17 @@ class CartController extends ActionController
             ->setTo(array($orderEmailAddress))
             ->setSubject($orderSubject)
             ->setBody($orderbody, 'text/html')
-            ->send();
+            ->send();*/
+
+        $file = '/var/www/html/neos/Web/order.html';
+        $content = serialize($confirmationbody);
+        file_put_contents($file, $content);
+        $content = unserialize(file_get_contents($file));
+
+        $file1 = '/var/www/html/neos/Web/conf.html';
+        $content1 = serialize($orderbody);
+        file_put_contents($file1, $content1);
+        $content1 = unserialize(file_get_contents($file1));
 
         //$coupon = $this->request->getArgument('coupon');
         $couponIdentifier = $this->request->getArgument('couponidentifier');
@@ -511,9 +496,9 @@ class CartController extends ActionController
             $this->view->assign('timestamp', $timestamp);
             $this->view->assign('payPalReturnUri', $payPalReturnUri);
             $this->view->assign('sumfullprice', $sumfullprice);
-            $this->cart->deleteCart();
+            #$this->cart->deleteCart();
         } else {
-            $this->cart->deleteCart();
+            #$this->cart->deleteCart();
             $linkToCart = $this->settings['linkToCart'];
             $this->redirectToUri($linkToCart);
         }
