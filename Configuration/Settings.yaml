@@ -59,13 +59,22 @@ Neos:
               index:
                 label: NeosRulez.ShoppingCart:Main:coupon
                 title: NeosRulez.ShoppingCart:Main:coupon
+          option:
+            label: NeosRulez.ShoppingCart:Main:option
+            controller: '\NeosRulez\ShoppingCart\Controller\OptionController'
+            description: NeosRulez.ShoppingCart:Main:optionmoddescription
+            icon: 'icon-list'
+            actions:
+              index:
+                label: NeosRulez.ShoppingCart:Main:option
+                title: NeosRulez.ShoppingCart:Main:option
 NeosRulez:
   ShoppingCart:
     taxinclusive: false
     linkToCart: '/de/warenkorb.html'
     linkToHome: '/'
-    standardDelivery: '49b096f0-bbdc-49fb-85e2-9cc490c473ac'
-    standardCountry: '82a601a0-515d-43da-b307-9c44714c2893'
+    standardDelivery: 'f7fe9c29-e24b-4840-a4ac-092fbef0db49'
+    standardCountry: 'c7fbefb3-120d-4997-b9d4-433f33b3313d'
     senderEmailAddress: 'postmaster@patriceckhart.com'
     orderEmailAddress: 'mail@patriceckhart.com'
     confirmationSubject: 'Bestellbestätigung'

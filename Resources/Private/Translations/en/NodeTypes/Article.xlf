@@ -29,6 +29,9 @@
             <trans-unit id="addtocart" xml:space="preserve">
 				<source>Add to cart</source>
 			</trans-unit>
+			<trans-unit id="pleaseselect" xml:space="preserve">
+				<source>Please select</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

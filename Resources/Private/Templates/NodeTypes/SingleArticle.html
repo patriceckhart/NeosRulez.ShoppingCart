@@ -33,13 +33,26 @@
             </div>
 
             <div class="card-text">
-                <f:if condition="{articleNumber}"><small class="text-muted">{f:translate(id: 'articlenumber', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')}: {articleNumber}</small></f:if>
-                {neos:contentElement.editable(property: 'articleDescription')}
+
+                <div class="row">
+                    <div class="col-12">
+                        <f:if condition="{articleNumber}"><small class="text-muted">{f:translate(id: 'articlenumber', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')}: {articleNumber}</small></f:if>
+                        {neos:contentElement.editable(property: 'articleDescription')}
+                    </div>
+                </div>
+
             </div>
 
             <f:if condition="{stock}==true">
                 <f:then>
                     <f:form action="addItem" objectName="item" controller="Cart" package="NeosRulez.ShoppingCart">
+
+                        <div class="row mb-5 article-options">
+                            <div class="col">
+                                Optionen
+                            </div>
+                        </div>
+
                         <f:if condition="{image}"><f:then><f:form.hidden property="image" value="{media:uri.image(image: image, maximumWidth:140, maximumHeight:140, allowCropping:TRUE)}" /></f:then><f:else><f:form.hidden property="image" value="Kein Bild" /></f:else></f:if>
                         <f:form.hidden property="articleTitle" value="{articleTitle}" />
                         <f:form.hidden property="articleDescription" value="{articleDescription}" />

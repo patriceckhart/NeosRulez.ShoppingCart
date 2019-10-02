@@ -1,5 +1,9 @@
+prototype(NeosRulez.ShoppingCart:SingleArticle) < prototype(Neos.Neos:Plugin)
 prototype(NeosRulez.ShoppingCart:SingleArticle) {
-    templatePath = 'resource://NeosRulez.ShoppingCart/Private/Templates/NodeTypes/SingleArticle.html'
+    package = 'NeosRulez.ShoppingCart'
+    controller = 'Article'
+    action = 'singleIndex'
+
     linkToCart = ${Configuration.setting('NeosRulez.ShoppingCart.linkToCart')}
     articleTitle = ${q(node).property('articleTitle')}
     articlePrice = ${String.replace(q(node).property('articlePrice'), ',', '.')}
@@ -10,6 +14,8 @@ prototype(NeosRulez.ShoppingCart:SingleArticle) {
     image = ${q(node).property('image')}
     delivery = ${String.replace(q(node).property('delivery'), ',', '.')}
     taxinclusive = ${Configuration.setting('NeosRulez.ShoppingCart.taxinclusive')}
+    options = ${q(node).property('options')}
+
     @cache {
         mode = 'uncached'
         context {

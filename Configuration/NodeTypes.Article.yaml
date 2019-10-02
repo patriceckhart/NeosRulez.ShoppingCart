@@ -1,6 +1,6 @@
 'NeosRulez.ShoppingCart:Article':
   superTypes:
-    'Neos.Neos:Content': TRUE
+    'Neos.Neos:Plugin': TRUE
   ui:
     label: i18n
     icon: 'icon-shopping-cart'

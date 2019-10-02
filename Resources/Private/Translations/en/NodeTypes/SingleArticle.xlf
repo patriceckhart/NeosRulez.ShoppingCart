@@ -53,6 +53,9 @@
 			<trans-unit id="properties.image" xml:space="preserve">
 				<source>Image</source>
 			</trans-unit>
+			<trans-unit id="properties.articleOptions" xml:space="preserve">
+				<source>Options</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

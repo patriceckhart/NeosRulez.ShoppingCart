@@ -1,6 +1,6 @@
 'NeosRulez.ShoppingCart:SingleArticle':
   superTypes:
-    'Neos.Neos:Content': TRUE
+    'Neos.Neos:Plugin': TRUE
   ui:
     label: i18n
     icon: 'icon-shopping-cart'
@@ -95,3 +95,13 @@
           editorOptions:
             features:
               resize: TRUE
+    'options':
+      type: array
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'shopsettings'
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            dataSourceIdentifier: neosrulez-shoppingcart-options

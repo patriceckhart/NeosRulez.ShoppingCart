@@ -34,6 +34,13 @@
                     <strong>{item.articleTitle}</strong><br />
                     <small class="text-muted">{f:translate(id: 'articlenumber', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')}: {item.articleNumber}</small><br/>
                     <f:format.crop maxCharacters="140"><f:format.stripTags>{item.articleDescription}</f:format.stripTags></f:format.crop>
+                    <f:if condition="{item.option}">
+                        <small class="d-block">
+                            <f:for each="{item.option}" as="option">
+                                {option}<br />
+                            </f:for>
+                        </small>
+                    </f:if>
                 </div>
                 <div class="col-lg-2 text-right">
                     <f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{item.articlePrice}</f:format.currency><br />
@@ -59,6 +66,16 @@
                         <f:form.hidden property="taxvalue" value="{item.taxvalue}" />
                         <f:form.hidden property="articleNumber" value="{item.articleNumber}" />
                         <f:form.hidden property="delivery" value="{item.delivery}" />
+                        <f:if condition="{item.option}">
+                            <f:then>
+                                <f:for each="{item.option}" as="option">
+                                    <input type="hidden" name="--neosrulez_shoppingcart-cart[item][option][]" value="{option}" />
+                                </f:for>
+                            </f:then>
+                            <f:else>
+                                    <input type="hidden" name="--neosrulez_shoppingcart-cart[item][option][]" value="" />
+                            </f:else>
+                        </f:if>
                         <f:form.hidden name="delivery" value="{delivery}" />
                         <button type="submit" class="btn btn-small" style="display:none;">{f:translate(id: 'refresh', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Cart')}</button>
                     </f:form>
@@ -165,6 +182,16 @@
                         <f:form.hidden name="tax{iterator.index}" value="{item.tax}" />
                         <f:form.hidden name="taxvalue{iterator.index}" value="{item.taxvalue}" />
                         <f:form.hidden name="quantity{iterator.index}" value="{item.quantity}" />
+                        <f:if condition="{item.option}">
+                            <f:then>
+                                <f:for each="{item.option}" as="option">
+                                    <f:form.hidden name="option{iterator.index}[]" value="{option}" />
+                                </f:for>
+                            </f:then>
+                            <f:else>
+                                <f:form.hidden name="option{iterator.index}[]" value="" />
+                            </f:else>
+                        </f:if>
                     </f:for>
                 </f:if>
                 <div class="row">

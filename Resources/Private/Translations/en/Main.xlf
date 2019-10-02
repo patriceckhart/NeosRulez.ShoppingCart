@@ -117,7 +117,7 @@
 				<source>Coupon-Code</source>
 			</trans-unit>
 			<trans-unit id="coupontype" xml:space="preserve">
-				<source>Gutschein-Type</source>
+				<source>Coupon-Type</source>
 			</trans-unit>
             <trans-unit id="unique" xml:space="preserve">
 				<source>Coupon is unique</source>
@@ -136,6 +136,33 @@
 			</trans-unit>
 			<trans-unit id="couponcounter" xml:space="preserve">
 				<source>Counter</source>
+			</trans-unit>
+			<trans-unit id="optionname" xml:space="preserve">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="optionnamewebsite" xml:space="preserve">
+				<source>Name on website</source>
+			</trans-unit>
+			<trans-unit id="optionlabel" xml:space="preserve">
+				<source>Label</source>
+			</trans-unit>
+			<trans-unit id="optionvalue" xml:space="preserve">
+				<source>Value</source>
+			</trans-unit>
+			<trans-unit id="noptions" xml:space="preserve">
+				<source>No options available.</source>
+			</trans-unit>
+			<trans-unit id="newoption" xml:space="preserve">
+				<source>Create new option</source>
+			</trans-unit>
+			<trans-unit id="option" xml:space="preserve">
+				<source>Options</source>
+			</trans-unit>
+			<trans-unit id="optionmoddescription" xml:space="preserve">
+				<source>With this module, you can manage options.</source>
+			</trans-unit>
+			<trans-unit id="newoptionvaluefor" xml:space="preserve">
+				<source>New optionvalue for:</source>
 			</trans-unit>
 		</body>
 	</file>

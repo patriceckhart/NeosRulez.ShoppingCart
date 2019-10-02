@@ -32,6 +32,12 @@
 			<trans-unit id="properties.assets" xml:space="preserve">
 				<source>Weitere Bilder</source>
 			</trans-unit>
+			<trans-unit id="properties.options" xml:space="preserve">
+				<source>Optionen</source>
+			</trans-unit>
+			<trans-unit id="properties.articleoptions" xml:space="preserve">
+				<source>Optionen</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

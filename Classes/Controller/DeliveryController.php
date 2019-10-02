@@ -2,7 +2,7 @@
 namespace NeosRulez\ShoppingCart\Controller;
 
 /*
- * This file is part of the NeosCommerce.Cart package.
+ * This file is part of the NeosRulez.ShoppingCart package.
  */
 
 use Neos\Flow\Annotations as Flow;

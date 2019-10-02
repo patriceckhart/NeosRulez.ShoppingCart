@@ -12,6 +12,10 @@ privilegeTargets:
       matcher: 'method(NeosRulez\ShoppingCart\Controller\DeliverycostController->.*Action())'
     'NeosRulez.ShoppingCart:CouponControllerActions':
       matcher: 'method(NeosRulez\ShoppingCart\Controller\CouponController->.*Action())'
+    'NeosRulez.ShoppingCart:OptionControllerActions':
+      matcher: 'method(NeosRulez\ShoppingCart\Controller\OptionController->.*Action())'
+    'NeosRulez.ShoppingCart:ArticleControllerActions':
+      matcher: 'method(NeosRulez\ShoppingCart\Controller\ArticleController->.*Action())'
 
 roles:
   'Neos.Flow:Everybody':
@@ -33,4 +37,10 @@ roles:
         permission: GRANT
       -
         privilegeTarget: 'NeosRulez.ShoppingCart:CouponControllerActions'
+        permission: GRANT
+      -
+        privilegeTarget: 'NeosRulez.ShoppingCart:OptionControllerActions'
+        permission: GRANT
+      -
+        privilegeTarget: 'NeosRulez.ShoppingCart:ArticleControllerActions'
         permission: GRANT

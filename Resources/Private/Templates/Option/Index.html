@@ -1,0 +1,57 @@
+<f:if condition="{options}">
+    <f:then>
+        <table class="neos-table">
+            <thead>
+            <tr>
+                <td>{f:translate(id: 'optionname', package: 'NeosRulez.ShoppingCart', source: 'Main')}</td>
+                <td>{f:translate(id: 'optionlabel', package: 'NeosRulez.ShoppingCart', source: 'Main')}</td>
+                <td>{f:translate(id: 'optionvalue', package: 'NeosRulez.ShoppingCart', source: 'Main')}</td>
+                <td>&nbsp;</td>
+            </tr>
+            </thead>
+            <tbody>
+            <f:for each="{options}" as="option">
+                <tr>
+                    <td>{option.name} ({option.fename})</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class="neos-action">
+                        <div class="neos-pull-right">
+                            <f:form action="delete" arguments="{option: option}">
+                                <f:link.action class="neos-button neos-button-primary" action="newvalue" arguments="{option: option}"><i class="fas fa-plus icon-white"></i></f:link.action>
+                                <f:link.action class="neos-button neos-button-primary" action="edit" arguments="{option: option}"><i class="fas fa-pencil-alt icon-white"></i></f:link.action>
+
+                                <button type="submit" class="neos-button neos-button-danger"><i class="fas fa-trash-alt"></i></button>
+                            </f:form>
+                        </div>
+                    </td>
+                </tr>
+                    <f:for each="{optionvalues}" as="optionvalue">
+                        <f:if condition="{optionvalue.option}==<f:format.identifier>{option}</f:format.identifier>">
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>{optionvalue.label}</td>
+                            <td>{optionvalue.value}</td>
+                            <td class="neos-action">
+                                <div class="neos-pull-right">
+                                    <f:form action="deleteoptionvalue" arguments="{optionvalue: optionvalue}">
+                                        <f:link.action class="neos-button neos-button-primary" action="editoptionvalue" arguments="{optionvalue: optionvalue}"><i class="fas fa-pencil-alt icon-white"></i></f:link.action>
+
+                                        <button type="submit" class="neos-button neos-button-danger"><i class="fas fa-trash-alt"></i></button>
+                                    </f:form>
+                                </div>
+                            </td>
+                        </tr>
+                        </f:if>
+                    </f:for>
+            </f:for>
+            </tbody>
+        </table>
+    </f:then>
+    <f:else>
+        <br />{f:translate(id: 'noptions', package: 'NeosRulez.ShoppingCart', source: 'Main')}
+    </f:else>
+</f:if>
+<div class="neos-footer">
+    <f:link.action class="neos-button neos-button-primary" action="new">{f:translate(id: 'newoption', package: 'NeosRulez.ShoppingCart', source: 'Main')}</f:link.action>
+</div>

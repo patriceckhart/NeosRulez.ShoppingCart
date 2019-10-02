@@ -387,9 +387,23 @@ class CartController extends ActionController
             $priceraw = $price;
             $subtotal = $priceraw - $taxvalue;
 
+
+            $options = $innerarray['option'];
+            //var_dump($innerarray);
+
+            if($options) {
+                $optionText = "";
+                foreach ($options as $option) {
+                    $optionText .= $option.'<br />';
+                }
+            }
+
             $article = str_replace("{quantity}",$quantity,$articleTemplate);
             $article = str_replace("{title}",$title,$article);
             $article = str_replace("{description}",$description,$article);
+            if($options) {
+                $article = str_replace("{options}", $optionText, $article);
+            }
             $article = str_replace("{articlenumber}",$articlenumber,$article);
             $article = str_replace("{price}",number_format($price, 2, ',', '.'),$article);
             $article = str_replace("{pricequantity}",number_format($price*$quantity, 2, ',', '.'),$article);
@@ -439,7 +453,7 @@ class CartController extends ActionController
         $confirmationbody = str_replace("{title}", $confirmationSubject, $body);
         $orderbody = str_replace("{title}", $orderSubject, $body);
 
-        /*$confirmation = new \Neos\SwiftMailer\Message();
+        $confirmation = new \Neos\SwiftMailer\Message();
         $confirmation->setFrom(array($senderEmailAddress))
             ->setTo(array($invoiceemail))
             ->setSubject($confirmationSubject)
@@ -451,9 +465,9 @@ class CartController extends ActionController
             ->setTo(array($orderEmailAddress))
             ->setSubject($orderSubject)
             ->setBody($orderbody, 'text/html')
-            ->send();*/
+            ->send();
 
-        $file = '/var/www/html/neos/Web/order.html';
+        /*$file = '/var/www/html/neos/Web/order.html';
         $content = serialize($confirmationbody);
         file_put_contents($file, $content);
         $content = unserialize(file_get_contents($file));
@@ -461,7 +475,7 @@ class CartController extends ActionController
         $file1 = '/var/www/html/neos/Web/conf.html';
         $content1 = serialize($orderbody);
         file_put_contents($file1, $content1);
-        $content1 = unserialize(file_get_contents($file1));
+        $content1 = unserialize(file_get_contents($file1));*/
 
         //$coupon = $this->request->getArgument('coupon');
         $couponIdentifier = $this->request->getArgument('couponidentifier');
@@ -496,9 +510,9 @@ class CartController extends ActionController
             $this->view->assign('timestamp', $timestamp);
             $this->view->assign('payPalReturnUri', $payPalReturnUri);
             $this->view->assign('sumfullprice', $sumfullprice);
-            #$this->cart->deleteCart();
+            $this->cart->deleteCart();
         } else {
-            #$this->cart->deleteCart();
+            $this->cart->deleteCart();
             $linkToCart = $this->settings['linkToCart'];
             $this->redirectToUri($linkToCart);
         }

@@ -1,0 +1,20 @@
+<f:form action="createoptionvalue" objectName="newOptionvalue" controller="Optionvalue">
+    <div class="neos-content neos-container-fluid">
+        <p>{f:translate(id: 'newoptionvaluefor', package: 'NeosRulez.ShoppingCart', source: 'Main')} <b>{optionname}</b></p><br />
+
+        <f:form.hidden property="option" id="option" value="{option}" />
+
+        <div class="neos-control-group">
+            <label for="label">{f:translate(id: 'optionlabel', package: 'NeosRulez.ShoppingCart', source: 'Main')}</label>
+            <f:form.textfield property="label" id="label" />
+        </div>
+        <div class="neos-control-group">
+            <label for="value">{f:translate(id: 'optionvalue', package: 'NeosRulez.ShoppingCart', source: 'Main')}</label>
+            <f:form.textfield property="value" id="value" />
+        </div>
+    </div>
+
+    <div class="neos-footer">
+        <f:form.submit class="neos-button neos-button-primary" value="{f:translate(id: 'newoption', package: 'NeosRulez.ShoppingCart', source: 'Main')}" />
+    </div>
+</f:form>

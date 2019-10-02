@@ -1,4 +1,9 @@
+prototype(NeosRulez.ShoppingCart:Article) < prototype(Neos.Neos:Plugin)
 prototype(NeosRulez.ShoppingCart:Article) {
+    package = 'NeosRulez.ShoppingCart'
+    controller = 'Article'
+    action = 'index'
+
     articleTitle = ${q(documentNode).property('articleTitle')}
     articlePrice = ${String.replace(q(documentNode).property('articlePrice'), ',', '.')}
     articleOldPrice = ${String.replace(q(documentNode).property('articleOldPrice'), ',', '.')}
@@ -9,6 +14,8 @@ prototype(NeosRulez.ShoppingCart:Article) {
     assets = ${q(documentNode).property('assets')}
     delivery = ${String.replace(q(documentNode).property('delivery'), ',', '.')}
     taxinclusive = ${Configuration.setting('NeosRulez.ShoppingCart.taxinclusive')}
+    options = ${q(documentNode).property('options')}
+
     @cache {
         mode = 'uncached'
         context {

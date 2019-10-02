@@ -1,0 +1,103 @@
+{namespace fusion=Neos\Fusion\ViewHelpers}
+{namespace neos*}
+{namespace media=Neos\Media\ViewHelpers}
+<div{attributes -> f:format.raw()}>
+<div class="card">
+    <f:if condition="{image}">
+        <media:image image="{image}" class="card-img-top" width="318px" height="180px" allowCropping="TRUE" allowUpScaling="TRUE" alt="" />
+    </f:if>
+    <div class="card-body">
+
+        <div class="row">
+            <div class="col-sm-6">
+                <h4 class="card-title">{articleTitle}</h4>
+            </div>
+            <div class="col-sm-6">
+                <f:if condition="{articlePrice}">
+                    <h4 class="price"><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{articlePrice}</f:format.currency></h4>
+                </f:if>
+                <f:if condition="{articleOldPrice}">
+                    <h6 class="old-price text-muted font-weight-normal"><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{articleOldPrice}</f:format.currency></h6>
+                </f:if>
+                <f:if condition="{taxinclusive}==1">
+                    <f:then>
+                        <small class="tax">{f:translate(id: 'incl', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')} {tax} % {f:translate(id: 'tax', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')}</small>
+                    </f:then>
+                    <f:else>
+                        <div class="tax">
+                            <small class="tax">{f:translate(id: 'excl', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')} {tax} % {f:translate(id: 'tax', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')}</small>
+                        </div>
+                    </f:else>
+                </f:if>
+            </div>
+        </div>
+
+        <div class="card-text">
+
+            <div class="row">
+                <div class="col-12">
+                    <f:if condition="{articleNumber}"><small class="text-muted">{f:translate(id: 'articlenumber', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')}: {articleNumber}</small></f:if>
+                    {neos:contentElement.editable(property: 'articleDescription')}
+                </div>
+            </div>
+
+        </div>
+
+        <f:if condition="{stock}">
+            <f:then>
+                <f:form action="addItem" objectName="item" controller="Cart" package="NeosRulez.ShoppingCart">
+
+                    <f:if condition="{optionarray}">
+                        <f:then>
+                            <div class="row mb-5 article-options">
+                                <div class="col">
+                                    <f:for each="{optionarray}" as="option" iteration="iterator">
+                                        <div class="d-block my-3">
+                                            <label for="option-{iterator.index}">{option.optionname}</label>
+                                            <select name="--neosrulez_shoppingcart-singlearticle[item][option][]" id="option-{iterator.index}" class="form-control" required="required">
+                                                <option value="" selected disabled>{f:translate(id: 'pleaseselect', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')}</option>
+                                                <f:for each="{option.optionvalues}" as="optionvalue">
+                                                    <option value="{option.optionname}: {optionvalue.value}">{optionvalue.label}</option>
+                                                </f:for>
+                                            </select>
+                                        </div>
+                                    </f:for>
+                                </div>
+                            </div>
+                        </f:then>
+                        <f:else>
+                            <input type="hidden" name="--neosrulez_shoppingcart-singlearticle[item][option][]" value="" />
+                        </f:else>
+                    </f:if>
+
+                    <f:if condition="{image}"><f:then><f:form.hidden property="image" value="{media:uri.image(image: image, maximumWidth:140, maximumHeight:140, allowCropping:TRUE)}" /></f:then><f:else><f:form.hidden property="image" value="Kein Bild" /></f:else></f:if>
+                    <f:form.hidden property="articleTitle" value="{articleTitle}" />
+                    <f:form.hidden property="articleDescription" value="{articleDescription}" />
+                    <f:form.hidden property="articlePrice" value="{articlePrice}" />
+                    <f:form.hidden property="tax" value="{tax}" />
+                    <f:form.hidden property="taxinclusive" value="{taxinclusive}" />
+                    <f:form.hidden property="articleNumber" value="{articleNumber}" />
+                    <f:form.hidden property="delivery" value="{delivery}" />
+                    <f:form.hidden property="nodeUri" value="{linkToCart}" />
+
+                    <div class="row mt-3">
+                        <div class="col-sm-4">
+                            <label class="col-form-label">{f:translate(id: 'quantity', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')}</label>
+                        </div>
+                        <div class="col-sm-8">
+                            <f:form.select property="quantity" id="quantity" class="form-control" value="1" options="{1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: '10', 11: '11', 12: '12', 13: '13', 14: '14', 15: '15', 16: '16', 17: '17', 18: '18', 19: '19', 20: '20', 21: '21', 22: '22', 23: '23', 24: '24', 25: '25', 26: '26', 27: '27', 28: '28', 29: '29', 30: '30', 31: '31', 32: '32', 33: '33', 34: '34', 35: '35', 36: '36', 37: '37', 38: '38', 39: '39', 40: '40', 41: '41', 42: '42', 43: '43', 44: '44', 45: '45', 46: '46', 47: '47', 48: '48', 49: '49', 50: '50', 51: '51', 52: '52', 53: '53', 54: '54', 55: '55', 56: '56', 57: '57', 58: '58', 59: '59', 60: '60', 61: '61', 62: '62', 63: '63', 64: '64', 65: '65', 66: '66', 67: '67', 68: '68', 69: '69', 70: '70', 71: '71', 72: '72', 73: '73', 74: '74', 75: '75', 76: '76', 77: '77', 78: '78', 79: '79', 80: '80', 81: '81', 82: '82', 83: '83', 84: '84', 85: '85', 86: '86', 87: '87', 88: '88', 89: '89', 90: '90', 91: '91', 92: '92', 93: '93', 94: '94', 95: '95', 96: '96', 97: '97', 98: '98', 99: '99', 100: '100'}" />
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn btn-primary addto w-100 mt-3">{f:translate(id: 'addtocart', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')}</button>
+
+                </f:form>
+            </f:then>
+            <f:else>
+                <span class="badge badge-danger mt-3">{f:translate(id: 'outofstock', package: 'NeosRulez.ShoppingCart', source: 'NodeTypes/Article')}</span>
+            </f:else>
+        </f:if>
+
+    </div>
+</div>
+</div>
