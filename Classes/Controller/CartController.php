@@ -285,6 +285,8 @@ class CartController extends ActionController
         $payPalBusiness = $this->settings['payPalBusiness'];
         $mailAdditional = $this->settings['mailAdditional'];
 
+        $taxinclusive = $this->settings['taxinclusive'];
+
         /* Invoice */
         $company = $this->request->getArgument('company');
         $firstname = $this->request->getArgument('firstname');
@@ -436,6 +438,9 @@ class CartController extends ActionController
         $body = str_replace("{delivery}",$deliveryname.' ('.number_format($deliverycosts, 2, ',', '.').')',$body);
         $body = str_replace("{payment}",$payment,$body);
 
+        if($taxinclusive==1) {
+            $sumsubtotal = $sumsubtotal-$sumtaxvalue;
+        }
         $body = str_replace("{sumsubtotal}",number_format($sumsubtotal, 2, ',', '.'),$body);
         $body = str_replace("{sumdeliverycosts}",number_format($sumdeliverycosts, 2, ',', '.'),$body);
         $body = str_replace("{sumtaxvalue}",number_format($sumtaxvalue, 2, ',', '.'),$body);
