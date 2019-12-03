@@ -3,4 +3,12 @@ prototype(NeosRulez.ShoppingCart:Cart) {
     package = 'NeosRulez.ShoppingCart'
     controller = 'Cart'
     action = 'cart'
+
+    @cache {
+        mode = 'uncached'
+        context {
+            1 = 'node'
+            2 = 'documentNode'
+        }
+    }
 }

@@ -413,8 +413,8 @@ class CartController extends ActionController
         }
 
         $invoiceTemplate = file_get_contents($this->settings['mailBodyTemplate']);
-
-        $body = str_replace("{logo}",$mailLogo.$this->i18nService->getConfiguration()->getCurrentLocale(),$invoiceTemplate);
+        //$this->i18nService->getConfiguration()->getCurrentLocale()
+        $body = str_replace("{logo}",$mailLogo,$invoiceTemplate);
         $body = str_replace("{articles}",$articles,$body);
 
         $body = str_replace("{company}",$company,$body);

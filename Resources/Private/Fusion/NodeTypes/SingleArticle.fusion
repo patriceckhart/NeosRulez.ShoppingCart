@@ -4,7 +4,6 @@ prototype(NeosRulez.ShoppingCart:SingleArticle) {
     controller = 'Article'
     action = 'singleIndex'
 
-    linkToCart = ${Configuration.setting('NeosRulez.ShoppingCart.linkToCart')}
     articleTitle = ${q(node).property('articleTitle')}
     articlePrice = ${String.replace(q(node).property('articlePrice'), ',', '.')}
     articleOldPrice = ${String.replace(q(node).property('articleOldPrice'), ',', '.')}
@@ -15,6 +14,7 @@ prototype(NeosRulez.ShoppingCart:SingleArticle) {
     delivery = ${String.replace(q(node).property('delivery'), ',', '.')}
     taxinclusive = ${Configuration.setting('NeosRulez.ShoppingCart.taxinclusive')}
     options = ${q(node).property('options')}
+    #linkToCart = ${Configuration.setting('NeosRulez.ShoppingCart.linkToCart')}
 
     @cache {
         mode = 'uncached'

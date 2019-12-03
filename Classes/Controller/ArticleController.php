@@ -23,6 +23,21 @@ class ArticleController extends ActionController
      */
     protected $optionvalueRepository;
 
+    /**
+     * @var array
+     */
+    protected $settings;
+
+    /**
+     * Inject the settings
+     *
+     * @param array $settings
+     * @return void
+     */
+    public function injectSettings(array $settings) {
+        $this->settings = $settings;
+    }
+
 
     /**
      * @return void
@@ -40,6 +55,11 @@ class ArticleController extends ActionController
         $this->view->assign('assets',$this->request->getInternalArgument('__assets'));
         $this->view->assign('delivery',$this->request->getInternalArgument('__delivery'));
         $this->view->assign('taxinclusive',$this->request->getInternalArgument('__taxinclusive'));
+
+        $linktoCart = $this->settings['linkToCart'];
+        $this->view->assign('linkToCart',$linktoCart);
+
+        // var_dump($this->settings['linkToCart']);
 
         $options = $this->request->getInternalArgument('__options');
 

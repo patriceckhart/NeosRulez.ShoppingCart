@@ -16,6 +16,8 @@ prototype(NeosRulez.ShoppingCart:Article) {
     taxinclusive = ${Configuration.setting('NeosRulez.ShoppingCart.taxinclusive')}
     options = ${q(documentNode).property('options')}
 
+    #linkToCart = ${Configuration.setting('NeosRulez.ShoppingCart.linkToCart')}
+
     @cache {
         mode = 'uncached'
         context {

@@ -35,7 +35,7 @@ class Cart {
             }
         }
 
-        $item['quantity'] = $quantity;
+        //$item['quantity'] = $quantity;
         $item['timestamp'] = time();
 
         $price = $item['articlePrice'];
