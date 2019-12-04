@@ -28,14 +28,14 @@ class Cart {
         $quantity = intval($item['quantity']);
         $key = array_search($item['articleNumber'], array_column($cart, 'articleNumber'));
 
-        if ($key!==FALSE) {
+        if($key) {
             $quantitycheck = intval($cart[$key]['quantity']);
-            if ($quantitycheck>0) {
+            if ($quantitycheck>=0) {
                 $quantity = intval($quantitycheck+$quantity);
             }
         }
 
-        //$item['quantity'] = $quantity;
+        $item['quantity'] = intval($quantity);
         $item['timestamp'] = time();
 
         $price = $item['articlePrice'];

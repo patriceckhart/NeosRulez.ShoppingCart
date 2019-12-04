@@ -77,7 +77,7 @@ class CartController extends ActionController
         $this->cart->addItem($item);
         $nodeUri = $item['nodeUri'];
         //$this->addFlashMessage($this->translator->translateById('added', $sourceName = 'NodeTypes/Article', $packageKey = 'NeosRulez.Cart'));
-        $this->addFlashMessage("Artikel hinzugefügt.");
+        //$this->addFlashMessage("Artikel hinzugefügt.");
         $this->redirectToUri($nodeUri);
     }
 
